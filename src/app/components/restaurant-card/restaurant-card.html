@@ -1,0 +1,11 @@
+<section>
+  <div class="Name">{{ restaurant().name }}</div>
+  <div class="Description">{{ restaurant().description }}</div>
+  <div class="cousineType">Kuchnia: {{ restaurant().cuisine }}</div>
+  <div class="image"><img src="{{ restaurant().imageUrl }}" /></div>
+  <div class="rating">Ocena: {{ restaurant().rating }}</div>
+  <div class="delivery-time-min">Min czas dostawy: {{ restaurant().deliveryTimeMin }}</div>
+  <div class="delivery-time-max">Max czas dostawy: {{ restaurant().deliveryTimeMax }}</div>
+  <div class="delivery-cost">Koszt dostawy: {{ restaurant().deliveryFee }}zł</div>
+  <div class="isActive">Aktywny: {{ restaurant().isActive }}</div>
+</section>

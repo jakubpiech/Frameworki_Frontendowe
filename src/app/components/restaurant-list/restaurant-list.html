@@ -1,0 +1,38 @@
+<section class="list">
+  <div class="filterSection">
+    <form action>
+      <label for="nameFilter">Znajdź restaurację po nazwie: </label>
+      <input type="text" id="nameFilter" placeholder="Wpisz nazwę restauracji..." />
+
+      <label for="cuisineFilter"> Wybierz kuchnię: </label>
+      <select id="cuisineFilter">
+        <option value="all">Wszystkie</option>
+        <option value="italian">Włoska</option>
+        <option value="polish">Polska</option>
+        <option value="chinese">Chińska</option>
+        <option value="thai">Tajska</option>
+        <option value="american">Amerykańska</option>
+      </select>
+
+      <label for="statusFilter"> Filtruj po statusie: </label>
+      <select id="statusFilter">
+        <option value="all">Wszystkie</option>
+        <option value="open">Otwarte</option>
+        <option value="closed">Zamknięte</option>
+      </select>
+
+      <label for="sortFilter"> Sortuj po: </label>
+      <select id="sortFilter">
+        <option value="rating">Rating</option>
+        <option value="deliveryTime">Czas Dostawy</option>
+        <option value="deliveryCost">Koszt dostawy</option>
+      </select>
+      <button>Reset Filtrów</button>
+      <button type="submit">Filtruj</button>
+    </form>
+  </div>
+
+  @for (restaurant of restaurants(); track restaurant.id) {
+    <app-restaurant-card [restaurant]="restaurant" />
+  }
+</section>
