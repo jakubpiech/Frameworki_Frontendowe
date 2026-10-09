@@ -1,11 +1,17 @@
 <section class="list">
   <div class="filterSection">
-    <form action>
+    <form #filterForm>
       <label for="nameFilter">Znajdź restaurację po nazwie: </label>
-      <input type="text" id="nameFilter" placeholder="Wpisz nazwę restauracji..." />
+      <input
+        #nameInput
+        type="text"
+        id="nameFilter"
+        placeholder="Wpisz nazwę restauracji..."
+        (input)="onNameChange(nameInput.value)"
+      />
 
       <label for="cuisineFilter"> Wybierz kuchnię: </label>
-      <select id="cuisineFilter">
+      <select #cuisineInput id="cuisineFilter" (change)="onCuisineChange(cuisineInput.value)">
         <option value="all">Wszystkie</option>
         <option value="italian">Włoska</option>
         <option value="polish">Polska</option>
@@ -15,24 +21,23 @@
       </select>
 
       <label for="statusFilter"> Filtruj po statusie: </label>
-      <select id="statusFilter">
+      <select #statusInput id="statusFilter" (change)="onStatusChange(statusInput.value)">
         <option value="all">Wszystkie</option>
         <option value="open">Otwarte</option>
         <option value="closed">Zamknięte</option>
       </select>
 
       <label for="sortFilter"> Sortuj po: </label>
-      <select id="sortFilter">
+      <select #sortInput id="sortFilter" (change)="onSortChange(sortInput.value)">
         <option value="rating">Rating</option>
         <option value="deliveryTime">Czas Dostawy</option>
         <option value="deliveryCost">Koszt dostawy</option>
       </select>
-      <button>Reset Filtrów</button>
-      <button type="submit">Filtruj</button>
+      <button type="button" (click)="filterForm.reset();resetFilters()">Reset Filtrów</button>
     </form>
   </div>
 
-  @for (restaurant of restaurants(); track restaurant.id) {
+  @for (restaurant of displayedRestaurants(); track restaurant.id) {
     <app-restaurant-card [restaurant]="restaurant" />
   }
 </section>

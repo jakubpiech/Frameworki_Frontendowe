@@ -11,6 +11,7 @@ export class RestaurantCard {
   private CanUpdate = signal(true);
 
   restaurant = model<Restaurant>({
+    id: 0,
     name: 'Wpisz nazwe',
     description: 'Wpisz opis',
     cuisine: 'Wpisz kuchnie',
@@ -19,6 +20,7 @@ export class RestaurantCard {
     deliveryTimeMin: 0,
     deliveryTimeMax: 0,
     deliveryFee: 0,
+    minimumOrderValue: 0,
     isActive: false,
   });
 }

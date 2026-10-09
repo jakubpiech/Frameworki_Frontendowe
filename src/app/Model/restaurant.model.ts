@@ -1,5 +1,5 @@
 export type Restaurant = {
-  [x: string]: any;
+  id: number;
   name: string;
   description: string;
   cuisine: string;
@@ -8,5 +8,6 @@ export type Restaurant = {
   deliveryTimeMin: number;
   deliveryTimeMax: number;
   deliveryFee: number;
+  minimumOrderValue: number;
   isActive: boolean;
 };
