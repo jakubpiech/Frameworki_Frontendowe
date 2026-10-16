@@ -1,8 +1,9 @@
 import { Component, model, signal } from '@angular/core';
 import { Restaurant } from '../../Model/restaurant.model';
+import { RouterLink } from '@angular/router';
 
 @Component({
-  imports: [],
+  imports: [RouterLink],
   selector: 'app-restaurant-card',
   styleUrl: './restaurant-card.scss',
   templateUrl: './restaurant-card.html',
@@ -22,5 +23,7 @@ export class RestaurantCard {
     deliveryFee: 0,
     minimumOrderValue: 0,
     isActive: false,
+    address: '',
+    menuCategories: [],
   });
 }

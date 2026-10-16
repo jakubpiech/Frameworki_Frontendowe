@@ -1,5 +1,5 @@
 <section>
-  <div class="Name">{{ restaurant().name }}</div>
+  <div class="Name"><a [routerLink]="'/restaurants/' + restaurant().id">{{ restaurant().name }}</a></div>
   <div class="Description">{{ restaurant().description }}</div>
   <div class="cousineType">Kuchnia: {{ restaurant().cuisine }}</div>
   <div class="image"><img src="{{ restaurant().imageUrl }}" /></div>
@@ -10,5 +10,5 @@
   <div class="minimum-order-value">
     Minimalna wartość zamówienia: {{ restaurant().minimumOrderValue }}zł
   </div>
-  <div class="isActive">Aktywny: {{ restaurant().isActive }}</div>
+  <div class="isActive">Otwarty: {{ restaurant().isActive }}</div>
 </section>

@@ -1,0 +1,144 @@
+:host {
+  display: block;
+}
+
+.list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 17rem), 1fr));
+  gap: 1.25rem;
+  max-width: 80rem;
+  margin: 0 auto;
+  padding: clamp(1rem, 3vw, 2rem);
+}
+
+.filterSection {
+  grid-column: 1 / -1;
+  padding: clamp(1rem, 2.5vw, 1.5rem);
+  border: 1px solid #d8e2dc;
+  border-radius: 1rem;
+  background: #f6faf7;
+  box-shadow: 0 0.25rem 1rem rgb(20 55 37 / 6%);
+}
+
+form {
+  display: grid;
+  grid-template-areas:
+    'name-label cuisine-label status-label sort-label'
+    'name cuisine status sort'
+    'reset reset reset reset';
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 0.5rem 1rem;
+  align-items: end;
+}
+
+label {
+  color: #26382d;
+  font-size: 0.9rem;
+  font-weight: 600;
+}
+
+label[for='nameFilter'] {
+  grid-area: name-label;
+}
+
+label[for='cuisineFilter'] {
+  grid-area: cuisine-label;
+}
+
+label[for='statusFilter'] {
+  grid-area: status-label;
+}
+
+label[for='sortFilter'] {
+  grid-area: sort-label;
+}
+
+#nameFilter,
+#cuisineFilter,
+#statusFilter,
+#sortFilter {
+  box-sizing: border-box;
+  width: 100%;
+  min-height: 2.75rem;
+  padding: 0.6rem 0.75rem;
+  border: 1px solid #aebfb3;
+  border-radius: 0.5rem;
+  background: #fff;
+  color: #1e2c23;
+  font: inherit;
+}
+
+#nameFilter {
+  grid-area: name;
+}
+
+#cuisineFilter {
+  grid-area: cuisine;
+}
+
+#statusFilter {
+  grid-area: status;
+}
+
+#sortFilter {
+  grid-area: sort;
+}
+
+#nameFilter:focus-visible,
+#cuisineFilter:focus-visible,
+#statusFilter:focus-visible,
+#sortFilter:focus-visible,
+button:focus-visible {
+  outline: 3px solid #28784b;
+  outline-offset: 2px;
+}
+
+button {
+  grid-area: reset;
+  justify-self: start;
+  min-height: 2.75rem;
+  margin-top: 0.5rem;
+  padding: 0.65rem 1rem;
+  border: 0;
+  border-radius: 0.5rem;
+  background: #28784b;
+  color: #fff;
+  cursor: pointer;
+  font: inherit;
+  font-weight: 600;
+  transition: background-color 150ms ease;
+}
+
+button:hover {
+  background: #1f603b;
+}
+
+app-restaurant-card {
+  min-width: 0;
+}
+
+@media (max-width: 48rem) {
+  form {
+    grid-template-areas:
+      'name-label'
+      'name'
+      'cuisine-label'
+      'cuisine'
+      'status-label'
+      'status'
+      'sort-label'
+      'sort'
+      'reset';
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  button {
+    justify-self: stretch;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  button {
+    transition: none;
+  }
+}

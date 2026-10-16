@@ -10,4 +10,19 @@ export type Restaurant = {
   deliveryFee: number;
   minimumOrderValue: number;
   isActive: boolean;
+  address: string;
+  menuCategories: MenuCategory[];
+};
+export type Product = {
+  id: number;
+  name: string;
+  description: string;
+  price: number;
+  imageUrl: string;
+  isAvailable: boolean;
+};
+export type MenuCategory = {
+  id: number;
+  name: string;
+  products: Product[];
 };
