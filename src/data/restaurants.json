@@ -10,7 +10,8 @@
     "deliveryTimeMax": 40,
     "deliveryFee": 8.99,
     "minimumOrderValue": 35,
-    "isActive": true
+    "isActive": true,
+    "address": "ul. Marszałkowska 1, Warszawa"
   },
   {
     "id": 2,
@@ -23,7 +24,8 @@
     "deliveryTimeMax": 50,
     "deliveryFee": 0,
     "minimumOrderValue": 50,
-    "isActive": true
+    "isActive": true,
+    "address": "ul. Floriańska 8, Kraków"
   },
   {
     "id": 3,
@@ -36,7 +38,8 @@
     "deliveryTimeMax": 35,
     "deliveryFee": 6.5,
     "minimumOrderValue": 40,
-    "isActive": true
+    "isActive": true,
+    "address": "ul. Piotrkowska 15, Wrocław"
   },
   {
     "id": 4,
@@ -49,7 +52,8 @@
     "deliveryTimeMax": 55,
     "deliveryFee": 11,
     "minimumOrderValue": 60,
-    "isActive": true
+    "isActive": true,
+    "address": "ul. Półwiejska 22, Poznań"
   },
   {
     "id": 5,
@@ -62,7 +66,8 @@
     "deliveryTimeMax": 60,
     "deliveryFee": 9.5,
     "minimumOrderValue": 45,
-    "isActive": true
+    "isActive": true,
+    "address": "ul. Kościuszki 29, Gdańsk"
   },
   {
     "id": 6,
@@ -70,12 +75,13 @@
     "description": "Obfite dania kuchni polskiej: kotlet schabowy, żurek w chlebie i golonka.",
     "cuisine": "polish",
     "imageUrl": "https://images.unsplash.com/photo-1544025162-d76694265947",
-    "rating": 5.0,
+    "rating": 5,
     "deliveryTimeMin": 30,
     "deliveryTimeMax": 50,
     "deliveryFee": 7.99,
     "minimumOrderValue": 40,
-    "isActive": true
+    "isActive": true,
+    "address": "ul. Złota 36, Łódź"
   },
   {
     "id": 7,
@@ -88,7 +94,8 @@
     "deliveryTimeMax": 40,
     "deliveryFee": 5,
     "minimumOrderValue": 30,
-    "isActive": true
+    "isActive": true,
+    "address": "ul. Mokotowska 43, Katowice"
   },
   {
     "id": 8,
@@ -101,7 +108,8 @@
     "deliveryTimeMax": 70,
     "deliveryFee": 14.99,
     "minimumOrderValue": 80,
-    "isActive": true
+    "isActive": true,
+    "address": "ul. Karmelicka 50, Szczecin"
   },
   {
     "id": 9,
@@ -114,7 +122,8 @@
     "deliveryTimeMax": 45,
     "deliveryFee": 0,
     "minimumOrderValue": 50,
-    "isActive": true
+    "isActive": true,
+    "address": "ul. Świdnicka 57, Gdynia"
   },
   {
     "id": 10,
@@ -127,7 +136,8 @@
     "deliveryTimeMax": 30,
     "deliveryFee": 4.99,
     "minimumOrderValue": 25,
-    "isActive": true
+    "isActive": true,
+    "address": "ul. Staromiejska 64, Lublin"
   },
   {
     "id": 11,
@@ -140,7 +150,8 @@
     "deliveryTimeMax": 50,
     "deliveryFee": 8,
     "minimumOrderValue": 30,
-    "isActive": true
+    "isActive": true,
+    "address": "ul. Powstańców Śląskich 71, Warszawa"
   },
   {
     "id": 12,
@@ -153,7 +164,8 @@
     "deliveryTimeMax": 55,
     "deliveryFee": 12,
     "minimumOrderValue": 70,
-    "isActive": true
+    "isActive": true,
+    "address": "ul. Poznańska 78, Kraków"
   },
   {
     "id": 13,
@@ -166,7 +178,8 @@
     "deliveryTimeMax": 40,
     "deliveryFee": 7.5,
     "minimumOrderValue": 40,
-    "isActive": true
+    "isActive": true,
+    "address": "ul. Dworcowa 85, Wrocław"
   },
   {
     "id": 14,
@@ -179,7 +192,8 @@
     "deliveryTimeMax": 50,
     "deliveryFee": 9.99,
     "minimumOrderValue": 55,
-    "isActive": true
+    "isActive": true,
+    "address": "ul. Garbary 92, Poznań"
   },
   {
     "id": 15,
@@ -192,7 +206,8 @@
     "deliveryTimeMax": 35,
     "deliveryFee": 6,
     "minimumOrderValue": 35,
-    "isActive": true
+    "isActive": true,
+    "address": "ul. Krakowskie Przedmieście 99, Gdańsk"
   },
   {
     "id": 16,
@@ -205,7 +220,8 @@
     "deliveryTimeMax": 35,
     "deliveryFee": 5.99,
     "minimumOrderValue": 30,
-    "isActive": true
+    "isActive": true,
+    "address": "ul. Szewska 106, Łódź"
   },
   {
     "id": 17,
@@ -218,7 +234,8 @@
     "deliveryTimeMax": 45,
     "deliveryFee": 0,
     "minimumOrderValue": 45,
-    "isActive": true
+    "isActive": true,
+    "address": "ul. Świętojańska 113, Katowice"
   },
   {
     "id": 18,
@@ -231,7 +248,8 @@
     "deliveryTimeMax": 50,
     "deliveryFee": 8.5,
     "minimumOrderValue": 35,
-    "isActive": false
+    "isActive": false,
+    "address": "ul. Słowackiego 120, Szczecin"
   },
   {
     "id": 19,
@@ -244,7 +262,8 @@
     "deliveryTimeMax": 65,
     "deliveryFee": 15,
     "minimumOrderValue": 90,
-    "isActive": true
+    "isActive": true,
+    "address": "ul. Chmielna 127, Gdynia"
   },
   {
     "id": 20,
@@ -257,7 +276,8 @@
     "deliveryTimeMax": 35,
     "deliveryFee": 5.5,
     "minimumOrderValue": 30,
-    "isActive": true
+    "isActive": true,
+    "address": "ul. Miodowa 134, Lublin"
   },
   {
     "id": 21,
@@ -270,7 +290,8 @@
     "deliveryTimeMax": 30,
     "deliveryFee": 4,
     "minimumOrderValue": 20,
-    "isActive": true
+    "isActive": true,
+    "address": "ul. Lipowa 141, Warszawa"
   },
   {
     "id": 22,
@@ -283,7 +304,8 @@
     "deliveryTimeMax": 40,
     "deliveryFee": 7.99,
     "minimumOrderValue": 45,
-    "isActive": true
+    "isActive": true,
+    "address": "ul. Jana Pawła II 148, Kraków"
   },
   {
     "id": 23,
@@ -296,7 +318,8 @@
     "deliveryTimeMax": 45,
     "deliveryFee": 6.99,
     "minimumOrderValue": 40,
-    "isActive": true
+    "isActive": true,
+    "address": "ul. Wita Stwosza 155, Wrocław"
   },
   {
     "id": 24,
@@ -309,7 +332,8 @@
     "deliveryTimeMax": 55,
     "deliveryFee": 10,
     "minimumOrderValue": 60,
-    "isActive": true
+    "isActive": true,
+    "address": "ul. Moniuszki 162, Poznań"
   },
   {
     "id": 25,
@@ -317,12 +341,13 @@
     "description": "Kanton i Syczuan na jednym talerzu. Ostre dania z pędami bambusa i grzybami mun.",
     "cuisine": "chinese",
     "imageUrl": "https://images.unsplash.com/photo-1525755662778-989d0524087e",
-    "rating": 4.0,
+    "rating": 4,
     "deliveryTimeMin": 25,
     "deliveryTimeMax": 40,
     "deliveryFee": 7,
     "minimumOrderValue": 35,
-    "isActive": false
+    "isActive": false,
+    "address": "ul. Wrocławska 169, Gdańsk"
   },
   {
     "id": 26,
@@ -335,7 +360,8 @@
     "deliveryTimeMax": 25,
     "deliveryFee": 3.99,
     "minimumOrderValue": 15,
-    "isActive": true
+    "isActive": true,
+    "address": "ul. Francuska 176, Łódź"
   },
   {
     "id": 27,
@@ -348,7 +374,8 @@
     "deliveryTimeMax": 65,
     "deliveryFee": 16,
     "minimumOrderValue": 100,
-    "isActive": true
+    "isActive": true,
+    "address": "ul. Święty Marcin 3, Katowice"
   },
   {
     "id": 28,
@@ -356,12 +383,13 @@
     "description": "Cienkie, chrupiące brzegi burgera smash, ser cheddar i domowa bułka brioche.",
     "cuisine": "american",
     "imageUrl": "https://images.unsplash.com/photo-1568901346375-23c9450c58cd",
-    "rating": 5.0,
+    "rating": 5,
     "deliveryTimeMin": 20,
     "deliveryTimeMax": 35,
     "deliveryFee": 5,
     "minimumOrderValue": 35,
-    "isActive": true
+    "isActive": true,
+    "address": "ul. Nowy Świat 10, Szczecin"
   },
   {
     "id": 29,
@@ -374,7 +402,8 @@
     "deliveryTimeMax": 45,
     "deliveryFee": 8,
     "minimumOrderValue": 40,
-    "isActive": true
+    "isActive": true,
+    "address": "ul. Grodzka 17, Gdynia"
   },
   {
     "id": 30,
@@ -387,7 +416,8 @@
     "deliveryTimeMax": 50,
     "deliveryFee": 9,
     "minimumOrderValue": 50,
-    "isActive": true
+    "isActive": true,
+    "address": "ul. Długa 24, Lublin"
   },
   {
     "id": 31,
@@ -400,7 +430,8 @@
     "deliveryTimeMax": 60,
     "deliveryFee": 10,
     "minimumOrderValue": 60,
-    "isActive": true
+    "isActive": true,
+    "address": "ul. Mickiewicza 31, Warszawa"
   },
   {
     "id": 32,
@@ -413,7 +444,8 @@
     "deliveryTimeMax": 40,
     "deliveryFee": 6,
     "minimumOrderValue": 35,
-    "isActive": true
+    "isActive": true,
+    "address": "ul. Piłsudskiego 38, Kraków"
   },
   {
     "id": 33,
@@ -426,7 +458,8 @@
     "deliveryTimeMax": 60,
     "deliveryFee": 12,
     "minimumOrderValue": 75,
-    "isActive": true
+    "isActive": true,
+    "address": "ul. Sienna 45, Wrocław"
   },
   {
     "id": 34,
@@ -439,7 +472,8 @@
     "deliveryTimeMax": 50,
     "deliveryFee": 8.99,
     "minimumOrderValue": 45,
-    "isActive": true
+    "isActive": true,
+    "address": "ul. Solec 52, Poznań"
   },
   {
     "id": 35,
@@ -452,7 +486,8 @@
     "deliveryTimeMax": 35,
     "deliveryFee": 5,
     "minimumOrderValue": 25,
-    "isActive": false
+    "isActive": false,
+    "address": "ul. Stradomska 59, Gdańsk"
   },
   {
     "id": 36,
@@ -465,7 +500,8 @@
     "deliveryTimeMax": 35,
     "deliveryFee": 6.5,
     "minimumOrderValue": 30,
-    "isActive": true
+    "isActive": true,
+    "address": "ul. Oławska 66, Łódź"
   },
   {
     "id": 37,
@@ -478,7 +514,8 @@
     "deliveryTimeMax": 50,
     "deliveryFee": 0,
     "minimumOrderValue": 55,
-    "isActive": true
+    "isActive": true,
+    "address": "ul. Mariacka 73, Katowice"
   },
   {
     "id": 38,
@@ -491,7 +528,8 @@
     "deliveryTimeMax": 75,
     "deliveryFee": 11,
     "minimumOrderValue": 65,
-    "isActive": true
+    "isActive": true,
+    "address": "ul. Legionów 80, Szczecin"
   },
   {
     "id": 39,
@@ -504,7 +542,8 @@
     "deliveryTimeMax": 50,
     "deliveryFee": 9.5,
     "minimumOrderValue": 50,
-    "isActive": true
+    "isActive": true,
+    "address": "ul. Królewska 87, Gdynia"
   },
   {
     "id": 40,
@@ -517,7 +556,8 @@
     "deliveryTimeMax": 35,
     "deliveryFee": 6,
     "minimumOrderValue": 35,
-    "isActive": true
+    "isActive": true,
+    "address": "ul. Jagiellońska 94, Lublin"
   },
   {
     "id": 41,
@@ -530,7 +570,8 @@
     "deliveryTimeMax": 40,
     "deliveryFee": 5.5,
     "minimumOrderValue": 30,
-    "isActive": true
+    "isActive": true,
+    "address": "ul. Marszałkowska 101, Warszawa"
   },
   {
     "id": 42,
@@ -543,7 +584,8 @@
     "deliveryTimeMax": 35,
     "deliveryFee": 7,
     "minimumOrderValue": 35,
-    "isActive": true
+    "isActive": true,
+    "address": "ul. Floriańska 108, Kraków"
   },
   {
     "id": 43,
@@ -551,12 +593,13 @@
     "description": "Amerykańskie hot dogi z kiełbaską wołową, prażoną cebulką i relishem ogórkowym.",
     "cuisine": "american",
     "imageUrl": "https://images.unsplash.com/photo-1619740455993-9e612b1af08a",
-    "rating": 4.0,
+    "rating": 4,
     "deliveryTimeMin": 15,
     "deliveryTimeMax": 30,
     "deliveryFee": 4.99,
     "minimumOrderValue": 25,
-    "isActive": true
+    "isActive": true,
+    "address": "ul. Piotrkowska 115, Wrocław"
   },
   {
     "id": 44,
@@ -569,7 +612,8 @@
     "deliveryTimeMax": 55,
     "deliveryFee": 10.5,
     "minimumOrderValue": 60,
-    "isActive": true
+    "isActive": true,
+    "address": "ul. Półwiejska 122, Poznań"
   },
   {
     "id": 45,
@@ -582,7 +626,8 @@
     "deliveryTimeMax": 30,
     "deliveryFee": 3.99,
     "minimumOrderValue": 20,
-    "isActive": false
+    "isActive": false,
+    "address": "ul. Kościuszki 129, Gdańsk"
   },
   {
     "id": 46,
@@ -595,7 +640,8 @@
     "deliveryTimeMax": 50,
     "deliveryFee": 8.99,
     "minimumOrderValue": 45,
-    "isActive": true
+    "isActive": true,
+    "address": "ul. Złota 136, Łódź"
   },
   {
     "id": 47,
@@ -608,7 +654,8 @@
     "deliveryTimeMax": 60,
     "deliveryFee": 13.5,
     "minimumOrderValue": 80,
-    "isActive": true
+    "isActive": true,
+    "address": "ul. Mokotowska 143, Katowice"
   },
   {
     "id": 48,
@@ -621,7 +668,8 @@
     "deliveryTimeMax": 40,
     "deliveryFee": 7.5,
     "minimumOrderValue": 40,
-    "isActive": true
+    "isActive": true,
+    "address": "ul. Karmelicka 150, Szczecin"
   },
   {
     "id": 49,
@@ -634,7 +682,8 @@
     "deliveryTimeMax": 45,
     "deliveryFee": 8,
     "minimumOrderValue": 45,
-    "isActive": true
+    "isActive": true,
+    "address": "ul. Świdnicka 157, Gdynia"
   },
   {
     "id": 50,
@@ -647,7 +696,8 @@
     "deliveryTimeMax": 45,
     "deliveryFee": 7.99,
     "minimumOrderValue": 40,
-    "isActive": true
+    "isActive": true,
+    "address": "ul. Staromiejska 164, Lublin"
   },
   {
     "id": 51,
@@ -660,7 +710,8 @@
     "deliveryTimeMax": 55,
     "deliveryFee": 9.99,
     "minimumOrderValue": 50,
-    "isActive": true
+    "isActive": true,
+    "address": "ul. Powstańców Śląskich 171, Warszawa"
   },
   {
     "id": 52,
@@ -673,7 +724,8 @@
     "deliveryTimeMax": 45,
     "deliveryFee": 6,
     "minimumOrderValue": 40,
-    "isActive": true
+    "isActive": true,
+    "address": "ul. Poznańska 178, Kraków"
   },
   {
     "id": 53,
@@ -686,7 +738,8 @@
     "deliveryTimeMax": 60,
     "deliveryFee": 12,
     "minimumOrderValue": 70,
-    "isActive": true
+    "isActive": true,
+    "address": "ul. Dworcowa 5, Wrocław"
   },
   {
     "id": 54,
@@ -699,7 +752,8 @@
     "deliveryTimeMax": 35,
     "deliveryFee": 5.99,
     "minimumOrderValue": 35,
-    "isActive": true
+    "isActive": true,
+    "address": "ul. Garbary 12, Poznań"
   },
   {
     "id": 55,
@@ -712,7 +766,8 @@
     "deliveryTimeMax": 50,
     "deliveryFee": 8.5,
     "minimumOrderValue": 55,
-    "isActive": true
+    "isActive": true,
+    "address": "ul. Krakowskie Przedmieście 19, Gdańsk"
   },
   {
     "id": 56,
@@ -725,7 +780,8 @@
     "deliveryTimeMax": 25,
     "deliveryFee": 4.5,
     "minimumOrderValue": 20,
-    "isActive": true
+    "isActive": true,
+    "address": "ul. Szewska 26, Łódź"
   },
   {
     "id": 57,
@@ -738,7 +794,8 @@
     "deliveryTimeMax": 55,
     "deliveryFee": 11,
     "minimumOrderValue": 75,
-    "isActive": true
+    "isActive": true,
+    "address": "ul. Świętojańska 33, Katowice"
   },
   {
     "id": 58,
@@ -751,7 +808,8 @@
     "deliveryTimeMax": 40,
     "deliveryFee": 6.99,
     "minimumOrderValue": 35,
-    "isActive": false
+    "isActive": false,
+    "address": "ul. Słowackiego 40, Szczecin"
   },
   {
     "id": 59,
@@ -764,7 +822,8 @@
     "deliveryTimeMax": 35,
     "deliveryFee": 5,
     "minimumOrderValue": 30,
-    "isActive": true
+    "isActive": true,
+    "address": "ul. Chmielna 47, Gdynia"
   },
   {
     "id": 60,
@@ -777,7 +836,8 @@
     "deliveryTimeMax": 40,
     "deliveryFee": 6.5,
     "minimumOrderValue": 35,
-    "isActive": true
+    "isActive": true,
+    "address": "ul. Miodowa 54, Lublin"
   },
   {
     "id": 61,
@@ -790,7 +850,8 @@
     "deliveryTimeMax": 35,
     "deliveryFee": 5.99,
     "minimumOrderValue": 25,
-    "isActive": true
+    "isActive": true,
+    "address": "ul. Lipowa 61, Warszawa"
   },
   {
     "id": 62,
@@ -798,12 +859,13 @@
     "description": "Świeży makaron wyrabiany codziennie rano, ravioli z borowikami.",
     "cuisine": "italian",
     "imageUrl": "https://images.unsplash.com/photo-1621996346565-e3d5d6281292",
-    "rating": 5.0,
+    "rating": 5,
     "deliveryTimeMin": 25,
     "deliveryTimeMax": 40,
     "deliveryFee": 7,
     "minimumOrderValue": 45,
-    "isActive": true
+    "isActive": true,
+    "address": "ul. Jana Pawła II 68, Kraków"
   },
   {
     "id": 63,
@@ -816,7 +878,8 @@
     "deliveryTimeMax": 35,
     "deliveryFee": 6,
     "minimumOrderValue": 30,
-    "isActive": true
+    "isActive": true,
+    "address": "ul. Wita Stwosza 75, Wrocław"
   },
   {
     "id": 64,
@@ -829,7 +892,8 @@
     "deliveryTimeMax": 50,
     "deliveryFee": 9,
     "minimumOrderValue": 50,
-    "isActive": true
+    "isActive": true,
+    "address": "ul. Moniuszki 82, Poznań"
   },
   {
     "id": 65,
@@ -837,12 +901,13 @@
     "description": "Słodko-kwaśna wieprzowina, chrupiące sajgonki i zupa pikantno-kwaśna.",
     "cuisine": "chinese",
     "imageUrl": "https://images.unsplash.com/photo-1585032226651-759b368d7246",
-    "rating": 4.0,
+    "rating": 4,
     "deliveryTimeMin": 25,
     "deliveryTimeMax": 40,
     "deliveryFee": 7,
     "minimumOrderValue": 30,
-    "isActive": true
+    "isActive": true,
+    "address": "ul. Wrocławska 89, Gdańsk"
   },
   {
     "id": 66,
@@ -855,7 +920,8 @@
     "deliveryTimeMax": 35,
     "deliveryFee": 5,
     "minimumOrderValue": 25,
-    "isActive": true
+    "isActive": true,
+    "address": "ul. Francuska 96, Łódź"
   },
   {
     "id": 67,
@@ -868,7 +934,8 @@
     "deliveryTimeMax": 55,
     "deliveryFee": 12.99,
     "minimumOrderValue": 70,
-    "isActive": true
+    "isActive": true,
+    "address": "ul. Święty Marcin 103, Katowice"
   },
   {
     "id": 68,
@@ -881,7 +948,8 @@
     "deliveryTimeMax": 45,
     "deliveryFee": 8.5,
     "minimumOrderValue": 45,
-    "isActive": false
+    "isActive": false,
+    "address": "ul. Nowy Świat 110, Szczecin"
   },
   {
     "id": 69,
@@ -894,7 +962,8 @@
     "deliveryTimeMax": 60,
     "deliveryFee": 14,
     "minimumOrderValue": 85,
-    "isActive": true
+    "isActive": true,
+    "address": "ul. Grodzka 117, Gdynia"
   },
   {
     "id": 70,
@@ -907,7 +976,8 @@
     "deliveryTimeMax": 35,
     "deliveryFee": 5.5,
     "minimumOrderValue": 30,
-    "isActive": true
+    "isActive": true,
+    "address": "ul. Długa 124, Lublin"
   },
   {
     "id": 71,
@@ -920,7 +990,8 @@
     "deliveryTimeMax": 35,
     "deliveryFee": 4.99,
     "minimumOrderValue": 25,
-    "isActive": true
+    "isActive": true,
+    "address": "ul. Mickiewicza 131, Warszawa"
   },
   {
     "id": 72,
@@ -933,7 +1004,8 @@
     "deliveryTimeMax": 50,
     "deliveryFee": 6.99,
     "minimumOrderValue": 35,
-    "isActive": true
+    "isActive": true,
+    "address": "ul. Piłsudskiego 138, Kraków"
   },
   {
     "id": 73,
@@ -946,7 +1018,8 @@
     "deliveryTimeMax": 40,
     "deliveryFee": 7,
     "minimumOrderValue": 40,
-    "isActive": true
+    "isActive": true,
+    "address": "ul. Sienna 145, Wrocław"
   },
   {
     "id": 74,
@@ -954,12 +1027,13 @@
     "description": "Pyszna tajska klasyka: Tom Kha Gai na mleczku kokosowym i trawie cytrynowej.",
     "cuisine": "thai",
     "imageUrl": "https://images.unsplash.com/photo-1626804475297-41608e074eb1",
-    "rating": 5.0,
+    "rating": 5,
     "deliveryTimeMin": 25,
     "deliveryTimeMax": 45,
     "deliveryFee": 8,
     "minimumOrderValue": 40,
-    "isActive": true
+    "isActive": true,
+    "address": "ul. Solec 152, Poznań"
   },
   {
     "id": 75,
@@ -972,7 +1046,8 @@
     "deliveryTimeMax": 35,
     "deliveryFee": 6,
     "minimumOrderValue": 35,
-    "isActive": true
+    "isActive": true,
+    "address": "ul. Stradomska 159, Gdańsk"
   },
   {
     "id": 76,
@@ -985,7 +1060,8 @@
     "deliveryTimeMax": 50,
     "deliveryFee": 9,
     "minimumOrderValue": 40,
-    "isActive": true
+    "isActive": true,
+    "address": "ul. Oławska 166, Łódź"
   },
   {
     "id": 77,
@@ -998,7 +1074,8 @@
     "deliveryTimeMax": 40,
     "deliveryFee": 5.5,
     "minimumOrderValue": 35,
-    "isActive": true
+    "isActive": true,
+    "address": "ul. Mariacka 173, Katowice"
   },
   {
     "id": 78,
@@ -1011,7 +1088,8 @@
     "deliveryTimeMax": 55,
     "deliveryFee": 10,
     "minimumOrderValue": 60,
-    "isActive": true
+    "isActive": true,
+    "address": "ul. Legionów 180, Szczecin"
   },
   {
     "id": 79,
@@ -1024,7 +1102,8 @@
     "deliveryTimeMax": 50,
     "deliveryFee": 9.99,
     "minimumOrderValue": 55,
-    "isActive": true
+    "isActive": true,
+    "address": "ul. Królewska 7, Gdynia"
   },
   {
     "id": 80,
@@ -1037,7 +1116,8 @@
     "deliveryTimeMax": 35,
     "deliveryFee": 6.5,
     "minimumOrderValue": 35,
-    "isActive": true
+    "isActive": true,
+    "address": "ul. Jagiellońska 14, Lublin"
   },
   {
     "id": 81,
@@ -1050,7 +1130,8 @@
     "deliveryTimeMax": 65,
     "deliveryFee": 12,
     "minimumOrderValue": 80,
-    "isActive": true
+    "isActive": true,
+    "address": "ul. Marszałkowska 21, Warszawa"
   },
   {
     "id": 82,
@@ -1063,7 +1144,8 @@
     "deliveryTimeMax": 30,
     "deliveryFee": 4.99,
     "minimumOrderValue": 30,
-    "isActive": true
+    "isActive": true,
+    "address": "ul. Floriańska 28, Kraków"
   },
   {
     "id": 83,
@@ -1076,7 +1158,8 @@
     "deliveryTimeMax": 35,
     "deliveryFee": 5.99,
     "minimumOrderValue": 35,
-    "isActive": true
+    "isActive": true,
+    "address": "ul. Piotrkowska 35, Wrocław"
   },
   {
     "id": 84,
@@ -1089,7 +1172,8 @@
     "deliveryTimeMax": 60,
     "deliveryFee": 13,
     "minimumOrderValue": 75,
-    "isActive": true
+    "isActive": true,
+    "address": "ul. Półwiejska 42, Poznań"
   },
   {
     "id": 85,
@@ -1102,7 +1186,8 @@
     "deliveryTimeMax": 35,
     "deliveryFee": 5,
     "minimumOrderValue": 25,
-    "isActive": false
+    "isActive": false,
+    "address": "ul. Kościuszki 49, Gdańsk"
   },
   {
     "id": 86,
@@ -1115,7 +1200,8 @@
     "deliveryTimeMax": 35,
     "deliveryFee": 4.5,
     "minimumOrderValue": 25,
-    "isActive": true
+    "isActive": true,
+    "address": "ul. Złota 56, Łódź"
   },
   {
     "id": 87,
@@ -1128,7 +1214,8 @@
     "deliveryTimeMax": 45,
     "deliveryFee": 7.5,
     "minimumOrderValue": 40,
-    "isActive": true
+    "isActive": true,
+    "address": "ul. Mokotowska 63, Katowice"
   },
   {
     "id": 88,
@@ -1141,7 +1228,8 @@
     "deliveryTimeMax": 50,
     "deliveryFee": 9,
     "minimumOrderValue": 50,
-    "isActive": true
+    "isActive": true,
+    "address": "ul. Karmelicka 70, Szczecin"
   },
   {
     "id": 89,
@@ -1154,7 +1242,8 @@
     "deliveryTimeMax": 40,
     "deliveryFee": 6.99,
     "minimumOrderValue": 35,
-    "isActive": true
+    "isActive": true,
+    "address": "ul. Świdnicka 77, Gdynia"
   },
   {
     "id": 90,
@@ -1167,7 +1256,8 @@
     "deliveryTimeMax": 40,
     "deliveryFee": 6,
     "minimumOrderValue": 30,
-    "isActive": true
+    "isActive": true,
+    "address": "ul. Staromiejska 84, Lublin"
   },
   {
     "id": 91,
@@ -1180,7 +1270,8 @@
     "deliveryTimeMax": 50,
     "deliveryFee": 8,
     "minimumOrderValue": 45,
-    "isActive": true
+    "isActive": true,
+    "address": "ul. Powstańców Śląskich 91, Warszawa"
   },
   {
     "id": 92,
@@ -1193,7 +1284,8 @@
     "deliveryTimeMax": 35,
     "deliveryFee": 5,
     "minimumOrderValue": 30,
-    "isActive": true
+    "isActive": true,
+    "address": "ul. Poznańska 98, Kraków"
   },
   {
     "id": 93,
@@ -1206,7 +1298,8 @@
     "deliveryTimeMax": 55,
     "deliveryFee": 9.5,
     "minimumOrderValue": 50,
-    "isActive": true
+    "isActive": true,
+    "address": "ul. Dworcowa 105, Wrocław"
   },
   {
     "id": 94,
@@ -1214,12 +1307,13 @@
     "description": "Aromatyczne potrawy z mięsa mielonego smażone z tajską bazylią i jajkiem sadzonym.",
     "cuisine": "thai",
     "imageUrl": "https://images.unsplash.com/photo-1559314809-0d155014e29e",
-    "rating": 5.0,
+    "rating": 5,
     "deliveryTimeMin": 25,
     "deliveryTimeMax": 45,
     "deliveryFee": 7.99,
     "minimumOrderValue": 40,
-    "isActive": true
+    "isActive": true,
+    "address": "ul. Garbary 112, Poznań"
   },
   {
     "id": 95,
@@ -1232,7 +1326,8 @@
     "deliveryTimeMax": 60,
     "deliveryFee": 11,
     "minimumOrderValue": 70,
-    "isActive": true
+    "isActive": true,
+    "address": "ul. Krakowskie Przedmieście 119, Gdańsk"
   },
   {
     "id": 96,
@@ -1245,7 +1340,8 @@
     "deliveryTimeMax": 50,
     "deliveryFee": 7.5,
     "minimumOrderValue": 40,
-    "isActive": true
+    "isActive": true,
+    "address": "ul. Szewska 126, Łódź"
   },
   {
     "id": 97,
@@ -1258,7 +1354,8 @@
     "deliveryTimeMax": 50,
     "deliveryFee": 10,
     "minimumOrderValue": 60,
-    "isActive": true
+    "isActive": true,
+    "address": "ul. Świętojańska 133, Katowice"
   },
   {
     "id": 98,
@@ -1271,7 +1368,8 @@
     "deliveryTimeMax": 35,
     "deliveryFee": 5.5,
     "minimumOrderValue": 30,
-    "isActive": true
+    "isActive": true,
+    "address": "ul. Słowackiego 140, Szczecin"
   },
   {
     "id": 99,
@@ -1284,7 +1382,8 @@
     "deliveryTimeMax": 40,
     "deliveryFee": 6.99,
     "minimumOrderValue": 35,
-    "isActive": true
+    "isActive": true,
+    "address": "ul. Chmielna 147, Gdynia"
   },
   {
     "id": 100,
@@ -1297,7 +1396,8 @@
     "deliveryTimeMax": 40,
     "deliveryFee": 6,
     "minimumOrderValue": 35,
-    "isActive": true
+    "isActive": true,
+    "address": "ul. Miodowa 154, Lublin"
   },
   {
     "id": 101,
@@ -1310,7 +1410,8 @@
     "deliveryTimeMax": 45,
     "deliveryFee": 6.5,
     "minimumOrderValue": 30,
-    "isActive": false
+    "isActive": false,
+    "address": "ul. Lipowa 161, Warszawa"
   },
   {
     "id": 102,
@@ -1323,7 +1424,8 @@
     "deliveryTimeMax": 40,
     "deliveryFee": 5,
     "minimumOrderValue": 35,
-    "isActive": true
+    "isActive": true,
+    "address": "ul. Jana Pawła II 168, Kraków"
   },
   {
     "id": 103,
@@ -1336,7 +1438,8 @@
     "deliveryTimeMax": 65,
     "deliveryFee": 12.5,
     "minimumOrderValue": 75,
-    "isActive": true
+    "isActive": true,
+    "address": "ul. Wita Stwosza 175, Wrocław"
   },
   {
     "id": 104,
@@ -1349,7 +1452,8 @@
     "deliveryTimeMax": 45,
     "deliveryFee": 8,
     "minimumOrderValue": 45,
-    "isActive": true
+    "isActive": true,
+    "address": "ul. Moniuszki 2, Poznań"
   },
   {
     "id": 105,
@@ -1362,7 +1466,8 @@
     "deliveryTimeMax": 30,
     "deliveryFee": 4.5,
     "minimumOrderValue": 25,
-    "isActive": true
+    "isActive": true,
+    "address": "ul. Wrocławska 9, Gdańsk"
   },
   {
     "id": 106,
@@ -1375,7 +1480,8 @@
     "deliveryTimeMax": 35,
     "deliveryFee": 5,
     "minimumOrderValue": 25,
-    "isActive": true
+    "isActive": true,
+    "address": "ul. Francuska 16, Łódź"
   },
   {
     "id": 107,
@@ -1388,7 +1494,8 @@
     "deliveryTimeMax": 45,
     "deliveryFee": 7,
     "minimumOrderValue": 40,
-    "isActive": true
+    "isActive": true,
+    "address": "ul. Święty Marcin 23, Katowice"
   },
   {
     "id": 108,
@@ -1401,7 +1508,8 @@
     "deliveryTimeMax": 35,
     "deliveryFee": 5.99,
     "minimumOrderValue": 35,
-    "isActive": true
+    "isActive": true,
+    "address": "ul. Nowy Świat 30, Szczecin"
   },
   {
     "id": 109,
@@ -1414,7 +1522,8 @@
     "deliveryTimeMax": 40,
     "deliveryFee": 7.5,
     "minimumOrderValue": 40,
-    "isActive": true
+    "isActive": true,
+    "address": "ul. Grodzka 37, Gdynia"
   },
   {
     "id": 110,
@@ -1427,7 +1536,8 @@
     "deliveryTimeMax": 40,
     "deliveryFee": 6,
     "minimumOrderValue": 35,
-    "isActive": true
+    "isActive": true,
+    "address": "ul. Długa 44, Lublin"
   },
   {
     "id": 111,
@@ -1440,7 +1550,8 @@
     "deliveryTimeMax": 50,
     "deliveryFee": 8.99,
     "minimumOrderValue": 45,
-    "isActive": true
+    "isActive": true,
+    "address": "ul. Mickiewicza 51, Warszawa"
   },
   {
     "id": 112,
@@ -1453,7 +1564,8 @@
     "deliveryTimeMax": 45,
     "deliveryFee": 8,
     "minimumOrderValue": 50,
-    "isActive": true
+    "isActive": true,
+    "address": "ul. Piłsudskiego 58, Kraków"
   },
   {
     "id": 113,
@@ -1466,7 +1578,8 @@
     "deliveryTimeMax": 35,
     "deliveryFee": 6,
     "minimumOrderValue": 35,
-    "isActive": true
+    "isActive": true,
+    "address": "ul. Sienna 65, Wrocław"
   },
   {
     "id": 114,
@@ -1479,7 +1592,8 @@
     "deliveryTimeMax": 40,
     "deliveryFee": 6.5,
     "minimumOrderValue": 30,
-    "isActive": false
+    "isActive": false,
+    "address": "ul. Solec 72, Poznań"
   },
   {
     "id": 115,
@@ -1492,7 +1606,8 @@
     "deliveryTimeMax": 30,
     "deliveryFee": 4,
     "minimumOrderValue": 25,
-    "isActive": true
+    "isActive": true,
+    "address": "ul. Stradomska 79, Gdańsk"
   },
   {
     "id": 116,
@@ -1505,7 +1620,8 @@
     "deliveryTimeMax": 45,
     "deliveryFee": 6.99,
     "minimumOrderValue": 35,
-    "isActive": true
+    "isActive": true,
+    "address": "ul. Oławska 86, Łódź"
   },
   {
     "id": 117,
@@ -1518,7 +1634,8 @@
     "deliveryTimeMax": 35,
     "deliveryFee": 5,
     "minimumOrderValue": 30,
-    "isActive": true
+    "isActive": true,
+    "address": "ul. Mariacka 93, Katowice"
   },
   {
     "id": 118,
@@ -1531,7 +1648,8 @@
     "deliveryTimeMax": 55,
     "deliveryFee": 11,
     "minimumOrderValue": 65,
-    "isActive": true
+    "isActive": true,
+    "address": "ul. Legionów 100, Szczecin"
   },
   {
     "id": 119,
@@ -1544,7 +1662,8 @@
     "deliveryTimeMax": 40,
     "deliveryFee": 7,
     "minimumOrderValue": 40,
-    "isActive": true
+    "isActive": true,
+    "address": "ul. Królewska 107, Gdynia"
   },
   {
     "id": 120,
@@ -1552,12 +1671,13 @@
     "description": "Smażony makaron z wołowiną, warzywami bambusowymi i sosem sojowym.",
     "cuisine": "chinese",
     "imageUrl": "https://images.unsplash.com/photo-1563245372-f21724e3856d",
-    "rating": 4.0,
+    "rating": 4,
     "deliveryTimeMin": 20,
     "deliveryTimeMax": 35,
     "deliveryFee": 5,
     "minimumOrderValue": 30,
-    "isActive": true
+    "isActive": true,
+    "address": "ul. Jagiellońska 114, Lublin"
   },
   {
     "id": 121,
@@ -1565,12 +1685,13 @@
     "description": "Gulasz z dzika, pstrąg z patelni oraz tradycyjny chleb ze smalcem i ogórkiem.",
     "cuisine": "polish",
     "imageUrl": "https://images.unsplash.com/photo-1541529086526-db283c563270",
-    "rating": 5.0,
+    "rating": 5,
     "deliveryTimeMin": 35,
     "deliveryTimeMax": 55,
     "deliveryFee": 9,
     "minimumOrderValue": 50,
-    "isActive": true
+    "isActive": true,
+    "address": "ul. Marszałkowska 121, Warszawa"
   },
   {
     "id": 122,
@@ -1583,7 +1704,8 @@
     "deliveryTimeMax": 50,
     "deliveryFee": 8.5,
     "minimumOrderValue": 55,
-    "isActive": true
+    "isActive": true,
+    "address": "ul. Floriańska 128, Kraków"
   },
   {
     "id": 123,
@@ -1596,7 +1718,8 @@
     "deliveryTimeMax": 65,
     "deliveryFee": 14,
     "minimumOrderValue": 80,
-    "isActive": true
+    "isActive": true,
+    "address": "ul. Piotrkowska 135, Wrocław"
   },
   {
     "id": 124,
@@ -1609,7 +1732,8 @@
     "deliveryTimeMax": 40,
     "deliveryFee": 6.99,
     "minimumOrderValue": 35,
-    "isActive": true
+    "isActive": true,
+    "address": "ul. Półwiejska 142, Poznań"
   },
   {
     "id": 125,
@@ -1622,7 +1746,8 @@
     "deliveryTimeMax": 45,
     "deliveryFee": 8,
     "minimumOrderValue": 45,
-    "isActive": true
+    "isActive": true,
+    "address": "ul. Kościuszki 149, Gdańsk"
   },
   {
     "id": 126,
@@ -1635,7 +1760,8 @@
     "deliveryTimeMax": 35,
     "deliveryFee": 4.99,
     "minimumOrderValue": 25,
-    "isActive": true
+    "isActive": true,
+    "address": "ul. Złota 156, Łódź"
   },
   {
     "id": 127,
@@ -1648,7 +1774,8 @@
     "deliveryTimeMax": 40,
     "deliveryFee": 6,
     "minimumOrderValue": 35,
-    "isActive": true
+    "isActive": true,
+    "address": "ul. Mokotowska 163, Katowice"
   },
   {
     "id": 128,
@@ -1661,7 +1788,8 @@
     "deliveryTimeMax": 40,
     "deliveryFee": 6.5,
     "minimumOrderValue": 35,
-    "isActive": true
+    "isActive": true,
+    "address": "ul. Karmelicka 170, Szczecin"
   },
   {
     "id": 129,
@@ -1674,7 +1802,8 @@
     "deliveryTimeMax": 45,
     "deliveryFee": 8.5,
     "minimumOrderValue": 45,
-    "isActive": true
+    "isActive": true,
+    "address": "ul. Świdnicka 177, Gdynia"
   },
   {
     "id": 130,
@@ -1687,7 +1816,8 @@
     "deliveryTimeMax": 40,
     "deliveryFee": 7,
     "minimumOrderValue": 40,
-    "isActive": false
+    "isActive": false,
+    "address": "ul. Staromiejska 4, Lublin"
   },
   {
     "id": 131,
@@ -1700,7 +1830,8 @@
     "deliveryTimeMax": 25,
     "deliveryFee": 3.99,
     "minimumOrderValue": 20,
-    "isActive": true
+    "isActive": true,
+    "address": "ul. Powstańców Śląskich 11, Warszawa"
   },
   {
     "id": 132,
@@ -1713,7 +1844,8 @@
     "deliveryTimeMax": 45,
     "deliveryFee": 6.5,
     "minimumOrderValue": 40,
-    "isActive": true
+    "isActive": true,
+    "address": "ul. Poznańska 18, Kraków"
   },
   {
     "id": 133,
@@ -1726,7 +1858,8 @@
     "deliveryTimeMax": 40,
     "deliveryFee": 8,
     "minimumOrderValue": 45,
-    "isActive": true
+    "isActive": true,
+    "address": "ul. Dworcowa 25, Wrocław"
   },
   {
     "id": 134,
@@ -1739,7 +1872,8 @@
     "deliveryTimeMax": 40,
     "deliveryFee": 7,
     "minimumOrderValue": 35,
-    "isActive": true
+    "isActive": true,
+    "address": "ul. Garbary 32, Poznań"
   },
   {
     "id": 135,
@@ -1752,7 +1886,8 @@
     "deliveryTimeMax": 30,
     "deliveryFee": 4.5,
     "minimumOrderValue": 25,
-    "isActive": true
+    "isActive": true,
+    "address": "ul. Krakowskie Przedmieście 39, Gdańsk"
   },
   {
     "id": 136,
@@ -1765,7 +1900,8 @@
     "deliveryTimeMax": 25,
     "deliveryFee": 3.5,
     "minimumOrderValue": 15,
-    "isActive": true
+    "isActive": true,
+    "address": "ul. Szewska 46, Łódź"
   },
   {
     "id": 137,
@@ -1778,7 +1914,8 @@
     "deliveryTimeMax": 40,
     "deliveryFee": 6.99,
     "minimumOrderValue": 40,
-    "isActive": true
+    "isActive": true,
+    "address": "ul. Świętojańska 53, Katowice"
   },
   {
     "id": 138,
@@ -1791,7 +1928,8 @@
     "deliveryTimeMax": 35,
     "deliveryFee": 6,
     "minimumOrderValue": 35,
-    "isActive": true
+    "isActive": true,
+    "address": "ul. Słowackiego 60, Szczecin"
   },
   {
     "id": 139,
@@ -1804,7 +1942,8 @@
     "deliveryTimeMax": 50,
     "deliveryFee": 8.99,
     "minimumOrderValue": 50,
-    "isActive": true
+    "isActive": true,
+    "address": "ul. Chmielna 67, Gdynia"
   },
   {
     "id": 140,
@@ -1817,7 +1956,8 @@
     "deliveryTimeMax": 40,
     "deliveryFee": 6.5,
     "minimumOrderValue": 35,
-    "isActive": true
+    "isActive": true,
+    "address": "ul. Miodowa 74, Lublin"
   },
   {
     "id": 141,
@@ -1830,7 +1970,8 @@
     "deliveryTimeMax": 40,
     "deliveryFee": 5.99,
     "minimumOrderValue": 30,
-    "isActive": true
+    "isActive": true,
+    "address": "ul. Lipowa 81, Warszawa"
   },
   {
     "id": 142,
@@ -1843,7 +1984,8 @@
     "deliveryTimeMax": 35,
     "deliveryFee": 5,
     "minimumOrderValue": 35,
-    "isActive": true
+    "isActive": true,
+    "address": "ul. Jana Pawła II 88, Kraków"
   },
   {
     "id": 143,
@@ -1856,7 +1998,8 @@
     "deliveryTimeMax": 45,
     "deliveryFee": 7.5,
     "minimumOrderValue": 40,
-    "isActive": false
+    "isActive": false,
+    "address": "ul. Wita Stwosza 95, Wrocław"
   },
   {
     "id": 144,
@@ -1869,7 +2012,8 @@
     "deliveryTimeMax": 55,
     "deliveryFee": 10,
     "minimumOrderValue": 60,
-    "isActive": true
+    "isActive": true,
+    "address": "ul. Moniuszki 102, Poznań"
   },
   {
     "id": 145,
@@ -1877,12 +2021,13 @@
     "description": "Klasyka kuchni azjatyckiej, ryż z warzywami, jajkiem i kurczakiem w panierce.",
     "cuisine": "chinese",
     "imageUrl": "https://images.unsplash.com/photo-1525755662778-989d0524087e",
-    "rating": 4.0,
+    "rating": 4,
     "deliveryTimeMin": 20,
     "deliveryTimeMax": 35,
     "deliveryFee": 5.5,
     "minimumOrderValue": 30,
-    "isActive": true
+    "isActive": true,
+    "address": "ul. Wrocławska 109, Gdańsk"
   },
   {
     "id": 146,
@@ -1895,7 +2040,8 @@
     "deliveryTimeMax": 40,
     "deliveryFee": 6.5,
     "minimumOrderValue": 35,
-    "isActive": true
+    "isActive": true,
+    "address": "ul. Francuska 116, Łódź"
   },
   {
     "id": 147,
@@ -1908,7 +2054,8 @@
     "deliveryTimeMax": 55,
     "deliveryFee": 12,
     "minimumOrderValue": 70,
-    "isActive": true
+    "isActive": true,
+    "address": "ul. Święty Marcin 123, Katowice"
   },
   {
     "id": 148,
@@ -1916,12 +2063,13 @@
     "description": "Kultowe kanapki z mieloną wołowiną w gęstym pomidorowym sosie.",
     "cuisine": "american",
     "imageUrl": "https://images.unsplash.com/photo-1586190848861-99aa4a171e90",
-    "rating": 4.0,
+    "rating": 4,
     "deliveryTimeMin": 20,
     "deliveryTimeMax": 35,
     "deliveryFee": 5,
     "minimumOrderValue": 30,
-    "isActive": true
+    "isActive": true,
+    "address": "ul. Nowy Świat 130, Szczecin"
   },
   {
     "id": 149,
@@ -1934,7 +2082,8 @@
     "deliveryTimeMax": 35,
     "deliveryFee": 6,
     "minimumOrderValue": 35,
-    "isActive": true
+    "isActive": true,
+    "address": "ul. Grodzka 137, Gdynia"
   },
   {
     "id": 150,
@@ -1947,7 +2096,8 @@
     "deliveryTimeMax": 40,
     "deliveryFee": 7,
     "minimumOrderValue": 40,
-    "isActive": true
+    "isActive": true,
+    "address": "ul. Długa 144, Lublin"
   },
   {
     "id": 151,
@@ -1960,7 +2110,8 @@
     "deliveryTimeMax": 50,
     "deliveryFee": 8.99,
     "minimumOrderValue": 45,
-    "isActive": true
+    "isActive": true,
+    "address": "ul. Mickiewicza 151, Warszawa"
   },
   {
     "id": 152,
@@ -1973,7 +2124,8 @@
     "deliveryTimeMax": 40,
     "deliveryFee": 6.5,
     "minimumOrderValue": 40,
-    "isActive": true
+    "isActive": true,
+    "address": "ul. Piłsudskiego 158, Kraków"
   },
   {
     "id": 153,
@@ -1986,7 +2138,8 @@
     "deliveryTimeMax": 35,
     "deliveryFee": 5.5,
     "minimumOrderValue": 35,
-    "isActive": true
+    "isActive": true,
+    "address": "ul. Sienna 165, Wrocław"
   },
   {
     "id": 154,
@@ -1999,7 +2152,8 @@
     "deliveryTimeMax": 40,
     "deliveryFee": 7,
     "minimumOrderValue": 35,
-    "isActive": true
+    "isActive": true,
+    "address": "ul. Solec 172, Poznań"
   },
   {
     "id": 155,
@@ -2012,7 +2166,8 @@
     "deliveryTimeMax": 40,
     "deliveryFee": 6.99,
     "minimumOrderValue": 40,
-    "isActive": true
+    "isActive": true,
+    "address": "ul. Stradomska 179, Gdańsk"
   },
   {
     "id": 156,
@@ -2025,7 +2180,8 @@
     "deliveryTimeMax": 25,
     "deliveryFee": 3.5,
     "minimumOrderValue": 15,
-    "isActive": true
+    "isActive": true,
+    "address": "ul. Oławska 6, Łódź"
   },
   {
     "id": 157,
@@ -2038,7 +2194,8 @@
     "deliveryTimeMax": 40,
     "deliveryFee": 6,
     "minimumOrderValue": 35,
-    "isActive": false
+    "isActive": false,
+    "address": "ul. Mariacka 13, Katowice"
   },
   {
     "id": 158,
@@ -2051,7 +2208,8 @@
     "deliveryTimeMax": 35,
     "deliveryFee": 5.99,
     "minimumOrderValue": 30,
-    "isActive": true
+    "isActive": true,
+    "address": "ul. Legionów 20, Szczecin"
   },
   {
     "id": 159,
@@ -2064,7 +2222,8 @@
     "deliveryTimeMax": 40,
     "deliveryFee": 7.5,
     "minimumOrderValue": 40,
-    "isActive": true
+    "isActive": true,
+    "address": "ul. Królewska 27, Gdynia"
   },
   {
     "id": 160,
@@ -2077,7 +2236,8 @@
     "deliveryTimeMax": 45,
     "deliveryFee": 8,
     "minimumOrderValue": 45,
-    "isActive": true
+    "isActive": true,
+    "address": "ul. Jagiellońska 34, Lublin"
   },
   {
     "id": 161,
@@ -2090,7 +2250,8 @@
     "deliveryTimeMax": 45,
     "deliveryFee": 6.5,
     "minimumOrderValue": 35,
-    "isActive": true
+    "isActive": true,
+    "address": "ul. Marszałkowska 41, Warszawa"
   },
   {
     "id": 162,
@@ -2103,7 +2264,8 @@
     "deliveryTimeMax": 40,
     "deliveryFee": 5.5,
     "minimumOrderValue": 35,
-    "isActive": true
+    "isActive": true,
+    "address": "ul. Floriańska 48, Kraków"
   },
   {
     "id": 163,
@@ -2116,7 +2278,8 @@
     "deliveryTimeMax": 40,
     "deliveryFee": 7.5,
     "minimumOrderValue": 40,
-    "isActive": true
+    "isActive": true,
+    "address": "ul. Piotrkowska 55, Wrocław"
   },
   {
     "id": 164,
@@ -2129,7 +2292,8 @@
     "deliveryTimeMax": 40,
     "deliveryFee": 6.99,
     "minimumOrderValue": 35,
-    "isActive": true
+    "isActive": true,
+    "address": "ul. Półwiejska 62, Poznań"
   },
   {
     "id": 165,
@@ -2142,7 +2306,8 @@
     "deliveryTimeMax": 40,
     "deliveryFee": 6.5,
     "minimumOrderValue": 35,
-    "isActive": true
+    "isActive": true,
+    "address": "ul. Kościuszki 69, Gdańsk"
   },
   {
     "id": 166,
@@ -2155,7 +2320,8 @@
     "deliveryTimeMax": 35,
     "deliveryFee": 4.99,
     "minimumOrderValue": 25,
-    "isActive": true
+    "isActive": true,
+    "address": "ul. Złota 76, Łódź"
   },
   {
     "id": 167,
@@ -2168,7 +2334,8 @@
     "deliveryTimeMax": 35,
     "deliveryFee": 7,
     "minimumOrderValue": 40,
-    "isActive": true
+    "isActive": true,
+    "address": "ul. Mokotowska 83, Katowice"
   },
   {
     "id": 168,
@@ -2176,12 +2343,13 @@
     "description": "Burgery serwowane w czarnych bułkach maślanych z wołowiną Wagyu.",
     "cuisine": "american",
     "imageUrl": "https://images.unsplash.com/photo-1586190848861-99aa4a171e90",
-    "rating": 5.0,
+    "rating": 5,
     "deliveryTimeMin": 30,
     "deliveryTimeMax": 45,
     "deliveryFee": 9,
     "minimumOrderValue": 55,
-    "isActive": true
+    "isActive": true,
+    "address": "ul. Karmelicka 90, Szczecin"
   },
   {
     "id": 169,
@@ -2194,7 +2362,8 @@
     "deliveryTimeMax": 35,
     "deliveryFee": 5.99,
     "minimumOrderValue": 30,
-    "isActive": true
+    "isActive": true,
+    "address": "ul. Świdnicka 97, Gdynia"
   },
   {
     "id": 170,
@@ -2207,7 +2376,8 @@
     "deliveryTimeMax": 35,
     "deliveryFee": 5,
     "minimumOrderValue": 30,
-    "isActive": true
+    "isActive": true,
+    "address": "ul. Staromiejska 104, Lublin"
   },
   {
     "id": 171,
@@ -2220,7 +2390,8 @@
     "deliveryTimeMax": 50,
     "deliveryFee": 8.5,
     "minimumOrderValue": 40,
-    "isActive": true
+    "isActive": true,
+    "address": "ul. Powstańców Śląskich 111, Warszawa"
   },
   {
     "id": 172,
@@ -2233,7 +2404,8 @@
     "deliveryTimeMax": 40,
     "deliveryFee": 5.99,
     "minimumOrderValue": 35,
-    "isActive": true
+    "isActive": true,
+    "address": "ul. Poznańska 118, Kraków"
   },
   {
     "id": 173,
@@ -2246,7 +2418,8 @@
     "deliveryTimeMax": 30,
     "deliveryFee": 4.5,
     "minimumOrderValue": 25,
-    "isActive": false
+    "isActive": false,
+    "address": "ul. Dworcowa 125, Wrocław"
   },
   {
     "id": 174,
@@ -2259,7 +2432,8 @@
     "deliveryTimeMax": 45,
     "deliveryFee": 8,
     "minimumOrderValue": 45,
-    "isActive": true
+    "isActive": true,
+    "address": "ul. Garbary 132, Poznań"
   },
   {
     "id": 175,
@@ -2272,7 +2446,8 @@
     "deliveryTimeMax": 30,
     "deliveryFee": 4,
     "minimumOrderValue": 20,
-    "isActive": true
+    "isActive": true,
+    "address": "ul. Krakowskie Przedmieście 139, Gdańsk"
   },
   {
     "id": 176,
@@ -2285,7 +2460,8 @@
     "deliveryTimeMax": 40,
     "deliveryFee": 6,
     "minimumOrderValue": 30,
-    "isActive": true
+    "isActive": true,
+    "address": "ul. Szewska 146, Łódź"
   },
   {
     "id": 177,
@@ -2298,7 +2474,8 @@
     "deliveryTimeMax": 50,
     "deliveryFee": 9,
     "minimumOrderValue": 55,
-    "isActive": true
+    "isActive": true,
+    "address": "ul. Świętojańska 153, Katowice"
   },
   {
     "id": 178,
@@ -2311,7 +2488,8 @@
     "deliveryTimeMax": 55,
     "deliveryFee": 10,
     "minimumOrderValue": 60,
-    "isActive": true
+    "isActive": true,
+    "address": "ul. Słowackiego 160, Szczecin"
   },
   {
     "id": 179,
@@ -2319,12 +2497,13 @@
     "description": "Zupa Tom Yum Goong z ostrymi papryczkami i trawa cytrynową.",
     "cuisine": "thai",
     "imageUrl": "https://images.unsplash.com/photo-1562565652-a0d8f0c59eb4",
-    "rating": 5.0,
+    "rating": 5,
     "deliveryTimeMin": 25,
     "deliveryTimeMax": 40,
     "deliveryFee": 7.5,
     "minimumOrderValue": 40,
-    "isActive": true
+    "isActive": true,
+    "address": "ul. Chmielna 167, Gdynia"
   },
   {
     "id": 180,
@@ -2332,12 +2511,13 @@
     "description": "Smażony ryż jaśminowy z kurczakiem curry i groszkiem.",
     "cuisine": "chinese",
     "imageUrl": "https://images.unsplash.com/photo-1585032226651-759b368d7246",
-    "rating": 4.0,
+    "rating": 4,
     "deliveryTimeMin": 20,
     "deliveryTimeMax": 35,
     "deliveryFee": 5.5,
     "minimumOrderValue": 30,
-    "isActive": true
+    "isActive": true,
+    "address": "ul. Miodowa 174, Lublin"
   },
   {
     "id": 181,
@@ -2350,7 +2530,8 @@
     "deliveryTimeMax": 50,
     "deliveryFee": 7.99,
     "minimumOrderValue": 40,
-    "isActive": true
+    "isActive": true,
+    "address": "ul. Lipowa 1, Warszawa"
   },
   {
     "id": 182,
@@ -2363,7 +2544,8 @@
     "deliveryTimeMax": 35,
     "deliveryFee": 5,
     "minimumOrderValue": 30,
-    "isActive": true
+    "isActive": true,
+    "address": "ul. Jana Pawła II 8, Kraków"
   },
   {
     "id": 183,
@@ -2376,7 +2558,8 @@
     "deliveryTimeMax": 35,
     "deliveryFee": 5.5,
     "minimumOrderValue": 35,
-    "isActive": true
+    "isActive": true,
+    "address": "ul. Wita Stwosza 15, Wrocław"
   },
   {
     "id": 184,
@@ -2389,7 +2572,8 @@
     "deliveryTimeMax": 50,
     "deliveryFee": 8.99,
     "minimumOrderValue": 50,
-    "isActive": true
+    "isActive": true,
+    "address": "ul. Moniuszki 22, Poznań"
   },
   {
     "id": 185,
@@ -2402,7 +2586,8 @@
     "deliveryTimeMax": 40,
     "deliveryFee": 6.5,
     "minimumOrderValue": 35,
-    "isActive": true
+    "isActive": true,
+    "address": "ul. Wrocławska 29, Gdańsk"
   },
   {
     "id": 186,
@@ -2415,7 +2600,8 @@
     "deliveryTimeMax": 35,
     "deliveryFee": 5,
     "minimumOrderValue": 25,
-    "isActive": true
+    "isActive": true,
+    "address": "ul. Francuska 36, Łódź"
   },
   {
     "id": 187,
@@ -2428,7 +2614,8 @@
     "deliveryTimeMax": 45,
     "deliveryFee": 8,
     "minimumOrderValue": 45,
-    "isActive": true
+    "isActive": true,
+    "address": "ul. Święty Marcin 43, Katowice"
   },
   {
     "id": 188,
@@ -2441,7 +2628,8 @@
     "deliveryTimeMax": 30,
     "deliveryFee": 4.5,
     "minimumOrderValue": 25,
-    "isActive": false
+    "isActive": false,
+    "address": "ul. Nowy Świat 50, Szczecin"
   },
   {
     "id": 189,
@@ -2454,7 +2642,8 @@
     "deliveryTimeMax": 40,
     "deliveryFee": 6.99,
     "minimumOrderValue": 35,
-    "isActive": true
+    "isActive": true,
+    "address": "ul. Grodzka 57, Gdynia"
   },
   {
     "id": 190,
@@ -2467,7 +2656,8 @@
     "deliveryTimeMax": 35,
     "deliveryFee": 5.5,
     "minimumOrderValue": 30,
-    "isActive": true
+    "isActive": true,
+    "address": "ul. Długa 64, Lublin"
   },
   {
     "id": 191,
@@ -2480,7 +2670,8 @@
     "deliveryTimeMax": 35,
     "deliveryFee": 4.99,
     "minimumOrderValue": 25,
-    "isActive": true
+    "isActive": true,
+    "address": "ul. Mickiewicza 71, Warszawa"
   },
   {
     "id": 192,
@@ -2493,7 +2684,8 @@
     "deliveryTimeMax": 40,
     "deliveryFee": 6,
     "minimumOrderValue": 35,
-    "isActive": true
+    "isActive": true,
+    "address": "ul. Piłsudskiego 78, Kraków"
   },
   {
     "id": 193,
@@ -2506,7 +2698,8 @@
     "deliveryTimeMax": 50,
     "deliveryFee": 9.99,
     "minimumOrderValue": 65,
-    "isActive": true
+    "isActive": true,
+    "address": "ul. Sienna 85, Wrocław"
   },
   {
     "id": 194,
@@ -2519,7 +2712,8 @@
     "deliveryTimeMax": 35,
     "deliveryFee": 5.99,
     "minimumOrderValue": 30,
-    "isActive": true
+    "isActive": true,
+    "address": "ul. Solec 92, Poznań"
   },
   {
     "id": 195,
@@ -2532,7 +2726,8 @@
     "deliveryTimeMax": 40,
     "deliveryFee": 7,
     "minimumOrderValue": 40,
-    "isActive": true
+    "isActive": true,
+    "address": "ul. Stradomska 99, Gdańsk"
   },
   {
     "id": 196,
@@ -2540,12 +2735,13 @@
     "description": "Tradycyjny barszcz czerwony z uszkami, placki ziemniaczane z śmietaną.",
     "cuisine": "polish",
     "imageUrl": "https://images.unsplash.com/photo-1541529086526-db283c563270",
-    "rating": 5.0,
+    "rating": 5,
     "deliveryTimeMin": 25,
     "deliveryTimeMax": 40,
     "deliveryFee": 6.5,
     "minimumOrderValue": 35,
-    "isActive": true
+    "isActive": true,
+    "address": "ul. Oławska 106, Łódź"
   },
   {
     "id": 197,
@@ -2558,7 +2754,8 @@
     "deliveryTimeMax": 35,
     "deliveryFee": 5,
     "minimumOrderValue": 30,
-    "isActive": true
+    "isActive": true,
+    "address": "ul. Mariacka 113, Katowice"
   },
   {
     "id": 198,
@@ -2571,7 +2768,8 @@
     "deliveryTimeMax": 40,
     "deliveryFee": 6.99,
     "minimumOrderValue": 35,
-    "isActive": true
+    "isActive": true,
+    "address": "ul. Legionów 120, Szczecin"
   },
   {
     "id": 199,
@@ -2584,7 +2782,8 @@
     "deliveryTimeMax": 45,
     "deliveryFee": 7.99,
     "minimumOrderValue": 40,
-    "isActive": true
+    "isActive": true,
+    "address": "ul. Królewska 127, Gdynia"
   },
   {
     "id": 200,
@@ -2592,11 +2791,12 @@
     "description": "Szybkie dania kuchni azjatyckiej, kurczak w sezamie i chrupiące sajgonki.",
     "cuisine": "chinese",
     "imageUrl": "https://images.unsplash.com/photo-1585032226651-759b368d7246",
-    "rating": 4.0,
+    "rating": 4,
     "deliveryTimeMin": 15,
     "deliveryTimeMax": 30,
     "deliveryFee": 4.5,
     "minimumOrderValue": 25,
-    "isActive": true
+    "isActive": true,
+    "address": "ul. Jagiellońska 134, Lublin"
   }
 ]

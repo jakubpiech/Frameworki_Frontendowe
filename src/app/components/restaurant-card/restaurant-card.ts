@@ -15,7 +15,7 @@ export class RestaurantCard {
     id: 0,
     name: 'Wpisz nazwe',
     description: 'Wpisz opis',
-    cuisine: 'Wpisz kuchnie',
+    cuisine: 'polish',
     imageUrl: 'https://via.placeholder.com/150',
     rating: 0,
     deliveryTimeMin: 0,

@@ -1,0 +1,942 @@
+[
+  {
+    "id": 101,
+    "name": "Pierogi Tradycyjne",
+    "cuisine": "polish",
+    "products": [
+      {
+        "id": 1001,
+        "name": "Pierogi Ruskie",
+        "description": "Z ziemniakami, twarogiem i prażoną cebulką (10 szt.)",
+        "price": 28,
+        "imageUrl": "https://images.unsplash.com/photo-1541529086526-db283c563270",
+        "isAvailable": true
+      },
+      {
+        "id": 1002,
+        "name": "Pierogi z Mięsem",
+        "description": "Nadziewane duszonym mięsem wołowo-wieprzowym z okrasą",
+        "price": 32,
+        "imageUrl": "https://images.unsplash.com/photo-1498837167922-ddd27525d352",
+        "isAvailable": true
+      },
+      {
+        "id": 1003,
+        "name": "Pierogi z Kapustą i Grzybami",
+        "description": "Klasyczne leśne grzyby i kiszona kapusta",
+        "price": 29,
+        "imageUrl": "https://images.unsplash.com/photo-1625944525533-473f1a3d54e7",
+        "isAvailable": true
+      },
+      {
+        "id": 1004,
+        "name": "Pierogi ze Szpinakiem i Fetą",
+        "description": "Ze świeżym szpinakiem, czosnkiem i serem feta",
+        "price": 30,
+        "imageUrl": "https://images.unsplash.com/photo-1540420773420-3366772f4999",
+        "isAvailable": true
+      },
+      {
+        "id": 1005,
+        "name": "Pierogi z Jagodami",
+        "description": "Na słodko, podawane ze śmietaną i cukrem trzcinowym",
+        "price": 34,
+        "imageUrl": "https://images.unsplash.com/photo-1563729784474-d77dbb933a9e",
+        "isAvailable": false
+      }
+    ]
+  },
+  {
+    "id": 102,
+    "name": "Zupy Polskie",
+    "cuisine": "polish",
+    "products": [
+      {
+        "id": 1006,
+        "name": "Żurek Staropolski",
+        "description": "Na zakwasie żytnim z białą kiełbasą i jajkiem",
+        "price": 24,
+        "imageUrl": "https://images.unsplash.com/photo-1547592166-23ac45744acd",
+        "isAvailable": true
+      },
+      {
+        "id": 1007,
+        "name": "Barszcz Czerwony z Uszkami",
+        "description": "Klarowny barszcz z uszkami z grzybami",
+        "price": 22,
+        "imageUrl": "https://images.unsplash.com/photo-1603105037880-880cd4edfb0d",
+        "isAvailable": true
+      },
+      {
+        "id": 1008,
+        "name": "Rosół z Domowym Makaronem",
+        "description": "Gotowany na trzech mięsach z marchewką i lubczykiem",
+        "price": 20,
+        "imageUrl": "https://images.unsplash.com/photo-1578020190125-f4f7c18bc9cb",
+        "isAvailable": true
+      },
+      {
+        "id": 1009,
+        "name": "Kwaśnica na Żeberkach",
+        "description": "Góralska zupa z kiszonej kapusty z wędzonym żeberkiem",
+        "price": 26,
+        "imageUrl": "https://images.unsplash.com/photo-1594756202469-9ff9799b4e4c",
+        "isAvailable": true
+      },
+      {
+        "id": 1010,
+        "name": "Zupa Grzybowa",
+        "description": "Ze świeżych borowików ze śmietaną i łazankami",
+        "price": 28,
+        "imageUrl": "https://images.unsplash.com/photo-1547592180-85f173990554",
+        "isAvailable": false
+      }
+    ]
+  },
+  {
+    "id": 103,
+    "name": "Dania Główne Mięsne",
+    "cuisine": "polish",
+    "products": [
+      {
+        "id": 1011,
+        "name": "Kotlet Schabowy z Kością",
+        "description": "Smażony na smalcu, podawany z ziemniakami i kapustą zasmażaną",
+        "price": 42,
+        "imageUrl": "https://images.unsplash.com/photo-1532550907401-a500c9a57435",
+        "isAvailable": true
+      },
+      {
+        "id": 1012,
+        "name": "Rolada Śląska",
+        "description": "Z wołowiny z boczkiem, ogórkiem i kluskami śląskimi",
+        "price": 54,
+        "imageUrl": "https://images.unsplash.com/photo-1544025162-d76694265947",
+        "isAvailable": true
+      },
+      {
+        "id": 1013,
+        "name": "Golonka Pieczona w Piwie",
+        "description": "Chrupiąca skórka, podawana z chrzanem i musztardą",
+        "price": 65,
+        "imageUrl": "https://images.unsplash.com/photo-1529692236671-f1f6cf9683ba",
+        "isAvailable": true
+      },
+      {
+        "id": 1014,
+        "name": "Kaczka Pieczona z Jabłkami",
+        "description": "Pół kaczki pieczonej z majerankiem i żurawiną",
+        "price": 75,
+        "imageUrl": "https://images.unsplash.com/photo-1518492104633-130d0cc84637",
+        "isAvailable": true
+      },
+      {
+        "id": 1015,
+        "name": "Stek z Polędwicy Wołowej",
+        "description": "Sezonowana polędwica z sosem borowikowym",
+        "price": 95,
+        "imageUrl": "https://images.unsplash.com/photo-1558030006-450675393462",
+        "isAvailable": false
+      }
+    ]
+  },
+  {
+    "id": 104,
+    "name": "Desery Polskie",
+    "cuisine": "polish",
+    "products": [
+      {
+        "id": 1016,
+        "name": "Sernik Krakowski",
+        "description": "Puszysty sernik z kratką z ciasta kruchego i rodzynkami",
+        "price": 20,
+        "imageUrl": "https://images.unsplash.com/photo-1533134242443-d4fd215305ad",
+        "isAvailable": true
+      },
+      {
+        "id": 1017,
+        "name": "Szarlotka na Ciepło",
+        "description": "Z polskich jabłek z cynamonem i gałką lodów waniliowych",
+        "price": 22,
+        "imageUrl": "https://images.unsplash.com/photo-1568571780765-9276ac8b75a2",
+        "isAvailable": true
+      },
+      {
+        "id": 1018,
+        "name": "Makowiec Zawijany",
+        "description": "Bogato nadziewany makiem z bakaliami i lukrem",
+        "price": 18,
+        "imageUrl": "https://images.unsplash.com/photo-1509440159596-0249088772ff",
+        "isAvailable": true
+      },
+      {
+        "id": 1019,
+        "name": "Racuchy z Jabłkami",
+        "description": "Puszyste placuszki drożdżowe z cukrem pudrem (4 szt.)",
+        "price": 19,
+        "imageUrl": "https://images.unsplash.com/photo-1528207776546-365bb710ee93",
+        "isAvailable": true
+      },
+      {
+        "id": 1020,
+        "name": "Pączki Rzemieślnicze z Różą",
+        "description": "Z tradycyjnym nadzieniem różanym i kandyzowaną skórką pomarańczy (2 szt.)",
+        "price": 16,
+        "imageUrl": "https://images.unsplash.com/photo-1527515862127-a4fc05baf7a5",
+        "isAvailable": false
+      }
+    ]
+  },
+  {
+    "id": 201,
+    "name": "Pizza Klasyczna",
+    "cuisine": "italian",
+    "products": [
+      {
+        "id": 2001,
+        "name": "Pizza Margherita",
+        "description": "Sos pomidorowy San Marzano, mozzarella fior di latte, bazylia",
+        "price": 32,
+        "imageUrl": "https://images.unsplash.com/photo-1574071318508-1cdbab80d002",
+        "isAvailable": true
+      },
+      {
+        "id": 2002,
+        "name": "Pizza Diavola",
+        "description": "San Marzano, mozzarella, pikantne salami spianata piccante",
+        "price": 40,
+        "imageUrl": "https://images.unsplash.com/photo-1628840042765-356cda07504e",
+        "isAvailable": true
+      },
+      {
+        "id": 2003,
+        "name": "Pizza Capricciosa",
+        "description": "Sos pomidorowy, mozzarella, szynka cotto, pieczarki, karczochy",
+        "price": 43,
+        "imageUrl": "https://images.unsplash.com/photo-1513104890138-7c749659a591",
+        "isAvailable": true
+      },
+      {
+        "id": 2004,
+        "name": "Pizza Quattro Formaggi",
+        "description": "Mozzarella, gorgonzola, taleggio, parmezan DOP",
+        "price": 46,
+        "imageUrl": "https://images.unsplash.com/photo-1573821663912-569905455b1c",
+        "isAvailable": true
+      },
+      {
+        "id": 2005,
+        "name": "Pizza Prosciutto Crudo e Rucola",
+        "description": "Sos pomidorowy, mozzarella di bufala, szynka parmeńska, rukola",
+        "price": 49,
+        "imageUrl": "https://images.unsplash.com/photo-1565299624946-b28f40a0ae38",
+        "isAvailable": false
+      }
+    ]
+  },
+  {
+    "id": 202,
+    "name": "Makarony Włoskie",
+    "cuisine": "italian",
+    "products": [
+      {
+        "id": 2006,
+        "name": "Spaghetti Carbonara",
+        "description": "Guanciale, żółtka jaj, pecorino romano, czarny pieprz (bez śmietany)",
+        "price": 42,
+        "imageUrl": "https://images.unsplash.com/photo-1612874742237-6526221588e3",
+        "isAvailable": true
+      },
+      {
+        "id": 2007,
+        "name": "Tagliatelle Bolognese",
+        "description": "Domowy makaron z długo duszonym sosem mięsno-warzywnym",
+        "price": 44,
+        "imageUrl": "https://images.unsplash.com/photo-1621996346565-e3adc6160fb6",
+        "isAvailable": true
+      },
+      {
+        "id": 2008,
+        "name": "Penne all'Arrabbiata",
+        "description": "Pikantny sos pomidorowy z czosnkiem, oliwą i papryczkami chili",
+        "price": 35,
+        "imageUrl": "https://images.unsplash.com/photo-1551183053-bf91a1d81141",
+        "isAvailable": true
+      },
+      {
+        "id": 2009,
+        "name": "Gnocchi z Pesto Bazyliowym",
+        "description": "Ziemniaczane kluseczki z domowym pesto z orzeszkami pinii",
+        "price": 39,
+        "imageUrl": "https://images.unsplash.com/photo-1556761223-4c4282c73f77",
+        "isAvailable": true
+      },
+      {
+        "id": 2010,
+        "name": "Tagliolini z Owocami Morza",
+        "description": "Krewetki, mule, kalmary w sosie z białego wina i pomidorków",
+        "price": 62,
+        "imageUrl": "https://images.unsplash.com/photo-1563379091339-03b21ab4a4f8",
+        "isAvailable": false
+      }
+    ]
+  },
+  {
+    "id": 203,
+    "name": "Przystawki Włoskie",
+    "cuisine": "italian",
+    "products": [
+      {
+        "id": 2011,
+        "name": "Bruschetta al Pomodoro",
+        "description": "Grzanki z pomidorami, bazylią i oliwą extra vergine (3 szt.)",
+        "price": 22,
+        "imageUrl": "https://images.unsplash.com/photo-1572656631137-7935297eff55",
+        "isAvailable": true
+      },
+      {
+        "id": 2012,
+        "name": "Carpaccio di Manzo",
+        "description": "Cienkie plastry polędwicy wołowej z rukolą, kaparami i parmezanem",
+        "price": 45,
+        "imageUrl": "https://images.unsplash.com/photo-1608897013039-887f21d8c804",
+        "isAvailable": true
+      },
+      {
+        "id": 2013,
+        "name": "Caprese z Mozzarellą di Bufala",
+        "description": "Pomidory malinowe, świeża bawoła mozzarella, pesto bazyliowe",
+        "price": 36,
+        "imageUrl": "https://images.unsplash.com/photo-1592417817098-8f3d69102553",
+        "isAvailable": true
+      },
+      {
+        "id": 2014,
+        "name": "Focaccia z Rozmarynem i Solą",
+        "description": "Pieczone włoskie pieczywo z oliwą i rozmarynem",
+        "price": 18,
+        "imageUrl": "https://images.unsplash.com/photo-1589367920969-ab8e050bbb04",
+        "isAvailable": true
+      },
+      {
+        "id": 2015,
+        "name": "Deska Włoskich Wędlin i Serów",
+        "description": "Prosciutto di Parma, Salami Felino, Gorgonzola, Pecorino, oliwki",
+        "price": 68,
+        "imageUrl": "https://images.unsplash.com/photo-1541544741938-0af808871cc0",
+        "isAvailable": false
+      }
+    ]
+  },
+  {
+    "id": 204,
+    "name": "Desery Włoskie",
+    "cuisine": "italian",
+    "products": [
+      {
+        "id": 2016,
+        "name": "Tiramisu Klasyczne",
+        "description": "Biszkopty nasączone espresso z amaretto i kremem mascarpone",
+        "price": 26,
+        "imageUrl": "https://images.unsplash.com/photo-1571877227200-a0d98ea607e9",
+        "isAvailable": true
+      },
+      {
+        "id": 2017,
+        "name": "Panna Cotta z Malinami",
+        "description": "Delikatny deser śmietankowy z musem malinowym",
+        "price": 23,
+        "imageUrl": "https://images.unsplash.com/photo-1551024709-8f23befc6f87",
+        "isAvailable": true
+      },
+      {
+        "id": 2018,
+        "name": "Cannoli Sycylijskie",
+        "description": "Chrupiące rurki nadziewane słodkim kremem z ricotty i pistacjami (2 szt.)",
+        "price": 25,
+        "imageUrl": "https://images.unsplash.com/photo-1551806235-6692c85e2832",
+        "isAvailable": true
+      },
+      {
+        "id": 2019,
+        "name": "Affogato al Caffe",
+        "description": "Gałka lodów waniliowych zalana gorącym espresso",
+        "price": 16,
+        "imageUrl": "https://images.unsplash.com/photo-1594998893017-36147cbcae05",
+        "isAvailable": true
+      },
+      {
+        "id": 2020,
+        "name": "Lava Cake Czekoladowa",
+        "description": "Ciastko z płynną czekoladą w środku",
+        "price": 29,
+        "imageUrl": "https://images.unsplash.com/photo-1606313564200-e75d5e30476c",
+        "isAvailable": false
+      }
+    ]
+  },
+  {
+    "id": 301,
+    "name": "Burgery Amerykańskie",
+    "cuisine": "american",
+    "products": [
+      {
+        "id": 3001,
+        "name": "Classic Cheeseburger",
+        "description": "200g wołowiny Black Angus, ser cheddar, pikle, czerwona cebula, sos autorski",
+        "price": 38,
+        "imageUrl": "https://images.unsplash.com/photo-1568901346375-23c9450c58cd",
+        "isAvailable": true
+      },
+      {
+        "id": 3002,
+        "name": "Bacon BBQ Burger",
+        "description": "Wołowina, podwójny chrupiący boczek, cheddar, krążki cebulowe, sos BBQ",
+        "price": 44,
+        "imageUrl": "https://images.unsplash.com/photo-1550547660-d9450f859349",
+        "isAvailable": true
+      },
+      {
+        "id": 3003,
+        "name": "Jalapeno Inferno Burger",
+        "description": "Wołowina, papryczki jalapeno, ser pepper jack, ostry sos habanero",
+        "price": 42,
+        "imageUrl": "https://images.unsplash.com/photo-1586190848861-99aa4a171e90",
+        "isAvailable": true
+      },
+      {
+        "id": 3004,
+        "name": "Crispy Chicken Burger",
+        "description": "Soczysta pierś z kurczaka w złocistej panierce, sałata, majonez",
+        "price": 36,
+        "imageUrl": "https://images.unsplash.com/photo-1625813506062-0aeb1d7a094b",
+        "isAvailable": true
+      },
+      {
+        "id": 3005,
+        "name": "Monster Double Beef Burger",
+        "description": "Podwójna wołowina 400g, 4x cheddar, boczek, sos relish",
+        "price": 58,
+        "imageUrl": "https://images.unsplash.com/photo-1582196016295-f8c8bd4b3e99",
+        "isAvailable": false
+      }
+    ]
+  },
+  {
+    "id": 302,
+    "name": "BBQ & Steki",
+    "cuisine": "american",
+    "products": [
+      {
+        "id": 3006,
+        "name": "Żeberka Wieprzowe BBQ (Pół porcji)",
+        "description": "Pieczone w niskiej temperaturze żeberka w glazurze miodowo-bbq",
+        "price": 52,
+        "imageUrl": "https://images.unsplash.com/photo-1544025162-d76694265947",
+        "isAvailable": true
+      },
+      {
+        "id": 3007,
+        "name": "Skrzydełka Buffalo",
+        "description": "Pikantne skrzydełka z kurczaka podawane z sosem blue cheese (8 szt.)",
+        "price": 32,
+        "imageUrl": "https://images.unsplash.com/photo-1527477321005-4d45d314bc33",
+        "isAvailable": true
+      },
+      {
+        "id": 3008,
+        "name": "Pulled Pork Platter",
+        "description": "Szarpana wieprzowina z colesławem i frytkami",
+        "price": 46,
+        "imageUrl": "https://images.unsplash.com/photo-1529193591184-b1d58069ecdd",
+        "isAvailable": true
+      },
+      {
+        "id": 3009,
+        "name": "Stek New York",
+        "description": "Stek z rostbefu wołowego z masłem ziołowym (250g)",
+        "price": 82,
+        "imageUrl": "https://images.unsplash.com/photo-1546964124-0cce460f38ef",
+        "isAvailable": true
+      },
+      {
+        "id": 3010,
+        "name": "T-Bone Steak Premium",
+        "description": "Potężny stek z kością łączący polędwicę i rostbef (450g)",
+        "price": 99,
+        "imageUrl": "https://images.unsplash.com/photo-1558030006-450675393462",
+        "isAvailable": false
+      }
+    ]
+  },
+  {
+    "id": 303,
+    "name": "Dodatki & Przekąski",
+    "cuisine": "american",
+    "products": [
+      {
+        "id": 3011,
+        "name": "Frytki Belgijskie",
+        "description": "Grubo krojone chrupiące frytki z sosem do wyboru",
+        "price": 16,
+        "imageUrl": "https://images.unsplash.com/photo-1573080496219-bb080dd4f877",
+        "isAvailable": true
+      },
+      {
+        "id": 3012,
+        "name": "Frytki z Batatów",
+        "description": "Słodkie frytki z batatów z sosem aioli",
+        "price": 21,
+        "imageUrl": "https://images.unsplash.com/photo-1585109649139-366815a0d713",
+        "isAvailable": true
+      },
+      {
+        "id": 3013,
+        "name": "Krążki Cebulowe w Cieście Piwnym",
+        "description": "Chrupiące krążki cebulowe z dipem czosnkowym (8 szt.)",
+        "price": 19,
+        "imageUrl": "https://images.unsplash.com/photo-1639024471285-0afc3855ff48",
+        "isAvailable": true
+      },
+      {
+        "id": 3014,
+        "name": "Mac & Cheese",
+        "description": "Makaron zapiekany w gęstym sosie serowym z cheddarem",
+        "price": 26,
+        "imageUrl": "https://images.unsplash.com/photo-1543339308-43e59d6b73a6",
+        "isAvailable": true
+      },
+      {
+        "id": 3015,
+        "name": "Loaded Fries z Boczkiem i Serem",
+        "description": "Frytki zapiekane z serem cheddar, boczkiem i szczypiorkiem",
+        "price": 29,
+        "imageUrl": "https://images.unsplash.com/photo-1585238342024-78d387f4a707",
+        "isAvailable": false
+      }
+    ]
+  },
+  {
+    "id": 304,
+    "name": "Napoje & Shake'i",
+    "cuisine": "american",
+    "products": [
+      {
+        "id": 3016,
+        "name": "Coca-Cola Szklana Butelka",
+        "description": "330ml mocno schłodzona klasyczna cola",
+        "price": 11,
+        "imageUrl": "https://images.unsplash.com/photo-1554866585-cd94860890b7",
+        "isAvailable": true
+      },
+      {
+        "id": 3017,
+        "name": "Milkshake Waniliowy",
+        "description": "Gęsty koktajl na bazie lodów waniliowych z bitą śmietaną",
+        "price": 20,
+        "imageUrl": "https://images.unsplash.com/photo-1572490122747-3968b75cc699",
+        "isAvailable": true
+      },
+      {
+        "id": 3018,
+        "name": "Milkshake Czekoladowy z Brownie",
+        "description": "Czekoladowy shake z kawałkami ciasta brownie",
+        "price": 24,
+        "imageUrl": "https://images.unsplash.com/photo-1579954115545-a95591f28bfc",
+        "isAvailable": true
+      },
+      {
+        "id": 3019,
+        "name": "Domowa Lemoniada Cytrynowa",
+        "description": "Świeżo wyciskany sok z cytryny, mięta, woda niegazowana 400ml",
+        "price": 16,
+        "imageUrl": "https://images.unsplash.com/photo-1513558161293-cdaf765ed2fd",
+        "isAvailable": true
+      },
+      {
+        "id": 3020,
+        "name": "Root Beer",
+        "description": "Tradycyjne amerykańskie piwo korzenne (bezalkoholowe) 355ml",
+        "price": 17,
+        "imageUrl": "https://images.unsplash.com/photo-1527661591475-527312dd65f5",
+        "isAvailable": false
+      }
+    ]
+  },
+  {
+    "id": 401,
+    "name": "Klasyki Kuchni Tajskiej",
+    "cuisine": "thai",
+    "products": [
+      {
+        "id": 4001,
+        "name": "Pad Thai z Krewetkami",
+        "description": "Smażony makaron ryżowy z krewetkami, tofu, jajkiem, kiełkami i orzeszkami ziemnymi",
+        "price": 39,
+        "imageUrl": "https://images.unsplash.com/photo-1559314809-0d155014e29e",
+        "isAvailable": true
+      },
+      {
+        "id": 4002,
+        "name": "Pad Kra Pao z Wołowiną",
+        "description": "Pikantna siekana wołowina smażona ze świętą bazylią, chilli i smażonym jajkiem",
+        "price": 42,
+        "imageUrl": "https://images.unsplash.com/photo-1562967914-608f82629710",
+        "isAvailable": true
+      },
+      {
+        "id": 4003,
+        "name": "Kao Pad z Kurczakiem",
+        "description": "Tradycyjny tajski smażony ryż jaśminowy z warzywami, jajkiem i kolendrą",
+        "price": 35,
+        "imageUrl": "https://images.unsplash.com/photo-1603133872878-684f208fb84b",
+        "isAvailable": true
+      },
+      {
+        "id": 4004,
+        "name": "Pad See Ew",
+        "description": "Szeroki makaron ryżowy w ciemnym sosie sojowym z wieprzowiną i brokułem chińskim",
+        "price": 38,
+        "imageUrl": "https://images.unsplash.com/photo-1569718212165-3a8278d5f624",
+        "isAvailable": true
+      },
+      {
+        "id": 4005,
+        "name": "Tajska Sałatka Som Tum",
+        "description": "Ostry i orzeźwiający coleslaw z zielonej papai, pomidorków, limonki i orzeszków",
+        "price": 29,
+        "imageUrl": "https://images.unsplash.com/photo-1540420773420-3366772f4999",
+        "isAvailable": true
+      }
+    ]
+  },
+  {
+    "id": 402,
+    "name": "Zupy & Curry Tajskie",
+    "cuisine": "thai",
+    "products": [
+      {
+        "id": 4006,
+        "name": "Tom Yum Goong",
+        "description": "Aromatyczna, ostro-kwaśna zupa z krewetkami, trawą cytrynową i grzybami słomianymi",
+        "price": 36,
+        "imageUrl": "https://images.unsplash.com/photo-1547592180-85f173990554",
+        "isAvailable": true
+      },
+      {
+        "id": 4007,
+        "name": "Tom Kha Gai",
+        "description": "Kremowa zupa kokosowa z kurczakiem, galangalem, liśćmi limonki kaffir i kolendrą",
+        "price": 34,
+        "imageUrl": "https://images.unsplash.com/photo-1547592166-23ac45744acd",
+        "isAvailable": true
+      },
+      {
+        "id": 4008,
+        "name": "Zielone Curry (Gaeng Kiew Wan)",
+        "description": "Pikantne zielone curry na mleku kokosowym z kurczakiem, pędami bambusa i bakłażanem",
+        "price": 44,
+        "imageUrl": "https://images.unsplash.com/photo-1455619452474-d2be8b1e70cd",
+        "isAvailable": true
+      },
+      {
+        "id": 4009,
+        "name": "Czerwone Curry z Kaczką",
+        "description": "Pieczona kaczka w kremowym czerwonym curry z ananasem, pomidorkami i liczi",
+        "price": 49,
+        "imageUrl": "https://images.unsplash.com/photo-1565557623262-b51c2513a641",
+        "isAvailable": true
+      },
+      {
+        "id": 4010,
+        "name": "Massaman Curry z Wołowiną",
+        "description": "Łagodne, bogate curry z orzeszkami ziemnymi, ziemniakami i duszonym mostkiem wołowym",
+        "price": 48,
+        "imageUrl": "https://images.unsplash.com/photo-1588166524941-3bf61a9c41db",
+        "isAvailable": false
+      }
+    ]
+  },
+  {
+    "id": 403,
+    "name": "Wok & Dania Główne",
+    "cuisine": "thai",
+    "products": [
+      {
+        "id": 4011,
+        "name": "Kurczak z Orzechami Nerkowca",
+        "description": "Chrupiący kurczak smażony z prażonymi nerkowcami, papryką i sosem ostrygowym",
+        "price": 41,
+        "imageUrl": "https://images.unsplash.com/photo-1525755662778-989d0524087e",
+        "isAvailable": true
+      },
+      {
+        "id": 4012,
+        "name": "Chrupiąca Ryba w Sosie Trzech Smaków",
+        "description": "Filet z labraksa w pikantno-słodko-kwaśnym sosie tamaryndowym z chilli",
+        "price": 54,
+        "imageUrl": "https://images.unsplash.com/photo-1519708227418-c8fd9a32b7a2",
+        "isAvailable": true
+      },
+      {
+        "id": 4013,
+        "name": "Krewetki Smażone z Czosnkiem i Pieprzem",
+        "description": "Królewskie krewetki w sosie z prażonego czosnku, pieprzu i świeżej kolendry",
+        "price": 52,
+        "imageUrl": "https://images.unsplash.com/photo-1563245372-f21724e3856d",
+        "isAvailable": true
+      },
+      {
+        "id": 4014,
+        "name": "Pikantne Tofu z Bakłażanem",
+        "description": "Smażone tofu z tajskim bakłażanem w pikantnym sosie z liśćmi bazylii",
+        "price": 36,
+        "imageUrl": "https://images.unsplash.com/photo-1546069901-ba9599a7e63c",
+        "isAvailable": true
+      },
+      {
+        "id": 4015,
+        "name": "Kaczka w Sosie Tamaryndowym",
+        "description": "Chrupiąca pierś z kaczki podana na podsmażanym szpinaku wodnym",
+        "price": 56,
+        "imageUrl": "https://images.unsplash.com/photo-1518492104633-130d0cc84637",
+        "isAvailable": true
+      }
+    ]
+  },
+  {
+    "id": 404,
+    "name": "Przystawki & Desery Tajskie",
+    "cuisine": "thai",
+    "products": [
+      {
+        "id": 4016,
+        "name": "Satay z Kurczaka",
+        "description": "Szaszłyki z marynowanego kurczaka z kremowym sosem orzechowym i piklami",
+        "price": 27,
+        "imageUrl": "https://images.unsplash.com/photo-1529193591184-b1d58069ecdd",
+        "isAvailable": true
+      },
+      {
+        "id": 4017,
+        "name": "Sajgonki Wegetariańskie (Poh Pia Tod)",
+        "description": "Chrupiące tajskie sajgonki z warzywami i makaronem sojowym, sos sweet chilli",
+        "price": 24,
+        "imageUrl": "https://images.unsplash.com/photo-1544025162-d76694265947",
+        "isAvailable": true
+      },
+      {
+        "id": 4018,
+        "name": "Tod Mun Pla (Tajskie Kotlety Rybne)",
+        "description": "Aromatyczne placuszki z pasty rybnej z czerwoną pastą curry i ogórkowym relish",
+        "price": 28,
+        "imageUrl": "https://images.unsplash.com/photo-1565299585323-38d6b0865b47",
+        "isAvailable": true
+      },
+      {
+        "id": 4019,
+        "name": "Mango Sticky Rice",
+        "description": "Słodki kleisty ryż w mleku kokosowym podawany ze świeżym dojrzałym mango",
+        "price": 29,
+        "imageUrl": "https://images.unsplash.com/photo-1563805042-7684c019e1cb",
+        "isAvailable": true
+      },
+      {
+        "id": 4020,
+        "name": "Smażone Banany w Sezamie",
+        "description": "Kawałki banana w chrupiącym cieście kokosowo-sezamowym z miodem",
+        "price": 23,
+        "imageUrl": "https://images.unsplash.com/photo-1587314168485-3236d6710814",
+        "isAvailable": true
+      }
+    ]
+  },
+  {
+    "id": 501,
+    "name": "Pierożki Dim Sum & Przystawki",
+    "cuisine": "chinese",
+    "products": [
+      {
+        "id": 5001,
+        "name": "Xiao Long Bao",
+        "description": "Pierożki na parze z wieprzowiną i gorącym aromatycznym bulionem w środku (6 szt.)",
+        "price": 34,
+        "imageUrl": "https://images.unsplash.com/photo-1496116218417-1a781b1c416c",
+        "isAvailable": true
+      },
+      {
+        "id": 5002,
+        "name": "Siu Mai z Wieprzowiną i Krewetkami",
+        "description": "Tradycyjne otwarte kantońskie pierożki na parze z grzybami shiitake (5 szt.)",
+        "price": 32,
+        "imageUrl": "https://images.unsplash.com/photo-1541696432-82c6da8ce7bf",
+        "isAvailable": true
+      },
+      {
+        "id": 5003,
+        "name": "Chrupiące Sajgonki z Kaczką",
+        "description": "Złociste sajgonki nadziewane szarpaną kaczką i warzywami z sosem śliwkowym",
+        "price": 28,
+        "imageUrl": "https://images.unsplash.com/photo-1544025162-d76694265947",
+        "isAvailable": true
+      },
+      {
+        "id": 5004,
+        "name": "Sałatka z Ogórka po Syczuańsku",
+        "description": "Gnieciony ogórek w czosnkowym sosie z olejem chilli i czarnym octem Chinkiang",
+        "price": 22,
+        "imageUrl": "https://images.unsplash.com/photo-1540420773420-3366772f4999",
+        "isAvailable": true
+      },
+      {
+        "id": 5005,
+        "name": "Pierożki Jiaozi z Wołowiną",
+        "description": "Smażone na chrupko pierożki z imbirem i szczypiorkiem (8 szt.)",
+        "price": 31,
+        "imageUrl": "https://images.unsplash.com/photo-1541529086526-db283c563270",
+        "isAvailable": true
+      }
+    ]
+  },
+  {
+    "id": 502,
+    "name": "Zupy & Makarony Chińskie",
+    "cuisine": "chinese",
+    "products": [
+      {
+        "id": 5006,
+        "name": "Zupa Wonton z Krewetkami",
+        "description": "Delikatny bulion drobiowy z cienkimi pierożkami wonton i pak choi",
+        "price": 29,
+        "imageUrl": "https://images.unsplash.com/photo-1569718212165-3a8278d5f624",
+        "isAvailable": true
+      },
+      {
+        "id": 5007,
+        "name": "Zupa Ostro-Kwaśna (Suan La Tang)",
+        "description": "Gęsta zupa z tofu, grzybami mun, pędami bambusa i jajkiem",
+        "price": 26,
+        "imageUrl": "https://images.unsplash.com/photo-1547592180-85f173990554",
+        "isAvailable": true
+      },
+      {
+        "id": 5008,
+        "name": "Makaron Dan Dan",
+        "description": "Syczuański makaron pszenny w ostrym sosie sezamowym z mieloną wieprzowiną",
+        "price": 38,
+        "imageUrl": "https://images.unsplash.com/photo-1552611052-33e04de081de",
+        "isAvailable": true
+      },
+      {
+        "id": 5009,
+        "name": "Chow Mein z Wołowiną",
+        "description": "Smażony makaron jajeczny z plastrami wołowiny, kiełkami i sosem ostrygowym",
+        "price": 41,
+        "imageUrl": "https://images.unsplash.com/photo-1585032226651-759b368d7246",
+        "isAvailable": true
+      },
+      {
+        "id": 5010,
+        "name": "Makaron Ryżowy Chow Fun",
+        "description": "Kantoński szeroki makaron smażony z polędwicą wołową i dymką",
+        "price": 43,
+        "imageUrl": "https://images.unsplash.com/photo-1569718212165-3a8278d5f624",
+        "isAvailable": false
+      }
+    ]
+  },
+  {
+    "id": 503,
+    "name": "Klasyki Kuchni Chińskiej",
+    "cuisine": "chinese",
+    "products": [
+      {
+        "id": 5011,
+        "name": "Kaczka po Pekińsku",
+        "description": "Chrupiąca kaczka podana z placuszkami na parze, sosem Hoisin, ogórkiem i porami",
+        "price": 68,
+        "imageUrl": "https://images.unsplash.com/photo-1518492104633-130d0cc84637",
+        "isAvailable": true
+      },
+      {
+        "id": 5012,
+        "name": "Kurczak Kung Pao",
+        "description": "Kawałki kurczaka smażone z orzeszkami ziemnymi, suszonym chilli i pieprzem syczuańskim",
+        "price": 42,
+        "imageUrl": "https://images.unsplash.com/photo-1525755662778-989d0524087e",
+        "isAvailable": true
+      },
+      {
+        "id": 5013,
+        "name": "Mapo Tofu",
+        "description": "Jedwabiste tofu w ognistym sosie z mieloną wołowiną, fermentowanym bobem i pieprzem",
+        "price": 37,
+        "imageUrl": "https://images.unsplash.com/photo-1546069901-ba9599a7e63c",
+        "isAvailable": true
+      },
+      {
+        "id": 5014,
+        "name": "Wieprzowina Słodko-Kwaśna (Gu Lao Rou)",
+        "description": "Chrupiące kąski wieprzowiny w glazurze słodko-kwaśnej z papryką i ananasem",
+        "price": 40,
+        "imageUrl": "https://images.unsplash.com/photo-1563245372-f21724e3856d",
+        "isAvailable": true
+      },
+      {
+        "id": 5015,
+        "name": "Wołowina po Syczuańsku na Gorącym Talerzu",
+        "description": "Plastry wołowiny w aromatycznym ostrym sosie z czarnym pieprzem i cebulą",
+        "price": 49,
+        "imageUrl": "https://images.unsplash.com/photo-1544025162-d76694265947",
+        "isAvailable": true
+      }
+    ]
+  },
+  {
+    "id": 504,
+    "name": "Dania Warzywne & Desery Chińskie",
+    "cuisine": "chinese",
+    "products": [
+      {
+        "id": 5016,
+        "name": "Pak Choi w Sosie Czosnkowym",
+        "description": "Młoda kapusta pak choi smażona na woku z dużą ilością czosnku i oleju sezamowego",
+        "price": 27,
+        "imageUrl": "https://images.unsplash.com/photo-1540420773420-3366772f4999",
+        "isAvailable": true
+      },
+      {
+        "id": 5017,
+        "name": "Bakłażan Yu Xiang",
+        "description": "Duszony bakłażan w słodko-pikantnym sosie czosnkowo-imbirowym o smaku rybnym",
+        "price": 33,
+        "imageUrl": "https://images.unsplash.com/photo-1546069901-ba9599a7e63c",
+        "isAvailable": true
+      },
+      {
+        "id": 5018,
+        "name": "Kulki Sezamowe Jian Dui",
+        "description": "Chrupiące kulki z mąki ryżowej z sezamem, nadziewane słodką pastą z czerwonej fasoli (4 szt.)",
+        "price": 22,
+        "imageUrl": "https://images.unsplash.com/photo-1563805042-7684c019e1cb",
+        "isAvailable": true
+      },
+      {
+        "id": 5019,
+        "name": "Smażone Lody w Cieście Kokosowym",
+        "description": "Gałka lodów waniliowych w gorącej chrupiącej panierce z sosem truskawkowym",
+        "price": 25,
+        "imageUrl": "https://images.unsplash.com/photo-1551024709-8f23befc6f87",
+        "isAvailable": true
+      },
+      {
+        "id": 5020,
+        "name": "Bułeczki Bao z Kremem Jajecznym",
+        "description": "Puszyste bułeczki na parze z płynnym słodkim kremem custard (3 szt.)",
+        "price": 24,
+        "imageUrl": "https://images.unsplash.com/photo-1509440159596-0249088772ff",
+        "isAvailable": true
+      }
+    ]
+  }
+]

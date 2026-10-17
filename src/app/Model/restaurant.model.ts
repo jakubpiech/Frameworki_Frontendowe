@@ -2,7 +2,7 @@ export type Restaurant = {
   id: number;
   name: string;
   description: string;
-  cuisine: string;
+  cuisine: Cuisine;
   imageUrl: string;
   rating: number;
   deliveryTimeMin: number;
@@ -24,5 +24,7 @@ export type Product = {
 export type MenuCategory = {
   id: number;
   name: string;
+  cuisine: Cuisine;
   products: Product[];
 };
+export type Cuisine = 'polish' | 'italian' | 'thai' | 'american' | 'chinese';

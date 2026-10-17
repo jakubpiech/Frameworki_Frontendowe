@@ -1,5 +1,7 @@
 <section>
-  <div class="Name"><a [routerLink]="'/restaurants/' + restaurant().id">{{ restaurant().name }}</a></div>
+  <div class="Name">
+    <a [routerLink]="'/restaurants/' + restaurant().id">{{ restaurant().name }}</a>
+  </div>
   <div class="Description">{{ restaurant().description }}</div>
   <div class="cousineType">Kuchnia: {{ restaurant().cuisine }}</div>
   <div class="image"><img src="{{ restaurant().imageUrl }}" /></div>

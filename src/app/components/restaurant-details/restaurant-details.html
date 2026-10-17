@@ -1,1 +1,46 @@
-<p>restaurant-details works!</p>
+@if (restaurantDetails(); as restaurantDetails) {
+  <header>
+    <h1>{{ restaurantDetails.name }}</h1>
+    <p>Opis: {{ restaurantDetails.description }}</p>
+  </header>
+  <section>
+    <div class="cousineType">Kuchnia: {{ restaurantDetails.cuisine }}</div>
+    <div class="image"><img src="{{ restaurantDetails.imageUrl }}" /></div>
+    <div class="rating">Ocena: {{ restaurantDetails.rating }}</div>
+    <div class="delivery-time-min">
+      Min czas dostawy: {{ restaurantDetails.deliveryTimeMin }}min
+    </div>
+    <div class="delivery-time-max">
+      Max czas dostawy: {{ restaurantDetails.deliveryTimeMax }}min
+    </div>
+    <div class="delivery-cost">Koszt dostawy: {{ restaurantDetails.deliveryFee }}zł</div>
+    <div class="minimum-order-value">
+      Minimalna wartość zamówienia: {{ restaurantDetails.minimumOrderValue }}
+    </div>
+    <div class="address">Adres: {{ restaurantDetails.address }}</div>
+    <section class="menu-section">
+      <div class="menu-header">
+        <h1>Menu</h1>
+        <a routerLink="/restaurants" class="back-button">← Wróć do listy restauracji</a>
+      </div>
+      @for (menu of menuCategories(); track menu.id) {
+        <div>
+          <h2>{{ menu.name }}</h2>
+          @for (product of menu.products; track product.id) {
+            <section>
+              <h4>{{ product.name }}</h4>
+              <h6>{{ product.description }}</h6>
+              <div>
+                <p>Cena: {{ product.price }}zł</p>
+                <p><img src="{{ product.imageUrl }}" alt="Zdjęcie" /></p>
+                <p>Dostępność: {{ product.isAvailable }}</p>
+              </div>
+            </section>
+          }
+        </div>
+      }
+    </section>
+  </section>
+} @else {
+  <p>Nie znaleziono restauracji o podanym ID.</p>
+}

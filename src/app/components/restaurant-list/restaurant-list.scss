@@ -4,37 +4,35 @@
 
 .list {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(min(100%, 17rem), 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(18rem, 1fr));
   gap: 1.25rem;
-  max-width: 80rem;
+  max-width: 76rem;
   margin: 0 auto;
-  padding: clamp(1rem, 3vw, 2rem);
+  padding: 1.5rem;
 }
 
 .filterSection {
   grid-column: 1 / -1;
-  padding: clamp(1rem, 2.5vw, 1.5rem);
-  border: 1px solid #d8e2dc;
-  border-radius: 1rem;
-  background: #f6faf7;
-  box-shadow: 0 0.25rem 1rem rgb(20 55 37 / 6%);
+  padding: 1.25rem;
+  border: 1px solid #e4e4e7;
+  border-radius: 0.75rem;
+  background: #fff;
 }
 
 form {
   display: grid;
   grid-template-areas:
-    'name-label cuisine-label status-label sort-label'
-    'name cuisine status sort'
-    'reset reset reset reset';
-  grid-template-columns: repeat(4, minmax(0, 1fr));
-  gap: 0.5rem 1rem;
-  align-items: end;
+    'name-label cuisine-label status-label sort-label .'
+    'name cuisine status sort reset';
+  grid-template-columns: repeat(4, minmax(0, 1fr)) auto;
+  gap: 0.4rem 1rem;
+  align-items: center;
 }
 
 label {
-  color: #26382d;
-  font-size: 0.9rem;
-  font-weight: 600;
+  color: #52525b;
+  font-size: 0.85rem;
+  font-weight: 500;
 }
 
 label[for='nameFilter'] {
@@ -53,21 +51,6 @@ label[for='sortFilter'] {
   grid-area: sort-label;
 }
 
-#nameFilter,
-#cuisineFilter,
-#statusFilter,
-#sortFilter {
-  box-sizing: border-box;
-  width: 100%;
-  min-height: 2.75rem;
-  padding: 0.6rem 0.75rem;
-  border: 1px solid #aebfb3;
-  border-radius: 0.5rem;
-  background: #fff;
-  color: #1e2c23;
-  font: inherit;
-}
-
 #nameFilter {
   grid-area: name;
 }
@@ -84,40 +67,46 @@ label[for='sortFilter'] {
   grid-area: sort;
 }
 
-#nameFilter:focus-visible,
-#cuisineFilter:focus-visible,
-#statusFilter:focus-visible,
-#sortFilter:focus-visible,
-button:focus-visible {
-  outline: 3px solid #28784b;
-  outline-offset: 2px;
+input,
+select {
+  width: 100%;
+  height: 2.5rem;
+  padding: 0 0.75rem;
+  border: 1px solid #d4d4d8;
+  border-radius: 0.5rem;
+  background: #fff;
+  color: #18181b;
+  font: inherit;
+  font-size: 0.9rem;
 }
 
 button {
   grid-area: reset;
-  justify-self: start;
-  min-height: 2.75rem;
-  margin-top: 0.5rem;
-  padding: 0.65rem 1rem;
-  border: 0;
+  height: 2.5rem;
+  padding: 0 1rem;
+  border: 1px solid #d4d4d8;
   border-radius: 0.5rem;
-  background: #28784b;
-  color: #fff;
-  cursor: pointer;
+  background: #f4f4f5;
+  color: #18181b;
   font: inherit;
-  font-weight: 600;
-  transition: background-color 150ms ease;
+  font-size: 0.9rem;
+  font-weight: 500;
+  white-space: nowrap;
+  cursor: pointer;
+
+  &:hover {
+    background: #e4e4e7;
+  }
 }
 
-button:hover {
-  background: #1f603b;
+input:focus-visible,
+select:focus-visible,
+button:focus-visible {
+  outline: 2px solid #18181b;
+  outline-offset: 2px;
 }
 
-app-restaurant-card {
-  min-width: 0;
-}
-
-@media (max-width: 48rem) {
+@media (max-width: 52rem) {
   form {
     grid-template-areas:
       'name-label'
@@ -129,16 +118,10 @@ app-restaurant-card {
       'sort-label'
       'sort'
       'reset';
-    grid-template-columns: minmax(0, 1fr);
+    grid-template-columns: 1fr;
   }
 
   button {
-    justify-self: stretch;
-  }
-}
-
-@media (prefers-reduced-motion: reduce) {
-  button {
-    transition: none;
+    margin-top: 0.25rem;
   }
 }
