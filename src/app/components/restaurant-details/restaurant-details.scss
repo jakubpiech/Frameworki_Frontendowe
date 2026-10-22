@@ -71,7 +71,7 @@ header {
     }
   }
 
-  .back-button {
+  .back-button, .add-to-cart {
     display: inline-flex;
     align-items: center;
     gap: 0.5rem;
@@ -89,6 +89,7 @@ header {
     &:hover {
       background: #e4e4e7;
       border-color: #a1a1aa;
+      cursor: pointer;
     }
 
     &:focus-visible {
@@ -157,6 +158,22 @@ header {
           height: 4.5rem;
           object-fit: cover;
           border-radius: 0.5rem;
+        }
+      }
+
+      &.unavailable {
+        background: #f4f4f5;
+        border-color: #e4e4e7;
+        opacity: 0.65;
+
+        h4,
+        h6,
+        p {
+          color: #71717a;
+        }
+
+        img {
+          filter: grayscale(100%);
         }
       }
     }

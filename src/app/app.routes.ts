@@ -3,6 +3,7 @@ import { RestaurantList } from './components/restaurant-list/restaurant-list';
 import { RestaurantDetails } from './components/restaurant-details/restaurant-details';
 
 export const routes: Routes = [
+  { path: '', redirectTo: 'restaurants', pathMatch: 'full' },
   {
     path: 'restaurants',
     component: RestaurantList,
