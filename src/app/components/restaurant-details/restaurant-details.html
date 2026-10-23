@@ -5,7 +5,9 @@
   </header>
   <section>
     <div class="cousineType">Kuchnia: {{ restaurantDetails.cuisine }}</div>
-    <div class="image"><img src="{{ restaurantDetails.imageUrl }}" /></div>
+    <div class="image">
+      <img [src]="restaurantDetails.imageUrl" [alt]="restaurantDetails.name" decoding="async" />
+    </div>
     <div class="rating">Ocena: {{ restaurantDetails.rating }}</div>
     <div class="delivery-time-min">
       Min czas dostawy: {{ restaurantDetails.deliveryTimeMin }}min
@@ -27,14 +29,29 @@
         <div>
           <h2>{{ menu.name }}</h2>
           @for (product of menu.products; track product.id) {
-            
             <section [class.unavailable]="!product.isAvailable">
               <h4>{{ product.name }}</h4>
               <h6>{{ product.description }}</h6>
               <div>
                 <p>Cena: {{ product.price }}zł</p>
-                <p><img src="{{ product.imageUrl }}" alt="Zdjęcie" /></p>
-                <button [disabled]="!product.isAvailable" class="add-to-cart">Dodaj do Koszyka</button>
+                <p>
+                  <img
+                    [src]="product.imageUrl"
+                    [alt]="product.name"
+                    loading="lazy"
+                    decoding="async"
+                  />
+                </p>
+                <div class="product-actions">
+                  <button [disabled]="!product.isAvailable" class="add-to-cart">
+                    Dodaj do Koszyka
+                  </button>
+                  @if (product.isAvailable) {
+                    <span class="availability-badge available">Dostępne</span>
+                  } @else {
+                    <span class="availability-badge not-available">Niedostępne</span>
+                  }
+                </div>
               </div>
             </section>
           }

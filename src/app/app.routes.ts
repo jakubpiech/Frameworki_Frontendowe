@@ -1,15 +1,14 @@
 import { Routes } from '@angular/router';
-import { RestaurantList } from './components/restaurant-list/restaurant-list';
-import { RestaurantDetails } from './components/restaurant-details/restaurant-details';
 
 export const routes: Routes = [
-  { path: '', redirectTo: 'restaurants', pathMatch: 'full' },
   {
     path: 'restaurants',
-    component: RestaurantList,
+    loadComponent: () =>
+      import('./components/restaurant-list/restaurant-list').then((m) => m.RestaurantList),
   },
   {
     path: 'restaurants/:id',
-    component: RestaurantDetails,
+    loadComponent: () =>
+      import('./components/restaurant-details/restaurant-details').then((m) => m.RestaurantDetails),
   },
 ];
