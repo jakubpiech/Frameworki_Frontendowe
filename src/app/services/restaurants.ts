@@ -4,13 +4,10 @@ import data from '../../data/restaurants.json';
 
 @Service()
 export class Restaurants {
-  private data = signal(data as Restaurant[]);
-  getAll() {
-    return this.data();
-  }
+  readonly #restaurants = signal<Restaurant[]>(data as Restaurant[]);
+  readonly restaurants = this.#restaurants.asReadonly();
+
   getById(id: number) {
-    {
-      return this.data().find((restaurant) => restaurant.id === id);
-    }
+    return this.#restaurants().find((restaurant) => restaurant.id === id);
   }
 }

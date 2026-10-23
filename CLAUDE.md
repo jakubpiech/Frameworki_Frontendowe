@@ -55,3 +55,4 @@ Standard „Pod maską”. Przy wprowadzaniu nowego pojęcia, wzorca, biblioteki
 - Pod maską: krótkie wyjaśnienie techniczne, co robi silnik Angulara, przeglądarka lub Git.
 - Zastosowanie: konkretny powód użycia w tym projekcie.
 - Recenzja zamiast przepisywania. Gdy użytkownik wklei własny kod, wskaż problemy i pytaj, jak je naprawić, zamiast od razu przepisywać.
+- jeśli chcesz zadać jakieś pytanie to rób to na końcu twojej wypowiedzi
