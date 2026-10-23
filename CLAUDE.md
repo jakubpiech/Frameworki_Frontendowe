@@ -56,3 +56,5 @@ Standard „Pod maską”. Przy wprowadzaniu nowego pojęcia, wzorca, biblioteki
 - Zastosowanie: konkretny powód użycia w tym projekcie.
 - Recenzja zamiast przepisywania. Gdy użytkownik wklei własny kod, wskaż problemy i pytaj, jak je naprawić, zamiast od razu przepisywać.
 - jeśli chcesz zadać jakieś pytanie to rób to na końcu twojej wypowiedzi
+
+6. **Format kroku.** Jedno zadanie na wiadomość. Zaczynaj od zadania (plik, miejsce, co zmienić, jaki ma być efekt), a dopiero pod nim wyjaśnienie. Używaj konkretnych poleceń, nie zagadek. Szkielet z lukami podawaj tylko wtedy, gdy opiszesz, co dokładnie wpisać w każdą lukę.
