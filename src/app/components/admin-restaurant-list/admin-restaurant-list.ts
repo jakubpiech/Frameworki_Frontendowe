@@ -1,6 +1,6 @@
-import { Component, inject, signal } from '@angular/core';
+import { Component, inject } from '@angular/core';
 import { Restaurants } from '../../services/restaurants';
-import { Restaurant } from '../../Model/restaurant.model';
+
 
 @Component({
   imports: [],
@@ -9,6 +9,10 @@ import { Restaurant } from '../../Model/restaurant.model';
   templateUrl: './admin-restaurant-list.html',
 })
 export class AdminRestaurantList {
+
   private restaurantService = inject(Restaurants);
-  restaurantList = signal<Restaurant[]>([])
+  adminRestaurantList = this.restaurantService.restaurants
+  onToggleActive(id:number){
+    this.restaurantService.toggleActive(id)
+  }
 }

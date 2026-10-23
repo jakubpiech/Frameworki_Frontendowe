@@ -1,1 +1,28 @@
-<p>admin-restaurant-list works!</p>
+<ul>
+  @for (restaurant of adminRestaurantList(); track restaurant.id) {
+    <li>
+      <p>{{ restaurant.name }}</p>
+      <p>Kuchnia: {{ restaurant.cuisine }}</p>
+      <p>Rating: {{ restaurant.rating }}</p>
+      <p>
+        Czy Otwarta:
+        @if (restaurant.isActive === true) {
+          tak
+        } @else {
+          nie
+        }
+      </p>
+      <p>
+        Akcje:
+        <button type="button" [attr.aria-label]="'Edytuj Restauracje' + restaurant.name">
+          Edytuj
+        </button>
+        @if (restaurant.isActive === true) {
+          <button type="button" class="isClosed" (click)="onToggleActive(restaurant.id)">Deactivate</button>
+        } @else {
+          <button type="button" class="isOpen" (click)="onToggleActive(restaurant.id)">Activate</button>
+        }
+      </p>
+    </li>
+  }
+</ul>

@@ -1,6 +1,7 @@
 import { Component, computed, inject, signal } from '@angular/core';
 import { RestaurantCard } from '../restaurant-card/restaurant-card';
 import { Restaurants } from '../../services/restaurants';
+import { Cuisine } from '../../Model/restaurant.model';
 
 @Component({
   imports: [RestaurantCard],
@@ -17,22 +18,24 @@ export class RestaurantList {
   sortFilter = signal('rating');
 
   displayedRestaurants = computed(() => {
-    const name = this.nameFilter().toLowerCase();
+    const name = this.nameFilter();
     const cuisine = this.cuisineFilter();
     const status = this.statusFilter();
     const sort = this.sortFilter();
+    const all = this.restaurantService.restaurants();
+    const nameToLower = name.toLowerCase();
 
-    const result = this.restaurantService.restaurants().filter((restaurant) => {
-      const matchesName = restaurant.name.toLowerCase().includes(name);
-      const matchesCuisine = cuisine === 'all' || restaurant.cuisine === cuisine;
-      const matchesStatus =
+    const result = all.filter((restaurant) => {
+      const nameMatch = restaurant.name.toLowerCase().includes(nameToLower);
+      const cuisineMatch = cuisine === 'all' || restaurant.cuisine === cuisine;
+      const statusMatch =
         status === 'all' ||
-        (status === 'open' && restaurant.isActive) ||
-        (status === 'closed' && !restaurant.isActive);
-      return matchesName && matchesCuisine && matchesStatus;
-    });
+        (restaurant.isActive === true && status === 'open') ||
+        (restaurant.isActive === false && status === 'closed');
 
-    return result.sort((a, b) => {
+      return nameMatch && cuisineMatch && statusMatch;
+    });
+    result.sort((a, b) => {
       switch (sort) {
         case 'rating':
           return b.rating - a.rating;
@@ -44,24 +47,20 @@ export class RestaurantList {
           return 0;
       }
     });
+    return result
   });
-
-  onNameChange(value: string) {
-    this.nameFilter.set(value);
+  onNameChange(name: string) {
+    this.nameFilter.set(name);
   }
-
-  onCuisineChange(value: string) {
-    this.cuisineFilter.set(value);
+  onCuisineChange(cuisine: string) {
+    this.cuisineFilter.set(cuisine);
   }
-
-  onStatusChange(value: string) {
-    this.statusFilter.set(value);
+  onStatusChange(status: string) {
+    this.statusFilter.set(status);
   }
-
-  onSortChange(value: string) {
-    this.sortFilter.set(value);
+  onSortChange(sort: string) {
+    this.sortFilter.set(sort);
   }
-
   resetFilters() {
     this.nameFilter.set('');
     this.cuisineFilter.set('all');

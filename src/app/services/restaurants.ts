@@ -10,4 +10,11 @@ export class Restaurants {
   getById(id: number) {
     return this.#restaurants().find((restaurant) => restaurant.id === id);
   }
+  toggleActive(id: number) {
+    this.#restaurants.update((list) =>
+      list.map((restaurant) =>
+        restaurant.id === id ? { ...restaurant, isActive: !restaurant.isActive } : restaurant,
+      ),
+    );
+  }
 }

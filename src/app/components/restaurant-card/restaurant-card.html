@@ -12,5 +12,10 @@
   <div class="minimum-order-value">
     Minimalna wartość zamówienia: {{ restaurant().minimumOrderValue }}zł
   </div>
-  <div class="isActive">Otwarty: {{ restaurant().isActive }}</div>
+  @if (restaurant().isActive === true) {
+    <div class="isOpen">Otwarte</div>
+  }@else {
+    <div class="isClosed">Zamknięte</div>
+  }
+  
 </section>
