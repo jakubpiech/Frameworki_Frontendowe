@@ -1,5 +1,5 @@
 import { Service, signal } from '@angular/core';
-import { Restaurant } from '../Model/restaurant.model';
+import { Restaurant, RestaurantWithoutId } from '../Model/restaurant.model';
 import data from '../../data/restaurants.json';
 
 @Service()
@@ -9,6 +9,23 @@ export class Restaurants {
 
   getById(id: number) {
     return this.#restaurants().find((restaurant) => restaurant.id === id);
+  }
+  
+  add(input: RestaurantWithoutId) {
+    this.#restaurants.update((list) => {
+      const ids = list.map((r) => r.id);
+      const biggestId = Math.max(...ids, 0);
+      const nextId = biggestId + 1;
+      return [...list,{...input,id:nextId,rating:0,menuCategories:[]}]
+    });
+    
+  }
+  update(id: number, input: RestaurantWithoutId) {
+    this.#restaurants.update((list)=>
+    list.map((restaurant)=>
+      restaurant.id===id ? {...restaurant, ...input }: restaurant,
+    ))
+
   }
   toggleActive(id: number) {
     this.#restaurants.update((list) =>

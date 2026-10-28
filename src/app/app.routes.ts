@@ -1,7 +1,7 @@
 import { Routes } from '@angular/router';
 
 export const routes: Routes = [
-  { path: '', redirectTo: 'restaurants', pathMatch:'full' },
+  { path: '', redirectTo: 'restaurants', pathMatch: 'full' },
   {
     path: 'restaurants',
     loadComponent: () =>
@@ -16,7 +16,21 @@ export const routes: Routes = [
     path: 'admin/restaurants',
     loadComponent: () =>
       import('./components/admin-restaurant-list/admin-restaurant-list').then(
-        (m) => m.AdminRestaurantList
+        (m) => m.AdminRestaurantList,
+      ),
+  },
+  {
+    path: 'admin/restaurants/new',
+    loadComponent: () =>
+      import('./components/admin-restaurant-form/admin-restaurant-form').then(
+        (m) => m.AdminRestaurantForm,
+      ),
+  },
+  {
+    path: 'admin/restaurants/:id/edit',
+    loadComponent: () =>
+      import('./components/admin-restaurant-form/admin-restaurant-form').then(
+        (m) => m.AdminRestaurantForm,
       ),
   },
 ];

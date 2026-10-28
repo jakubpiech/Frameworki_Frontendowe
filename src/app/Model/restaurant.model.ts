@@ -13,6 +13,7 @@ export type Restaurant = {
   address: string;
   menuCategories: MenuCategory[];
 };
+export type RestaurantWithoutId = Omit<Restaurant,'id'|'rating'|'menuCategories'>;
 export type Product = {
   id: number;
   name: string;
