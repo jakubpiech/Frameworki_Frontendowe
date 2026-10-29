@@ -1,4 +1,32 @@
 <button routerLink="/admin/restaurants">Wróć</button>
 
-<label for="restaurant-name">Podaj Imię</label>
-<input id="restaurant-name" type="text"[formField]="restaurantForm.name"/>
+<label for="restaurant-name">Podaj Nazwę Restauracji </label>
+<input id="restaurant-name" type="text" [formField]="restaurantForm.name" />
+<label for="restaurant-description">Dodaj Opis </label>
+<input id="restaurant-description" type="text" [formField]="restaurantForm.description" />
+<label for="restaurant-cuisine">Podaj rodzaj Kuchni </label>
+<input id="restaurant-cuisine" type="Cuisine" [formField]="restaurantForm.cuisine" />
+<label for="restaurant-image">Podaj Link do Zdjęcia</label>
+<input id="restaurant-image" type="text" [formField]="restaurantForm.imageUrl" />
+<label for="restaurant-delivery-min">Podaj Minimalny Czas Dostawy</label>
+<input id="restaurant-delivery-min" type="number" [formField]="restaurantForm.deliveryTimeMin" />
+<label for="restaurant-delivery-max">Podaj Maksymalny czas Dostawy</label>
+<input id="restaurant-delivery-max" type="number" [formField]="restaurantForm.deliveryTimeMax" />
+<label for="restaurant-delivery-fee">Podaj Koszt Dostawy</label>
+<input id="restaurant-delivery-fee" type="number" [formField]="restaurantForm.deliveryFee" />
+<label for="restaurant-min-order-value">Podaj Minimalną wartość zamówienia</label>
+<input
+  id="restaurant-min-order-value"
+  type="number"
+  [formField]="restaurantForm.minimumOrderValue"
+/>
+<label for="restaurant-isactive">Podaj czy restauracja jest otwarta</label>
+<label for="restaurant-isactive">Restauracja jest otwarta</label>
+<input id="restaurant-isactive" type="checkbox" [formField]="restaurantForm.isActive" />
+<label for="restaurant-address">Podaj Adres restauracji</label>
+<input id="restaurant-address" type="text" [formField]="restaurantForm.address" />
+
+<button type="submit" (click)="save()">Dalej</button>
+@if (errorMessage()) {
+  <p style="color: red">Error: {{ errorMessage() }}</p>
+}

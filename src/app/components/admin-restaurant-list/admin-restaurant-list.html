@@ -1,4 +1,5 @@
-  <button routerLink="/admin/restaurants/new">Dodaj Nową Restauracje</button>
+<button routerLink="/admin/restaurants/new">Dodaj Nową Restauracje</button>
+
 <ul>
   @for (restaurant of adminRestaurantList(); track restaurant.id) {
     <li>
@@ -15,13 +16,22 @@
       </p>
       <p>
         Akcje:
-        <button type="button" routerLink="./admin/restaurants/:id/edit" [attr.aria-label]="'Edytuj Restauracje' + restaurant.name">
+        <button
+          type="button"
+          [routerLink]="['/admin/restaurants', restaurant.id, 'edit']"
+          [attr.aria-label]="'Edytuj Restauracje' + restaurant.name"
+        >
           Edytuj
         </button>
+
         @if (restaurant.isActive === true) {
-          <button type="button" class="isClosed" (click)="onToggleActive(restaurant.id)">Deactivate</button>
+          <button type="button" class="isClosed" (click)="onToggleActive(restaurant.id)">
+            Deactivate
+          </button>
         } @else {
-          <button type="button" class="isOpen" (click)="onToggleActive(restaurant.id)">Activate</button>
+          <button type="button" class="isOpen" (click)="onToggleActive(restaurant.id)">
+            Activate
+          </button>
         }
       </p>
     </li>

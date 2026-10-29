@@ -10,22 +10,24 @@ export class Restaurants {
   getById(id: number) {
     return this.#restaurants().find((restaurant) => restaurant.id === id);
   }
-  
+
   add(input: RestaurantWithoutId) {
     this.#restaurants.update((list) => {
       const ids = list.map((r) => r.id);
       const biggestId = Math.max(...ids, 0);
       const nextId = biggestId + 1;
-      return [...list,{...input,id:nextId,rating:0,menuCategories:[]}]
+      return [...list, { ...input, id: nextId, rating: 0, menuCategories: [] }];
     });
-    
   }
   update(id: number, input: RestaurantWithoutId) {
-    this.#restaurants.update((list)=>
-    list.map((restaurant)=>
-      restaurant.id===id ? {...restaurant, ...input }: restaurant,
-    ))
-
+    const existingRestaurant = this.getById(id);
+    if (existingRestaurant === undefined) {
+      return false;
+    }
+    this.#restaurants.update((list) =>
+      list.map((restaurant) => (restaurant.id === id ? { ...restaurant, ...input } : restaurant)),
+    );
+    return true;
   }
   toggleActive(id: number) {
     this.#restaurants.update((list) =>
