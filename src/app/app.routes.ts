@@ -1,11 +1,12 @@
 import { Routes } from '@angular/router';
+import { RestaurantList } from './components/restaurant-list/restaurant-list';
+import { isAdminGuard } from './guards/is-admin-guard';
 
 export const routes: Routes = [
   { path: '', redirectTo: 'restaurants', pathMatch: 'full' },
   {
     path: 'restaurants',
-    loadComponent: () =>
-      import('./components/restaurant-list/restaurant-list').then((m) => m.RestaurantList),
+    component: RestaurantList,
   },
   {
     path: 'restaurants/:id',
@@ -13,24 +14,9 @@ export const routes: Routes = [
       import('./components/restaurant-details/restaurant-details').then((m) => m.RestaurantDetails),
   },
   {
-    path: 'admin/restaurants',
-    loadComponent: () =>
-      import('./components/admin-restaurant-list/admin-restaurant-list').then(
-        (m) => m.AdminRestaurantList,
-      ),
-  },
-  {
-    path: 'admin/restaurants/new',
-    loadComponent: () =>
-      import('./components/admin-restaurant-form/admin-restaurant-form').then(
-        (m) => m.AdminRestaurantForm,
-      ),
-  },
-  {
-    path: 'admin/restaurants/:id/edit',
-    loadComponent: () =>
-      import('./components/admin-restaurant-form/admin-restaurant-form').then(
-        (m) => m.AdminRestaurantForm,
-      ),
+    path: 'admin',
+    loadComponent: () => import('./components/admin-panel/admin-panel').then((m) => m.AdminPanel),
+    canActivateChild: [isAdminGuard],
+    loadChildren: () => import('./admin.routes').then((m) => m.ADMIN_ROUTES),
   },
 ];
