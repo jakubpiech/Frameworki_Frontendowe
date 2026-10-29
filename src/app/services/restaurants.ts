@@ -1,12 +1,28 @@
-import { Service, signal } from '@angular/core';
+import { effect, Service, signal } from '@angular/core';
 import { Restaurant, RestaurantWithoutId } from '../Model/restaurant.model';
 import data from '../../data/restaurants.json';
-
+function loadRestaurants(): Restaurant[] {
+  const saved = localStorage.getItem('restaurants');
+  if (saved === null) {
+    return data as Restaurant[];
+  }
+  try {
+    const parsed: unknown = JSON.parse(saved);
+    if (Array.isArray(parsed)) {
+      return parsed as Restaurant[];
+    }
+  } catch {
+    // Corrupted data in localStorage, fall back to the JSON file.
+  }
+  return data as Restaurant[];
+}
 @Service()
 export class Restaurants {
-  readonly #restaurants = signal<Restaurant[]>(data as Restaurant[]);
+  readonly #restaurants = signal<Restaurant[]>(loadRestaurants());
   readonly restaurants = this.#restaurants.asReadonly();
-
+  readonly #persist = effect(() => {
+    localStorage.setItem('restaurants', JSON.stringify(this.#restaurants()));
+  });
   getById(id: number) {
     return this.#restaurants().find((restaurant) => restaurant.id === id);
   }

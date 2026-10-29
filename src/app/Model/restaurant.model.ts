@@ -13,7 +13,7 @@ export type Restaurant = {
   address: string;
   menuCategories: MenuCategory[];
 };
-export type RestaurantWithoutId = Omit<Restaurant,'id'|'rating'|'menuCategories'>;
+export type RestaurantWithoutId = Omit<Restaurant, 'id' | 'rating' | 'menuCategories'>;
 export type Product = {
   id: number;
   name: string;
@@ -28,4 +28,5 @@ export type MenuCategory = {
   cuisine: Cuisine;
   products: Product[];
 };
-export type Cuisine = 'polish' | 'italian' | 'thai' | 'american' | 'chinese';
+export const CUISINES = ['polish', 'italian', 'thai', 'american', 'chinese'] as const;
+export type Cuisine = (typeof CUISINES)[number];

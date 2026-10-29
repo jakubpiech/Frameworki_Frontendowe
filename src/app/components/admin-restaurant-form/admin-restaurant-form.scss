@@ -42,7 +42,9 @@ textarea {
   color: #18181b;
   font: inherit;
   font-size: 0.9rem;
-  transition: border-color 150ms ease;
+  transition:
+    border-color 150ms ease,
+    background-color 150ms ease;
 
   &:hover {
     border-color: #a1a1aa;
@@ -51,6 +53,15 @@ textarea {
   &:focus-visible {
     outline: 2px solid #18181b;
     outline-offset: 2px;
+  }
+
+  &:has(+ p[role='alert']) {
+    border-color: #ef4444;
+    background: #fef2f2;
+
+    &:focus-visible {
+      outline-color: #dc2626;
+    }
   }
 }
 
@@ -66,6 +77,24 @@ input[type='checkbox'] {
     outline: 2px solid #18181b;
     outline-offset: 2px;
   }
+}
+
+p[role='alert'] {
+  margin: 0.3rem 0 0;
+  color: #b91c1c;
+  font-size: 0.8rem;
+  font-weight: 500;
+}
+
+button + p {
+  margin: 0.85rem 0 0;
+  padding: 0.65rem 0.85rem;
+  border: 1px solid #fca5a5;
+  border-radius: 0.5rem;
+  background: #fef2f2;
+  color: #991b1b;
+  font-size: 0.85rem;
+  font-weight: 500;
 }
 
 button {

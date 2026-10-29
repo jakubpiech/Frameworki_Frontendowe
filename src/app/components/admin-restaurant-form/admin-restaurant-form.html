@@ -2,24 +2,46 @@
 
 <label for="restaurant-name">Podaj Nazwę Restauracji </label>
 <input id="restaurant-name" type="text" [formField]="restaurantForm.name" />
+@if (restaurantForm.name().touched() && restaurantForm.name().invalid()) {
+  <p role="alert">{{ restaurantForm.name().errors()[0].message }}</p>
+}
 <label for="restaurant-description">Dodaj Opis </label>
 <input id="restaurant-description" type="text" [formField]="restaurantForm.description" />
+@if (restaurantForm.description().touched() && restaurantForm.description().invalid()) {
+  <p role="alert">{{ restaurantForm.description().errors()[0].message }}</p>
+}
 <label for="restaurant-cuisine">Podaj rodzaj Kuchni </label>
-<input id="restaurant-cuisine" type="Cuisine" [formField]="restaurantForm.cuisine" />
+<select id="restaurant-cuisine" [formField]="restaurantForm.cuisine">
+  @for (cuisine of cuisines; track cuisine) {
+    <option [value]="cuisine">{{ cuisine }}</option>
+  }
+</select>
 <label for="restaurant-image">Podaj Link do Zdjęcia</label>
 <input id="restaurant-image" type="text" [formField]="restaurantForm.imageUrl" />
 <label for="restaurant-delivery-min">Podaj Minimalny Czas Dostawy</label>
 <input id="restaurant-delivery-min" type="number" [formField]="restaurantForm.deliveryTimeMin" />
+@if (restaurantForm.deliveryTimeMin().touched() && restaurantForm.deliveryTimeMin().invalid()) {
+  <p role="alert">{{ restaurantForm.deliveryTimeMin().errors()[0].message }}</p>
+}
 <label for="restaurant-delivery-max">Podaj Maksymalny czas Dostawy</label>
 <input id="restaurant-delivery-max" type="number" [formField]="restaurantForm.deliveryTimeMax" />
+@if (restaurantForm.deliveryTimeMax().touched() && restaurantForm.deliveryTimeMax().invalid()) {
+  <p role="alert">{{ restaurantForm.deliveryTimeMax().errors()[0].message }}</p>
+}
 <label for="restaurant-delivery-fee">Podaj Koszt Dostawy</label>
 <input id="restaurant-delivery-fee" type="number" [formField]="restaurantForm.deliveryFee" />
+@if (restaurantForm.deliveryFee().touched() && restaurantForm.deliveryFee().invalid()) {
+  <p role="alert">{{ restaurantForm.deliveryFee().errors()[0].message }}</p>
+}
 <label for="restaurant-min-order-value">Podaj Minimalną wartość zamówienia</label>
 <input
   id="restaurant-min-order-value"
   type="number"
   [formField]="restaurantForm.minimumOrderValue"
 />
+@if (restaurantForm.minimumOrderValue().touched() && restaurantForm.minimumOrderValue().invalid()) {
+  <p role="alert">{{ restaurantForm.minimumOrderValue().errors()[0].message }}</p>
+}
 <label for="restaurant-isactive">Podaj czy restauracja jest otwarta</label>
 <label for="restaurant-isactive">Restauracja jest otwarta</label>
 <input id="restaurant-isactive" type="checkbox" [formField]="restaurantForm.isActive" />
@@ -28,5 +50,5 @@
 
 <button type="submit" (click)="save()">Dalej</button>
 @if (errorMessage()) {
-  <p style="color: red">Error: {{ errorMessage() }}</p>
+  <p>Error: {{ errorMessage() }}</p>
 }
