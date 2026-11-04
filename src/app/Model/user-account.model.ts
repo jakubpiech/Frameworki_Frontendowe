@@ -45,7 +45,7 @@ export type UpdateAdminInput = Pick<AdminAccount, 'name' | 'email' | 'phone'>;
 
 export type UpdateProfileInput = UpdateCustomerInput | UpdateAdminInput;
 
-export type StoredAt = {
+export type StoredSession = {
   userId: string;
   expiresAt: number;
 };
