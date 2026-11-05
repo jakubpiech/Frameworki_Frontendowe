@@ -1,0 +1,6 @@
+<label for="login-email">Email</label>
+<input id="login-email" type="email" autocomplete="email" [formField]="loginForm.email" />
+<label for="login-password">Password</label>
+<input id="login-password" type="password" autocomplete="current-password" [formField]="loginForm.password" />
+<p role="alert">{{ errorMessage() }}</p>
+<button type="submit"(click)="onSubmit()">Login</button>

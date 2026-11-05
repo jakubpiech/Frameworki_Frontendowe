@@ -1,6 +1,8 @@
 import { Routes } from '@angular/router';
 import { AdminRestaurantList } from './components/admin-restaurant-list/admin-restaurant-list';
 import { AdminRestaurantForm } from './components/admin-restaurant-form/admin-restaurant-form';
+import { AdminUserList } from './components/admin-user-list/admin-user-list';
+import { AdminUserForm } from './components/admin-user-form/admin-user-form';
 
 export const ADMIN_ROUTES: Routes = [
   {
@@ -21,4 +23,17 @@ export const ADMIN_ROUTES: Routes = [
       },
     ],
   },
+  {
+    path: 'users',
+    children: [
+      {
+        path:'',
+        component: AdminUserList,
+      },
+      {
+        path: 'new',
+        component: AdminUserForm,
+      }
+    ]
+  }
 ];

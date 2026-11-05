@@ -43,7 +43,7 @@ export class UserService {
   getUserList() {
     return this.users();
   }
-  isAdminLoggedIn() {}
+  
 
   async verifyCredentials(email: string, password: string): Promise<PublicUserAccount | undefined> {
     const normalizedEmail = normalizeEmail(email);
@@ -118,6 +118,14 @@ export class UserService {
     this.#users.update((users) =>
       users.map((user) => (user.id === id ? { ...user, passwordHash } : user)),
     );
+    return true;
+  }
+  deleteAccount(id: string): boolean {
+      const existingAccount = this.#users().find((user) => user.id === id);
+    if (!existingAccount) {
+      return false;
+    }
+    this.#users.update((users) => users.filter((user) => user.id !== id));
     return true;
   }
 }

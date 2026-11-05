@@ -1,0 +1,16 @@
+<label for="register-name">Name</label>
+<input id="register-name" type="text" autocomplete="name" [formField]="registerForm.name" />
+<label for="register-email">Email</label>
+<input id="register-email" type="email" autocomplete="email" [formField]="registerForm.email" />
+<label for="register-password">Password</label>
+<input id="register-password" type="password" autocomplete="current-password" [formField]="registerForm.password" />
+<label for="register-street">Street</label>
+<input id="register-street" type="text" autocomplete="street-address" [formField]="registerForm.street" />
+<label for="register-building-number">Building Number</label>
+<input id="register-building-number" type="text" autocomplete="address-line1" [formField]="registerForm.buildingNumber" />
+<label for="register-city">City</label>
+<input id="register-city" type="text" autocomplete="address-level2" [formField]="registerForm.city" />
+<label for="register-postal-code">Postal Code</label>
+<input id="register-postal-code" type="text" autocomplete="postal-code" [formField]="registerForm.postalCode" />
+<p role="alert">{{ errorMessage() }}</p>
+<button type="submit" (click)="onSubmit()">Register</button>

@@ -1,3 +1,13 @@
-<p>header works!</p>
-<button [routerLink]="['/admin']">Panel Admina</button>
-<button [routerLink]="['']">Strona Główna</button>
+<button [routerLink]="['/restaurants']">Strona Główna</button>
+
+@if (currentUser(); as user) {
+  <p>{{ user.name }}</p>
+  <a [routerLink]="['/profile']">Profil</a>
+  <button (click)="onLogout()">Wyloguj</button>
+  @if (currentUser()?.role === 'admin') {
+    <button [routerLink]="['/admin']">Panel Admina</button>
+  }
+} @else {
+  <a [routerLink]="['/login']">Zaloguj</a>
+  <a [routerLink]="['/register']">Zarejestruj</a>
+}

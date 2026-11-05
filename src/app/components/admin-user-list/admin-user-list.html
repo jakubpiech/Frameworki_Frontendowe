@@ -1,0 +1,26 @@
+<a routerLink="/admin/users/new">Dodaj administratora</a>
+<table>
+  <thead>
+    <tr>
+      <th>Imię</th>
+      <th>Email</th>
+  
+    </tr>
+  </thead>
+  <tbody>
+    @for (user of users; track user.id) {
+      <tr>
+        <td> {{  user.name  }} </td>
+        <td> {{  user.email  }} </td>
+        <td> {{  user.role  }} </td>
+        
+          <button (click)="onDelete(user.id)">Usuń</button>
+          <button (click)="startReset(user.id)">Resetuj Hasło</button>
+          @if (ressetingId()===user.id) {
+            <input type="password" #newPassword placeholder="Nowe Hasło" />
+            <button (click)="onResetPassword(user.id,newPassword.value)">Zresetuj</button>
+          }
+      </tr>
+    }
+  </tbody>
+</table>

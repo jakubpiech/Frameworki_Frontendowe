@@ -123,13 +123,6 @@ button {
 
   &:not(:first-child) {
     margin-top: 1.5rem;
-    border-color: #18181b;
-    background: #18181b;
-    color: #fff;
-
-    &:hover {
-      background: #27272a;
-    }
   }
 
   &:hover {

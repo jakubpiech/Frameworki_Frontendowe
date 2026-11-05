@@ -1,0 +1,42 @@
+<p>Dane Użytkownika</p>
+<div>
+    <label for="profile-name">Name</label>
+    <input id="profile-name" type="text" [formField]="profileForm.name" />
+    @if (profileForm.name().touched() && profileForm.name().invalid()) {
+        <p role="alert">{{ profileForm.name().errors()[0].message }}</p>
+    }
+    <label for="profile-email">Email</label>
+    <input id="profile-email" type="email" [formField]="profileForm.email" />
+    @if (profileForm.email().touched() && profileForm.email().invalid()) {
+        <p role="alert">{{ profileForm.email().errors()[0].message }}</p>
+    }
+    @if (isCustomer()) {
+          <label for="profile-street">Street</label>
+    <input id="profile-street" type="text" [formField]="profileForm.street" />
+    @if (profileForm.street().touched() && profileForm.street().invalid()) {
+        <p role="alert">{{ profileForm.street().errors()[0].message }}</p>
+    }
+    <label for="profile-building-number">Building Number</label>
+    <input id="profile-building-number" type="text" [formField]="profileForm.buildingNumber" />
+    @if (profileForm.buildingNumber().touched() && profileForm.buildingNumber().invalid()) {
+        <p role="alert">{{ profileForm.buildingNumber().errors()[0].message }}</p>
+    }
+    <label for="profile-city">City</label>
+    <input id="profile-city" type="text" [formField]="profileForm.city" />
+    @if (profileForm.city().touched() && profileForm.city().invalid()) {
+        <p role="alert">{{ profileForm.city().errors()[0].message }}</p>
+    }
+    <label for="profile-postal-code">Postal Code</label>
+    <input id="profile-postal-code" type="text" [formField]="profileForm.postalCode" />
+    @if (profileForm.postalCode().touched() && profileForm.postalCode().invalid()) {
+        <p role="alert">{{ profileForm.postalCode().errors()[0].message }}</p>
+    }
+    }
+  
+    <button type="submit" (click)="onSubmit()" >Zapisz</button>
+    @if (errorMessage()) {
+        <p role="alert">{{ errorMessage() }}</p>
+    }
+    @if (successMessage()) {
+        <p role="alert">{{ successMessage() }}</p>
+    }

@@ -14,7 +14,7 @@
     "role": "customer",
     "deliveryAddress": {
       "street": "123 Main St",
-      "buildingNumber": "Apt 4B",
+      "buildingNumber": "4B",
       "apartmentNumber": "4",
       "city": "New York",
       "postalCode": "10001"
