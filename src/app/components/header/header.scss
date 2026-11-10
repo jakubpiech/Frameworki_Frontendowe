@@ -1,15 +1,22 @@
+/* Full-width bar stuck to the top edge. Padding keeps the content
+   aligned with the page content below (same left and right edges). */
 :host {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
   gap: var(--space-1);
-  width: var(--page-width);
-  margin: var(--space-2) auto 0;
-  padding: var(--space-1) var(--space-2);
-  border: 1px solid var(--color-border);
-  border-radius: var(--radius-md);
+  width: 100%;
+  margin: 0;
+  padding: var(--space-1) max(var(--space-2), calc((100% - 72rem) / 2));
+  border-bottom: 1px solid var(--color-border);
   background: var(--color-surface);
   box-shadow: var(--shadow-sm);
+}
+
+@media (min-width: 48rem) {
+  :host {
+    padding-inline: max(var(--space-3), calc((100% - 72rem) / 2));
+  }
 }
 
 /* The home button pushes the rest of the navigation to the right */
