@@ -47,7 +47,7 @@ export class RestaurantList {
           return 0;
       }
     });
-    return result
+    return result;
   });
   onNameChange(name: string) {
     this.nameFilter.set(name);

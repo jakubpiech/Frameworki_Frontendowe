@@ -4,22 +4,44 @@
     <tr>
       <th>Imię</th>
       <th>Email</th>
-  
+      <th>Rola</th>
+      <th>Akcje</th>
     </tr>
   </thead>
   <tbody>
-    @for (user of users; track user.id) {
+    @for (user of users(); track user.id) {
       <tr>
-        <td> {{  user.name  }} </td>
-        <td> {{  user.email  }} </td>
-        <td> {{  user.role  }} </td>
-        
-          <button (click)="onDelete(user.id)">Usuń</button>
-          <button (click)="startReset(user.id)">Resetuj Hasło</button>
-          @if (ressetingId()===user.id) {
-            <input type="password" #newPassword placeholder="Nowe Hasło" />
-            <button (click)="onResetPassword(user.id,newPassword.value)">Zresetuj</button>
-          }
+        <td>{{ user.name }}</td>
+        <td>{{ user.email }}</td>
+        <td>{{ user.role }}</td>
+
+        @if (user.id !== currentUser()?.id) {
+          <button
+            type="button"
+            aria-label="Usuń użytkownika {{ user.name }}"
+            (click)="onDelete(user.id)"
+          >
+            Usuń
+          </button>
+        }
+
+        <button
+          type="button"
+          aria-label="Resetuj hasło użytkownika {{ user.name }}"
+          (click)="startReset(user.id)"
+        >
+          Resetuj Hasło
+        </button>
+        @if (resetingId() === user.id) {
+          <input type="password" #newPassword placeholder="Nowe Hasło" />
+          <button
+            type="button"
+            aria-label="Zresetuj hasło użytkownika {{ user.name }}"
+            (click)="onResetPassword(user.id, newPassword.value)"
+          >
+            Zresetuj
+          </button>
+        }
       </tr>
     }
   </tbody>

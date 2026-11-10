@@ -1,16 +1,18 @@
-<label for="admin-name">Imię:</label>
-<input type="text" id="admin-name" [formField]="adminForm.name" />
-@if (adminForm.name().touched()&&adminForm.name().invalid()) {
+<form (submit)="onSubmit($event)">
+  <label for="admin-name">Imię:</label>
+  <input type="text" id="admin-name" [formField]="adminForm.name" />
+  @if (adminForm.name().touched() && adminForm.name().invalid()) {
     <p role="alert">{{ adminForm.name().errors()[0].message }}</p>
-}
-<label for="admin-email">Email:</label>
-<input type="email" id="admin-email" [formField]="adminForm.email" />
-@if (adminForm.email().touched()&&adminForm.email().invalid()) {
+  }
+  <label for="admin-email">Email:</label>
+  <input type="email" id="admin-email" [formField]="adminForm.email" />
+  @if (adminForm.email().touched() && adminForm.email().invalid()) {
     <p role="alert">{{ adminForm.email().errors()[0].message }}</p>
-}
-<label for="admin-password">Hasło:</label>
-<input type="password" id="admin-password" [formField]="adminForm.password" />
-@if (adminForm.password().touched()&&adminForm.password().invalid()) {
+  }
+  <label for="admin-password">Hasło:</label>
+  <input type="password" id="admin-password" [formField]="adminForm.password" />
+  @if (adminForm.password().touched() && adminForm.password().invalid()) {
     <p role="alert">{{ adminForm.password().errors()[0].message }}</p>
-}
-<button type="submit" (click)="onSubmit()">Dodaj</button>
+  }
+  <button type="submit">Dodaj</button>
+</form>

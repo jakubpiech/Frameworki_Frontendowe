@@ -27,13 +27,13 @@ export const ADMIN_ROUTES: Routes = [
     path: 'users',
     children: [
       {
-        path:'',
+        path: '',
         component: AdminUserList,
       },
       {
         path: 'new',
         component: AdminUserForm,
-      }
-    ]
-  }
+      },
+    ],
+  },
 ];

@@ -11,5 +11,4 @@ export class MenuService {
   getByCuisine(cuisine: Cuisine) {
     return this.menuCategories().filter((category) => category.cuisine === cuisine);
   }
- 
 }

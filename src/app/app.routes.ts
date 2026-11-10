@@ -1,13 +1,17 @@
 import { Routes } from '@angular/router';
-import { RestaurantList } from './components/restaurant-list/restaurant-list';
 import { isAdminGuard } from './guards/is-admin-guard';
 import { isLoggedInGuard } from './guards/is-logged-in-guard';
 
 export const routes: Routes = [
-
+  {
+    path: '',
+    redirectTo: 'restaurants',
+    pathMatch: 'full',
+  },
   {
     path: 'restaurants',
-    component: RestaurantList,
+    loadComponent: () =>
+      import('./components/restaurant-list/restaurant-list').then((m) => m.RestaurantList),
   },
   {
     path: 'restaurants/:id',
@@ -33,5 +37,5 @@ export const routes: Routes = [
     path: 'profile',
     loadComponent: () => import('./components/profile/profile').then((m) => m.Profile),
     canActivate: [isLoggedInGuard],
-  }
+  },
 ];

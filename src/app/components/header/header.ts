@@ -9,7 +9,7 @@ import { AuthService } from '../../services/auth-service';
   templateUrl: './header.html',
 })
 export class Header {
-  readonly #auth= inject(AuthService);
+  readonly #auth = inject(AuthService);
   readonly #router = inject(Router);
   readonly currentUser = this.#auth.currentUser;
 

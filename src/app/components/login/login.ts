@@ -22,11 +22,17 @@ export class Login {
     required(schema.password, { message: 'Password is required' });
   });
 
-  async onSubmit() {
+  async onSubmit(event: Event) {
+    event.preventDefault();
     const isInvalid = this.loginForm().invalid();
+    if (isInvalid) {
+      this.errorMessage.set('Please fill in all required fields');
+      return;
+    }
+    this.errorMessage.set('');
     const loggedIn = await this.#auth.login(this.model().email, this.model().password);
     if (loggedIn) {
-      return this.#router.navigate(['/admin']);
+      return this.#router.navigate(['/restaurants']);
     }
     return this.errorMessage.set('Invalid email or password');
   }

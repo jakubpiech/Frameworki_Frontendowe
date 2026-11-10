@@ -43,7 +43,6 @@ export class UserService {
   getUserList() {
     return this.users();
   }
-  
 
   async verifyCredentials(email: string, password: string): Promise<PublicUserAccount | undefined> {
     const normalizedEmail = normalizeEmail(email);
@@ -94,16 +93,18 @@ export class UserService {
     this.#users.update((users) => [...users, newAccount]);
     return true;
   }
-  updateProfile(id:string, input: UpdateProfileInput): boolean {
+  updateProfile(id: string, input: UpdateProfileInput): boolean {
     const existingAccount = this.#users().find((user) => user.id === id);
     if (!existingAccount) {
       return false;
     }
     const emailMatch = normalizeEmail(input.email);
-    const isEmailTaken = this.#users().some((user)=> user.id !== id && normalizeEmail(user.email) === emailMatch);
-      if (isEmailTaken) {
-        return false;
-      }
+    const isEmailTaken = this.#users().some(
+      (user) => user.id !== id && normalizeEmail(user.email) === emailMatch,
+    );
+    if (isEmailTaken) {
+      return false;
+    }
     this.#users.update((users) =>
       users.map((user) => (user.id === id ? { ...user, ...input, email: emailMatch } : user)),
     );
@@ -121,7 +122,7 @@ export class UserService {
     return true;
   }
   deleteAccount(id: string): boolean {
-      const existingAccount = this.#users().find((user) => user.id === id);
+    const existingAccount = this.#users().find((user) => user.id === id);
     if (!existingAccount) {
       return false;
     }

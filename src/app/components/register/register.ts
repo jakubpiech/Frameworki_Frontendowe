@@ -1,5 +1,5 @@
 import { Component, inject, signal } from '@angular/core';
-import { email,form, FormField, required } from '@angular/forms/signals';
+import { email, form, FormField, required } from '@angular/forms/signals';
 import { AuthService } from '../../services/auth-service';
 import { Router } from '@angular/router';
 
@@ -21,18 +21,19 @@ export class Register {
     buildingNumber: '',
     city: '',
     postalCode: '',
-  })
-  registerForm = form(this.model,(schema)=>{
-    required(schema.name,{message:'Name is required'});
-    required(schema.email,{message:'Email is required'});
-    email(schema.email,{message:'Email is invalid'});
-    required(schema.password,{message:'Password is required'});
-    required(schema.street,{message:'Street is required'});
-    required(schema.buildingNumber,{message:'Building number is required'});
-    required(schema.city,{message:'City is required'});
-    required(schema.postalCode,{message:'Postal code is required'});
-  })
-  async onSubmit() {
+  });
+  registerForm = form(this.model, (schema) => {
+    required(schema.name, { message: 'Name is required' });
+    required(schema.email, { message: 'Email is required' });
+    email(schema.email, { message: 'Email is invalid' });
+    required(schema.password, { message: 'Password is required' });
+    required(schema.street, { message: 'Street is required' });
+    required(schema.buildingNumber, { message: 'Building number is required' });
+    required(schema.city, { message: 'City is required' });
+    required(schema.postalCode, { message: 'Postal code is required' });
+  });
+  async onSubmit(event: Event) {
+    event.preventDefault();
     const isInvalid = this.registerForm().invalid();
     if (isInvalid) {
       this.errorMessage.set('Please fill in all required fields');
@@ -52,8 +53,8 @@ export class Register {
     };
     const success = await this.#auth.register(newUser);
     if (!success) {
-      this.errorMessage.set('Registration failed')
-      return;;
+      this.errorMessage.set('Registration failed');
+      return;
     }
     return this.#router.navigate(['/login']);
   }

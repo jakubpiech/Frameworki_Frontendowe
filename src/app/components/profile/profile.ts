@@ -1,20 +1,19 @@
 import { Component, computed, inject, linkedSignal, signal } from '@angular/core';
 import { AuthService } from '../../services/auth-service';
-import { Router } from '@angular/router';
+import { RouterLink } from '@angular/router';
 import { email, form, FormField, required } from '@angular/forms/signals';
 
 @Component({
-  imports: [FormField],
+  imports: [FormField, RouterLink],
   selector: 'app-profile',
   styleUrl: './profile.scss',
   templateUrl: './profile.html',
 })
 export class Profile {
   readonly #auth = inject(AuthService);
-  readonly #router = inject(Router);
   errorMessage = signal('');
   successMessage = signal('');
-   isCustomer = computed(() => this.#auth.currentUser()?.role === 'customer');
+  isCustomer = computed(() => this.#auth.currentUser()?.role === 'customer');
   model = linkedSignal(() => {
     const user = this.#auth.currentUser();
     return {
@@ -37,50 +36,51 @@ export class Profile {
       required(schema.postalCode, { message: 'Postal code is required' });
     }
   });
-onSubmit() {
-  const isInvalid = this.profileForm().invalid();
-  if (isInvalid) {
-    this.successMessage.set('');
-    this.errorMessage.set('Please fill in all required fields');
-    return;
+  onSubmit(event: Event) {
+    event.preventDefault();
+    const isInvalid = this.profileForm().invalid();
+    if (isInvalid) {
+      this.successMessage.set('');
+      this.errorMessage.set('Please fill in all required fields');
+      return;
+    }
+
+    const user = this.#auth.currentUser();
+    if (!user) {
+      this.successMessage.set('');
+      this.errorMessage.set('User not found');
+      return;
+    }
+
+    const data = this.model();
+    let success = false;
+
+    if (user.role === 'customer') {
+      success = this.#auth.updateOwnProfile({
+        name: data.name,
+        email: data.email,
+        deliveryAddress: {
+          ...user.deliveryAddress,
+          street: data.street,
+          buildingNumber: data.buildingNumber,
+          postalCode: data.postalCode,
+          city: data.city,
+        },
+      });
+    } else {
+      success = this.#auth.updateOwnProfile({
+        name: data.name,
+        email: data.email,
+      });
+    }
+
+    if (!success) {
+      this.successMessage.set('');
+      this.errorMessage.set('Profile update failed');
+      return;
+    }
+
+    this.errorMessage.set('');
+    this.successMessage.set('Profile updated successfully');
   }
-
-  const user = this.#auth.currentUser();
-  if (!user) {
-    this.successMessage.set('');
-    this.errorMessage.set('User not found');
-    return;
-  }
-
-  const data = this.model();
-  let success = false;
-
-  if (user.role === 'customer') {
-    success = this.#auth.updateOwnProfile({
-      name: data.name,
-      email: data.email,
-      deliveryAddress: {
-        ...user.deliveryAddress,
-        street: data.street,
-        buildingNumber: data.buildingNumber,
-        postalCode: data.postalCode,
-        city: data.city,
-      },
-    });
-  } else {
-    success = this.#auth.updateOwnProfile({
-      name: data.name,
-      email: data.email,
-    });
-  }
-
-  if (!success) {
-    this.successMessage.set('');
-    this.errorMessage.set('Profile update failed');
-    return;
-  }
-
-  this.errorMessage.set('');
-  this.successMessage.set('Profile updated successfully');
-}
 }
