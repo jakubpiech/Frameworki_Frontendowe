@@ -2,12 +2,12 @@
 
 @if (currentUser(); as user) {
   <p>{{ user.name }}</p>
-  <a [routerLink]="['/profile']">Profil</a>
+  <a class="btn" [routerLink]="['/profile']">Profil</a>
   <button (click)="onLogout()">Wyloguj</button>
   @if (currentUser()?.role === 'admin') {
     <button [routerLink]="['/admin']">Panel Admina</button>
   }
 } @else {
-  <a [routerLink]="['/login']">Zaloguj</a>
-  <a [routerLink]="['/register']">Zarejestruj</a>
+  <a class="btn" [routerLink]="['/login']">Zaloguj</a>
+  <a class="btn btn-primary" [routerLink]="['/register']">Zarejestruj</a>
 }

@@ -1,134 +1,148 @@
 :host {
   display: block;
+  width: var(--page-width);
+  margin-inline: auto;
 }
 
 .list {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(18rem, 1fr));
-  gap: 1.25rem;
-  max-width: 76rem;
-  margin: 0 auto;
-  padding: 1.5rem;
+  grid-template-columns: minmax(0, 1fr);
+  gap: var(--space-2);
+  padding: var(--space-2) 0 var(--space-4);
 }
 
 .filterSection {
   grid-column: 1 / -1;
-  padding: 1.25rem;
-  border: 1px solid #e4e4e7;
-  border-radius: 0.75rem;
-  background: #fff;
+  padding: var(--space-2);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  background: var(--color-surface);
+  box-shadow: var(--shadow-sm);
 }
 
+/* Mobile: one column of label + field pairs */
 form {
   display: grid;
-  grid-template-areas:
-    'name-label cuisine-label status-label sort-label .'
-    'name cuisine status sort reset';
-  grid-template-columns: repeat(4, minmax(0, 1fr)) auto;
-  gap: 0.4rem 1rem;
-  align-items: center;
+  grid-template-columns: minmax(0, 1fr);
+  gap: var(--space-1);
+  align-items: end;
 }
 
 label {
-  color: #52525b;
-  font-size: 0.85rem;
-  font-weight: 500;
+  margin-top: var(--space-1);
 }
 
-label[for='nameFilter'] {
-  grid-area: name-label;
-}
-
-label[for='cuisineFilter'] {
-  grid-area: cuisine-label;
-}
-
-label[for='statusFilter'] {
-  grid-area: status-label;
-}
-
-label[for='sortFilter'] {
-  grid-area: sort-label;
-}
-
-#nameFilter {
-  grid-area: name;
-}
-
-#cuisineFilter {
-  grid-area: cuisine;
-}
-
-#statusFilter {
-  grid-area: status;
-}
-
-#sortFilter {
-  grid-area: sort;
-}
-
-input,
-select {
-  width: 100%;
-  height: 2.5rem;
-  padding: 0 0.75rem;
-  border: 1px solid #d4d4d8;
-  border-radius: 0.5rem;
-  background: #fff;
-  color: #18181b;
-  font: inherit;
-  font-size: 0.9rem;
+label:first-child {
+  margin-top: 0;
 }
 
 button {
-  grid-area: reset;
-  height: 2.5rem;
-  padding: 0 1rem;
-  border: 1px solid #d4d4d8;
-  border-radius: 0.5rem;
-  background: #f4f4f5;
-  color: #18181b;
-  font: inherit;
-  font-size: 0.9rem;
-  font-weight: 500;
-  white-space: nowrap;
-  cursor: pointer;
+  margin-top: var(--space-1);
+}
 
-  &:hover {
-    background: #e4e4e7;
+@media (min-width: 48rem) {
+  .list {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: var(--space-3);
+    padding-top: var(--space-3);
   }
-}
 
-input:focus-visible,
-select:focus-visible,
-button:focus-visible {
-  outline: 2px solid #18181b;
-  outline-offset: 2px;
-}
+  .filterSection {
+    padding: var(--space-3);
+  }
 
-.card-placeholder {
-  min-height: 22rem;
-  border: 1px solid #e4e4e7;
-  border-radius: 0.75rem;
-  background: #f4f4f5;
-}
-
-@media (max-width: 52rem) {
+  /* Tablet: two label + field pairs per row */
   form {
-    grid-template-areas:
-      'name-label'
-      'name'
-      'cuisine-label'
-      'cuisine'
-      'status-label'
-      'status'
-      'sort-label'
-      'sort'
-      'reset';
-    grid-template-columns: 1fr;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    column-gap: var(--space-2);
+    row-gap: var(--space-1);
+  }
+
+  /* Place each label above its field: labels on odd rows, fields on even rows */
+  label[for='nameFilter'] {
+    grid-area: 1 / 1;
+  }
+
+  #nameFilter {
+    grid-area: 2 / 1;
+  }
+
+  label[for='cuisineFilter'] {
+    grid-area: 1 / 2;
+  }
+
+  #cuisineFilter {
+    grid-area: 2 / 2;
+  }
+
+  label[for='statusFilter'] {
+    grid-area: 3 / 1;
+  }
+
+  #statusFilter {
+    grid-area: 4 / 1;
+  }
+
+  label[for='sortFilter'] {
+    grid-area: 3 / 2;
+  }
+
+  #sortFilter {
+    grid-area: 4 / 2;
+  }
+
+  label {
+    margin-top: 0;
   }
 
   button {
-    margin-top: 0.25rem;
+    grid-area: 5 / 1 / 6 / 3;
+    justify-self: start;
+  }
+}
+
+@media (min-width: 64rem) {
+  .list {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  /* Desktop: all four filters and the reset button in one row */
+  form {
+    grid-template-columns: repeat(4, minmax(0, 1fr)) auto;
+  }
+
+  label[for='nameFilter'],
+  #nameFilter {
+    grid-column: 1;
+  }
+
+  label[for='cuisineFilter'],
+  #cuisineFilter {
+    grid-column: 2;
+  }
+
+  label[for='statusFilter'],
+  #statusFilter {
+    grid-column: 3;
+  }
+
+  label[for='sortFilter'],
+  #sortFilter {
+    grid-column: 4;
+  }
+
+  label[for='statusFilter'],
+  label[for='sortFilter'] {
+    grid-row: 1;
+  }
+
+  #statusFilter,
+  #sortFilter {
+    grid-row: 2;
+  }
+
+  button {
+    grid-area: 2 / 5;
+    margin-top: 0;
   }
 }

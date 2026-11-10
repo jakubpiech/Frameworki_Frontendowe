@@ -1,46 +1,26 @@
 :host {
   display: block;
-  max-width: 76rem;
-  margin: 0 auto;
-  color: #18181b;
+  width: var(--page-width);
+  margin: var(--space-2) auto 0;
 }
 
+/* Same look and width as the main header, so both bars line up */
 header {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
-  gap: 0.75rem;
-  margin: 1.25rem 1.5rem 0;
-  padding: 0.85rem 1.25rem;
-  border: 1px solid #e4e4e7;
-  border-radius: 0.75rem;
-  background: #fff;
+  gap: var(--space-1);
+  padding: var(--space-1) var(--space-2);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  background: var(--color-surface);
+  box-shadow: var(--shadow-sm);
 }
 
-a {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  height: 2.25rem;
-  padding: 0 1rem;
-  border: 1px solid #d4d4d8;
-  border-radius: 0.5rem;
-  background: #f4f4f5;
-  color: #18181b;
-  font-size: 0.875rem;
-  font-weight: 500;
-  text-decoration: none;
-  transition:
-    background-color 150ms ease,
-    border-color 150ms ease;
-
-  &:hover {
-    border-color: #a1a1aa;
-    background: #e4e4e7;
-  }
-
-  &:focus-visible {
-    outline: 2px solid #18181b;
-    outline-offset: 2px;
-  }
+a[aria-current='page'] {
+  border-color: var(--color-accent);
+  background: var(--color-accent-subtle);
+  color: var(--color-accent);
+  text-decoration: underline;
+  text-underline-offset: 0.25em;
 }
