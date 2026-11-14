@@ -3,6 +3,10 @@
 @if (currentUser(); as user) {
   <p>{{ user.name }}</p>
   <a class="btn" [routerLink]="['/profile']">Profil</a>
+  @if (currentUser()?.role === 'customer') {
+    <a class="btn" [routerLink]="['/orders']">Zamówienia</a>
+  }
+  <a class="btn" [routerLink]="['/cart']">Koszyk</a>
   <button (click)="onLogout()">Wyloguj</button>
   @if (currentUser()?.role === 'admin') {
     <button [routerLink]="['/admin']">Panel Admina</button>

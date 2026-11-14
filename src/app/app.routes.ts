@@ -1,6 +1,8 @@
 import { Routes } from '@angular/router';
 import { isAdminGuard } from './guards/is-admin-guard';
 import { isLoggedInGuard } from './guards/is-logged-in-guard';
+import { cartNotEmptyGuard } from './guards/cart-not-empty-guard';
+import { OrderDetails } from './components/order-details/order-details';
 
 export const routes: Routes = [
   {
@@ -37,5 +39,27 @@ export const routes: Routes = [
     path: 'profile',
     loadComponent: () => import('./components/profile/profile').then((m) => m.Profile),
     canActivate: [isLoggedInGuard],
+  },
+  {
+    path: 'cart',
+    loadComponent: () => import('./components/cart/cart').then((m) => m.Cart),
+  },
+  {
+    path: 'checkout',
+    loadComponent: () => import('./components/checkout/checkout').then((m) => m.Checkout),
+    canActivate: [isLoggedInGuard, cartNotEmptyGuard],
+  },
+  {
+    path: 'orders',
+    loadComponent: () => import('./components/order-list/order-list').then((m) => m.OrderList),
+    canActivate: [isLoggedInGuard],
+    children: [
+      {
+        path: ':id',
+        loadComponent: () =>
+          import('./components/order-details/order-details').then((m) => m.OrderDetails),
+        canActivate: [isLoggedInGuard],
+      },
+    ],
   },
 ];
