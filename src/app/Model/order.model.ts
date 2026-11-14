@@ -37,7 +37,7 @@ export type Order = {
   status: OrderStatus;
   orderPrice: number;
   deliveryFee: number;
-  wholePrice: number;
+  totalToPay: number;
   userName: string;
   userSurname: string;
   email: string;
