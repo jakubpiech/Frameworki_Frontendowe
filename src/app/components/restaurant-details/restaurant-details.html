@@ -25,6 +25,13 @@
         <h1>Menu</h1>
         <a routerLink="/restaurants" class="btn back-button">← Wróć do listy restauracji</a>
       </div>
+      @if (pendingProduct()) {
+        <div role="alert">
+          <p>Masz już dodany produkt z innej restauracji, co chcesz zrobić?</p>
+          <button type="button" (click)="cancelAdding()">Anuluj Dodawanie nowego produktu</button>
+          <button type="button" (click)="replaceCart()">Anuluj bieżące zamówienie i dodaj nowe</button>
+        </div>
+      }
       @for (menu of menuCategories(); track menu.id) {
         <div>
           <h2>{{ menu.name }}</h2>
@@ -43,9 +50,14 @@
                   />
                 </p>
                 <div class="product-actions">
-                  <button [disabled]="!product.isAvailable" class="add-to-cart">
+                  <button
+                    [disabled]="!product.isAvailable"
+                    class="add-to-cart"
+                    (click)="addToCart(product)"
+                  >
                     Dodaj do Koszyka
                   </button>
+
                   @if (product.isAvailable) {
                     <span class="availability-badge available">Dostępne</span>
                   } @else {

@@ -71,6 +71,46 @@ header {
   }
 }
 
+/* Warning when the cart already has products from another restaurant.
+   The message carries text, the border and background only support it. */
+.menu-section > [role='alert'] {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-1) var(--space-2);
+  align-items: center;
+  margin-bottom: var(--space-3);
+  padding: var(--space-2);
+  border: 1px solid var(--color-danger);
+  border-radius: var(--radius-md);
+  background: var(--color-danger-bg);
+
+  > p {
+    flex-basis: 100%;
+    margin: 0;
+    color: var(--color-danger);
+    font-size: 0.95rem;
+    font-weight: 700;
+  }
+
+  > button {
+    flex: 1 1 14rem;
+    background: var(--color-surface);
+  }
+
+  /* Second button replaces the cart, so it is the main (accent) action */
+  > button:last-of-type {
+    border-color: var(--color-accent);
+    background: var(--color-accent);
+    color: var(--color-accent-contrast);
+
+    &:hover:not(:disabled) {
+      border-color: var(--color-accent-hover);
+      background: var(--color-accent-hover);
+      color: var(--color-accent-contrast);
+    }
+  }
+}
+
 /* Product row: text and price on the left, image and action on the right */
 .menu-section > div > section {
   display: grid;

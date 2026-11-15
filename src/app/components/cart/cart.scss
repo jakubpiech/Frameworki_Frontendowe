@@ -1,0 +1,184 @@
+:host {
+  display: block;
+  width: var(--page-width);
+  margin: var(--space-3) auto var(--space-4);
+}
+
+/* Empty cart message */
+:host > p:only-child {
+  padding: var(--space-3);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  background: var(--color-surface);
+  color: var(--color-text-muted);
+  text-align: center;
+}
+
+table,
+thead,
+tbody {
+  display: block;
+}
+
+table {
+  overflow: hidden;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  background: var(--color-surface);
+  box-shadow: var(--shadow-sm);
+}
+
+/* Mobile: header row is hidden, each product is a small block */
+thead {
+  display: none;
+}
+
+tr {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  gap: var(--space-1) var(--space-2);
+  align-items: center;
+  padding: var(--space-2);
+
+  & + & {
+    border-top: 1px solid var(--color-border);
+  }
+}
+
+th,
+td {
+  padding: 0;
+  border: 0;
+  background: none;
+}
+
+/* Product name */
+td:first-child {
+  grid-column: 1;
+  font-weight: 700;
+}
+
+/* Price */
+td:nth-child(2) {
+  grid-column: 2;
+  color: var(--color-text-muted);
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+/* Quantity: minus, input, plus in one row */
+td:nth-child(3) {
+  display: flex;
+  grid-column: 1;
+  align-items: center;
+  gap: var(--space-1);
+}
+
+/* Remove button */
+td:last-child {
+  grid-column: 2;
+  justify-self: end;
+}
+
+td button {
+  min-height: 2.25rem;
+  padding: 0 0.75rem;
+  font-size: 0.85rem;
+}
+
+/* Square plus and minus buttons */
+td:nth-child(3) button {
+  width: 2.25rem;
+  padding: 0;
+  font-size: 1.1rem;
+  line-height: 1;
+}
+
+td:last-child button {
+  border-color: var(--color-danger);
+  color: var(--color-danger);
+
+  &:hover:not(:disabled) {
+    border-color: var(--color-danger);
+    background: var(--color-danger-bg);
+    color: var(--color-danger);
+  }
+}
+
+input {
+  width: 4rem;
+  min-height: 2.25rem;
+  padding: 0 var(--space-1);
+  font-size: 0.9rem;
+  text-align: center;
+}
+
+/* Totals */
+:host > p:not(:only-child) {
+  display: flex;
+  justify-content: space-between;
+  max-width: 24rem;
+  margin: var(--space-1) 0 0 auto;
+  color: var(--color-text-muted);
+}
+
+/* Last total line ("Razem") is emphasised */
+:host > p:nth-last-of-type(1) {
+  padding-top: var(--space-1);
+  border-top: 1px solid var(--color-border);
+  color: var(--color-text);
+  font-size: 1.15rem;
+  font-weight: 700;
+}
+
+:host > a {
+  display: flex;
+  justify-content: center;
+  max-width: 24rem;
+  margin: var(--space-2) 0 0 auto;
+}
+
+@media (min-width: 48rem) {
+  thead {
+    display: block;
+  }
+
+  thead tr {
+    background: var(--color-surface-muted);
+  }
+
+  /* Desktop: real columns, same for the header and every row */
+  tr {
+    grid-template-columns: minmax(0, 1fr) 7rem 11rem 6rem;
+    column-gap: var(--space-2);
+  }
+
+  td:first-child,
+  td:nth-child(2),
+  td:nth-child(3),
+  td:last-child {
+    grid-column: auto;
+  }
+
+  td:last-child {
+    justify-self: stretch;
+  }
+
+  td:last-child button {
+    width: 100%;
+  }
+
+  th {
+    color: var(--color-text-muted);
+    font-size: 0.8rem;
+  }
+
+  /* Quantity column: label and controls share the same center line */
+  th:nth-child(3) {
+    text-align: center;
+  }
+
+  td:nth-child(3) {
+    justify-content: center;
+  }
+}

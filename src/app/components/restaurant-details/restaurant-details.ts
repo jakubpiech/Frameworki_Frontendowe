@@ -1,8 +1,9 @@
-import { Component, computed, inject, input } from '@angular/core';
+import { Component, computed, inject, input, signal } from '@angular/core';
 import { Restaurants } from '../../services/restaurants';
-import { Cuisine } from '../../Model/restaurant.model';
+import { Cuisine, Product } from '../../Model/restaurant.model';
 import { MenuService } from '../../services/menu-service';
 import { RouterLink } from '@angular/router';
+import { CartService } from '../../services/cart-service';
 
 @Component({
   imports: [RouterLink],
@@ -11,6 +12,8 @@ import { RouterLink } from '@angular/router';
   templateUrl: './restaurant-details.html',
 })
 export class RestaurantDetails {
+  readonly #cartService = inject(CartService);
+  pendingProduct = signal<Product | null>(null);
   id = input<string>();
   private restaurantService = inject(Restaurants);
 
@@ -29,4 +32,27 @@ export class RestaurantDetails {
     }
     return this.menuService.getByCuisine(restaurant.cuisine);
   });
+  addToCart(product: Product) {
+    const restaurant = this.restaurantDetails();
+    if (!restaurant) {
+      return;
+    }
+    const added = this.#cartService.addProduct(restaurant.id, product);
+    if (!added) {
+      this.pendingProduct.set(product);
+    }
+  }
+  cancelAdding() {
+    this.pendingProduct.set(null);
+  }
+  replaceCart() {
+    const product = this.pendingProduct();
+    const restaurant = this.restaurantDetails();
+    if (!product || !restaurant) {
+      return;
+    }
+    this.#cartService.clear();
+    this.#cartService.addProduct(restaurant.id, product);
+    this.pendingProduct.set(null);
+  }
 }
