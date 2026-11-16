@@ -1,4 +1,3 @@
-import { Product } from './restaurant.model';
 import { Address } from './user-account.model';
 
 export const ORDER_STATUS = [
@@ -30,7 +29,7 @@ export const ORDER_PAYMENT_METHODS = ['cash', 'card'] as const;
 export type OrderPaymentMethod = (typeof ORDER_PAYMENT_METHODS)[number];
 export type Order = {
   id: string;
-  userId: number;
+  userId: string;
   restaurantId: number;
   restaurantName: string;
   cartItems: CartItem[];
