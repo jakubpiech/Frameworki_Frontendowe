@@ -29,7 +29,9 @@
         <div role="alert">
           <p>Masz już dodany produkt z innej restauracji, co chcesz zrobić?</p>
           <button type="button" (click)="cancelAdding()">Anuluj Dodawanie nowego produktu</button>
-          <button type="button" (click)="replaceCart()">Anuluj bieżące zamówienie i dodaj nowe</button>
+          <button type="button" (click)="replaceCart()">
+            Anuluj bieżące zamówienie i dodaj nowe
+          </button>
         </div>
       }
       @for (menu of menuCategories(); track menu.id) {
@@ -57,7 +59,6 @@
                   >
                     Dodaj do Koszyka
                   </button>
-
                   @if (product.isAvailable) {
                     <span class="availability-badge available">Dostępne</span>
                   } @else {

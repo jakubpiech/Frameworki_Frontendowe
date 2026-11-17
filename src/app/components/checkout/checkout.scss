@@ -1,0 +1,214 @@
+:host {
+  display: block;
+  max-width: 48rem;
+  margin: 1rem auto;
+  padding: 1.25rem 1.5rem;
+  border: 1px solid #e4e4e7;
+  border-radius: 0.75rem;
+  background: #fff;
+  color: #18181b;
+}
+
+form {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  column-gap: 1.25rem;
+  align-items: start;
+}
+
+label {
+  margin-top: 0.65rem;
+  margin-bottom: 0.25rem;
+  color: #3f3f46;
+  font-size: 0.825rem;
+  font-weight: 500;
+}
+
+input,
+select {
+  width: 100%;
+  height: 2.25rem;
+  padding: 0 0.65rem;
+  border: 1px solid #d4d4d8;
+  border-radius: 0.5rem;
+  background: #fff;
+  color: #18181b;
+  font: inherit;
+  font-size: 0.875rem;
+  transition:
+    border-color 150ms ease,
+    background-color 150ms ease;
+
+  &:hover {
+    border-color: #a1a1aa;
+  }
+
+  &:focus-visible {
+    outline: 2px solid #18181b;
+    outline-offset: 2px;
+  }
+
+  &:has(+ p[role='alert']) {
+    border-color: #ef4444;
+    background: #fef2f2;
+
+    &:focus-visible {
+      outline-color: #dc2626;
+    }
+  }
+}
+
+p[role='alert'] {
+  margin: 0.2rem 0 0;
+  color: #b91c1c;
+  font-size: 0.75rem;
+  font-weight: 500;
+}
+
+/* Column assignment */
+label[for='userName'],
+#userName,
+#userName + p[role='alert'],
+label[for='email'],
+#email,
+#email + p[role='alert'],
+label[for='street'],
+#street,
+#street + p[role='alert'],
+label[for='apartmentNumber'],
+#apartmentNumber,
+#apartmentNumber + p[role='alert'],
+label[for='city'],
+#city,
+#city + p[role='alert'] {
+  grid-column: 1;
+}
+
+label[for='userSurname'],
+#userSurname,
+#userSurname + p[role='alert'],
+label[for='phoneNumber'],
+#phoneNumber,
+#phoneNumber + p[role='alert'],
+label[for='buildingNumber'],
+#buildingNumber,
+#buildingNumber + p[role='alert'],
+label[for='postalCode'],
+#postalCode,
+#postalCode + p[role='alert'],
+label[for='paymentMethod'],
+#paymentMethod {
+  grid-column: 2;
+}
+
+/* Row 1: userName & userSurname */
+label[for='userName'],
+label[for='userSurname'] {
+  grid-row: 1;
+  margin-top: 0;
+}
+#userName,
+#userSurname {
+  grid-row: 2;
+}
+#userName + p[role='alert'],
+#userSurname + p[role='alert'] {
+  grid-row: 3;
+}
+
+/* Row 2: email & phoneNumber */
+label[for='email'],
+label[for='phoneNumber'] {
+  grid-row: 4;
+}
+#email,
+#phoneNumber {
+  grid-row: 5;
+}
+#email + p[role='alert'],
+#phoneNumber + p[role='alert'] {
+  grid-row: 6;
+}
+
+/* Row 3: street & buildingNumber */
+label[for='street'],
+label[for='buildingNumber'] {
+  grid-row: 7;
+}
+#street,
+#buildingNumber {
+  grid-row: 8;
+}
+#street + p[role='alert'],
+#buildingNumber + p[role='alert'] {
+  grid-row: 9;
+}
+
+/* Row 4: apartmentNumber & postalCode */
+label[for='apartmentNumber'],
+label[for='postalCode'] {
+  grid-row: 10;
+}
+#apartmentNumber,
+#postalCode {
+  grid-row: 11;
+}
+#apartmentNumber + p[role='alert'],
+#postalCode + p[role='alert'] {
+  grid-row: 12;
+}
+
+/* Row 5: city & paymentMethod */
+label[for='city'],
+label[for='paymentMethod'] {
+  grid-row: 13;
+}
+#city,
+#paymentMethod {
+  grid-row: 14;
+}
+#city + p[role='alert'] {
+  grid-row: 15;
+}
+
+button[type='submit'] {
+  grid-column: 1 / -1;
+  grid-row: 16;
+  justify-self: end;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 8rem;
+  height: 2.35rem;
+  margin-top: 1rem;
+  padding: 0 1.25rem;
+  border: 1px solid #18181b;
+  border-radius: 0.5rem;
+  background: #18181b;
+  color: #fff;
+  font: inherit;
+  font-size: 0.875rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 150ms ease;
+
+  &:hover {
+    background: #27272a;
+  }
+
+  &:focus-visible {
+    outline: 2px solid #18181b;
+    outline-offset: 2px;
+  }
+}
+
+@media (max-width: 42rem) {
+  form {
+    display: flex;
+    flex-direction: column;
+  }
+
+  button[type='submit'] {
+    align-self: stretch;
+  }
+}

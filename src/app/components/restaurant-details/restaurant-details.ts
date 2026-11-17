@@ -4,6 +4,7 @@ import { Cuisine, Product } from '../../Model/restaurant.model';
 import { MenuService } from '../../services/menu-service';
 import { RouterLink } from '@angular/router';
 import { CartService } from '../../services/cart-service';
+import { AuthService } from '../../services/auth-service';
 
 @Component({
   imports: [RouterLink],

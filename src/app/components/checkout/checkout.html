@@ -1,1 +1,54 @@
-<p>checkout works!</p>
+<form (submit)="onSubmit($event)" novalidate>
+  <label for="userName">Imię</label>
+  <input type="text" id="userName" [formField]="orderForm.userName" />
+  @if (orderForm.userName().touched() && orderForm.userName().invalid()) {
+    <p role="alert">{{ orderForm.userName().errors()[0].message }}</p>
+  }
+  <label for="userSurname">Nazwisko</label>
+  <input type="text" id="userSurname" [formField]="orderForm.userSurname" />
+  @if (orderForm.userSurname().touched() && orderForm.userSurname().invalid()) {
+    <p role="alert">{{ orderForm.userSurname().errors()[0].message }}</p>
+  }
+  <label for="email">Email</label>
+  <input type="email" id="email" [formField]="orderForm.email" />
+  @if (orderForm.email().touched() && orderForm.email().invalid()) {
+    <p role="alert">{{ orderForm.email().errors()[0].message }}</p>
+  }
+  <label for="phoneNumber">Numer Telefonu</label>
+  <input type="tel" id="phoneNumber" [formField]="orderForm.phoneNumber" />
+  @if (orderForm.phoneNumber().touched() && orderForm.phoneNumber().invalid()) {
+    <p role="alert">{{ orderForm.phoneNumber().errors()[0].message }}</p>
+  }
+  <label for="street">Ulica</label>
+  <input type="text" id="street" [formField]="orderForm.street" />
+  @if (orderForm.street().touched() && orderForm.street().invalid()) {
+    <p role="alert">{{ orderForm.street().errors()[0].message }}</p>
+  }
+  <label for="buildingNumber">Numer Budynku</label>
+  <input type="text" id="buildingNumber" [formField]="orderForm.buildingNumber" />
+  @if (orderForm.buildingNumber().touched() && orderForm.buildingNumber().invalid()) {
+    <p role="alert">{{ orderForm.buildingNumber().errors()[0].message }}</p>
+  }
+  <label for="apartmentNumber">Numer Mieszkania</label>
+  <input type="text" id="apartmentNumber" [formField]="orderForm.apartmentNumber" />
+  @if (orderForm.apartmentNumber().touched() && orderForm.apartmentNumber().invalid()) {
+    <p role="alert">{{ orderForm.apartmentNumber().errors()[0].message }}</p>
+  }
+  <label for="postalCode">Kod Pocztowy</label>
+  <input type="text" id="postalCode" [formField]="orderForm.postalCode" />
+  @if (orderForm.postalCode().touched() && orderForm.postalCode().invalid()) {
+    <p role="alert">{{ orderForm.postalCode().errors()[0].message }}</p>
+  }
+  <label for="city">Miasto</label>
+  <input type="text" id="city" [formField]="orderForm.city" />
+  @if (orderForm.city().touched() && orderForm.city().invalid()) {
+    <p role="alert">{{ orderForm.city().errors()[0].message }}</p>
+  }
+  <label for="paymentMethod">Metoda płatności</label>
+  <select id="paymentMethod" [formField]="orderForm.paymentMethod">
+    <option value="cash">Gotówka</option>
+    <option value="card">Karta</option>
+  </select>
+  <p role="alert">{{ errorMessage() }}</p>
+  <button type="submit">Dalej</button>
+</form>
