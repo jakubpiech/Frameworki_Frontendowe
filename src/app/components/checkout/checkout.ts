@@ -1,5 +1,5 @@
 import { Component, inject, signal } from '@angular/core';
-import { email, form, FormField, required } from '@angular/forms/signals';
+import { email, form, FormField, pattern, required } from '@angular/forms/signals';
 import { OrderService } from '../../services/order-service';
 import { Router } from '@angular/router';
 import { AuthService } from '../../services/auth-service';
@@ -41,9 +41,16 @@ export class Checkout {
     required(schema.city, { message: 'City is Required' });
     required(schema.paymentMethod, { message: 'Payment method is Required' });
     email(schema.email, { message: 'Email is invalid' });
+    pattern(schema.phoneNumber, /^\+?[0-9]{9,12}$/, { message: 'Phone number is invalid' });
   });
   onSubmit(event: Event) {
     event.preventDefault();
+    this.errorMessage.set('');
+    if (this.orderForm().invalid()) {
+      this.errorMessage.set('Please fill all required fields');
+      return;
+    }
+
     const user = this.#auth.currentUser();
     const restaurant = this.#cart.restaurant();
     const emptyCart = this.#cart.isCartEmpty();
@@ -53,12 +60,10 @@ export class Checkout {
     const data = this.model();
     const paymentMethod = ORDER_PAYMENT_METHODS.find((item) => item === data.paymentMethod);
     if (!paymentMethod) {
+      this.errorMessage.set('Wybierz metode płatności');
       return;
     }
-    if (this.orderForm().invalid()) {
-      this.errorMessage.set('Please fill all required fields');
-      return;
-    }
+
     this.#order.createOrder({
       userId: user.id,
       restaurantId: restaurant.id,

@@ -47,14 +47,14 @@ select {
     outline: 2px solid #18181b;
     outline-offset: 2px;
   }
+}
 
-  &:has(+ p[role='alert']) {
-    border-color: #ef4444;
-    background: #fef2f2;
+input:has(+ p[role='alert']) {
+  border-color: #ef4444;
+  background: #fef2f2;
 
-    &:focus-visible {
-      outline-color: #dc2626;
-    }
+  &:focus-visible {
+    outline-color: #dc2626;
   }
 }
 
@@ -171,8 +171,18 @@ label[for='paymentMethod'] {
   grid-row: 15;
 }
 
+/* Bottom row: general error message next to submit button */
+p[role='alert']:has(+ button[type='submit']),
+button[type='submit'] + p {
+  grid-column: 1;
+  grid-row: 16;
+  align-self: center;
+  margin-top: 1rem;
+  font-size: 0.85rem;
+}
+
 button[type='submit'] {
-  grid-column: 1 / -1;
+  grid-column: 2;
   grid-row: 16;
   justify-self: end;
   display: inline-flex;

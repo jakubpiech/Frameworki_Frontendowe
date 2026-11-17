@@ -1,2 +1,25 @@
-<p>order-list works!</p>
+<table>
+  <thead>
+    <tr>
+      <th>Restauracja</th>
+      <th>Kwota do Zapłaty</th>
+      <th>Status</th>
+      <th>Szczegóły</th>
+    </tr>
+  </thead>
+  <tbody>
+    @for (order of orders(); track order.id) {
+      <tr>
+        <td>{{ order.restaurantName }}</td>
+        <td>{{ order.totalToPay | number: '1.2-2' }}zł</td>
+        <td>{{ statusLabels[order.status] }}</td>
+        <td><a [routerLink]="['/orders', 'order.id']">Szczegóły</a></td>
+      </tr>
+    } @empty {
+      <tr>
+        <td colspan="2">Brak zamówień</td>
+      </tr>
+    }
+  </tbody>
+</table>
 <router-outlet></router-outlet>

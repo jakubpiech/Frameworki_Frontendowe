@@ -46,9 +46,13 @@
   }
   <label for="paymentMethod">Metoda płatności</label>
   <select id="paymentMethod" [formField]="orderForm.paymentMethod">
+    <option value="">Wybierz...</option>
     <option value="cash">Gotówka</option>
     <option value="card">Karta</option>
   </select>
+  @if (orderForm.paymentMethod().touched() && orderForm.paymentMethod().invalid()) {
+    <p role="alert">{{ orderForm.paymentMethod().errors()[0].message }}</p>
+  }
   <p role="alert">{{ errorMessage() }}</p>
   <button type="submit">Dalej</button>
 </form>
