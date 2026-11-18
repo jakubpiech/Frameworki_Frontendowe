@@ -1,0 +1,164 @@
+/* Layout: the list is centered. When an order is open (<app-order-details>
+   is rendered by the router-outlet), the list moves left and the details
+   appear on the right. Each part takes 40% of the width on desktop. */
+:host {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+  align-items: center;
+  width: var(--page-width);
+  margin: var(--space-3) auto var(--space-4);
+}
+
+/* The router-outlet is only an anchor, it must not take part in the layout */
+router-outlet {
+  display: none;
+}
+
+/* The orders list is a card with an accent stripe on top */
+table,
+thead,
+tbody {
+  display: block;
+}
+
+table {
+  container-type: inline-size;
+  width: 100%;
+  max-width: 40rem;
+  padding: var(--space-2);
+  border: 1px solid var(--color-border);
+  border-top: 4px solid var(--color-accent);
+  border-radius: var(--radius-md);
+  background: var(--color-surface);
+  box-shadow: var(--shadow-sm);
+}
+
+/* Narrow card: no header row, each order is a small block */
+thead {
+  display: none;
+}
+
+tr {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  gap: var(--space-1) var(--space-2);
+  align-items: center;
+  padding: var(--space-2) 0;
+
+  & + & {
+    border-top: 1px solid var(--color-border);
+  }
+}
+
+th,
+td {
+  padding: 0;
+  border: 0;
+  background: none;
+}
+
+/* Restaurant name */
+td:first-child {
+  font-weight: 700;
+}
+
+/* Total to pay */
+td:nth-child(2) {
+  color: var(--color-text);
+  font-weight: 700;
+  white-space: nowrap;
+}
+
+/* Empty state spans the whole row */
+td[colspan] {
+  grid-column: 1 / -1;
+  color: var(--color-text-muted);
+  text-align: center;
+}
+
+td:last-child:not([colspan]) {
+  justify-self: end;
+}
+
+td .btn {
+  min-height: 2.25rem;
+  font-size: 0.85rem;
+}
+
+/* Row of the order that is open in the details panel.
+   Color is not the only signal: a stripe on the left and aria-current="page" too. */
+tbody tr.selected {
+  margin-inline: calc(-1 * var(--space-1));
+  padding-inline: var(--space-1);
+  border-radius: var(--radius-md);
+  background: var(--color-accent-subtle);
+  box-shadow: inset 4px 0 0 var(--color-accent);
+  transition: background-color 150ms ease;
+
+  & + tr,
+  & {
+    border-top-color: transparent;
+  }
+}
+/* Wide card (list centered, no details open): real columns */
+@container (min-width: 34rem) {
+  thead {
+    display: block;
+  }
+
+  thead tr {
+    padding: var(--space-1) var(--space-2);
+    border: 0;
+    border-radius: var(--radius-md);
+    background: var(--color-surface-muted);
+  }
+
+  /* Same columns in the header and in every row */
+  tr {
+    grid-template-columns: minmax(0, 1fr) 6rem 11rem 6.5rem;
+    column-gap: var(--space-2);
+  }
+
+  tbody tr {
+    padding-inline: var(--space-2);
+  }
+
+  th {
+    color: var(--color-text-muted);
+    font-size: 0.8rem;
+  }
+
+  td:nth-child(2),
+  th:nth-child(2) {
+    text-align: right;
+  }
+
+  td:last-child:not([colspan]) {
+    justify-self: stretch;
+  }
+
+  td .btn {
+    width: 100%;
+  }
+}
+
+/* Desktop: list and details side by side, 40% of the width each */
+@media (min-width: 64rem) {
+  :host {
+    flex-direction: row;
+    justify-content: center;
+    align-items: flex-start;
+  }
+
+  table {
+    flex: 0 0 40%;
+    width: 40%;
+    max-width: none;
+  }
+
+  /* With open details: list to the left, details to the right */
+  :host:has(app-order-details) {
+    justify-content: space-between;
+  }
+}

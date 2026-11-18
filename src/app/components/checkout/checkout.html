@@ -1,3 +1,4 @@
+<button type="button" (click)="fillFromProfile()">Użyj zapisanych danych</button>
 <form (submit)="onSubmit($event)" novalidate>
   <label for="userName">Imię</label>
   <input type="text" id="userName" [formField]="orderForm.userName" />

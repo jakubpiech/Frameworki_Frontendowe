@@ -1,1 +1,51 @@
-<p>order-details works!</p>
+@if (order(); as selectedOrder) {
+  <a class="btn" [routerLink]="homeLink()">Wróć</a>
+  <p>Nazwa Restauracji: {{ selectedOrder?.restaurantName }}</p>
+  <p>
+    Status Zamówienia:
+    <span
+      class="status"
+      [class.delivered]="selectedOrder.status === 'delivered'"
+      [class.cancelled]="selectedOrder.status === 'cancelled'"
+      >{{ statusLabels[selectedOrder.status] }}</span
+    >
+  </p>
+  <p>Klient: {{ selectedOrder?.userName }} {{ selectedOrder?.userSurname }}</p>
+  <p>
+    Adres: {{ selectedOrder?.address.street }} {{ selectedOrder?.address.buildingNumber }}/{{
+      selectedOrder?.address.apartmentNumber
+    }}
+    {{ selectedOrder?.address.city }}
+    {{ selectedOrder?.address.postalCode }}
+  </p>
+  @if (selectedOrder.paymentMethod === 'cash') {
+    <p>Płatność: Gotówka</p>
+  } @else {
+    <p>Płatność: Karta</p>
+  }
+
+  <table>
+    <thead>
+      <tr>
+        <th>Produkt</th>
+        <th>Cena</th>
+        <th>Ilość</th>
+      </tr>
+    </thead>
+    <tbody>
+      @for (item of selectedOrder.cartItems; track item.productId) {
+        <tr>
+          <td>{{ item.name }}</td>
+          <td>{{ item.price | number: '1.2-2' }}zł</td>
+          <td>{{ item.quantity }}</td>
+        </tr>
+      }
+    </tbody>
+  </table>
+
+  <p>Suma zamówienia: {{ selectedOrder.orderPrice | number: '1.2-2' }}zł</p>
+  <p>Koszt dostawy: {{ selectedOrder.deliveryFee | number: '1.2-2' }}zł</p>
+  <p>Kwota do zapłaty: {{ selectedOrder.totalToPay | number: '1.2-2' }}zł</p>
+} @else {
+  <p>Nie znaleziono zamówienia.</p>
+}

@@ -89,4 +89,21 @@ export class Checkout {
     this.#cart.clear();
     this.#router.navigateByUrl('/orders');
   }
+  fillFromProfile() {
+    const user = this.#auth.currentUser();
+    if (!user || user.role !== 'customer') {
+      return;
+    }
+    this.model.update((current) => ({
+      ...current,
+      userName: user.name,
+      email: user.email,
+      phoneNumber: user.phone ?? '',
+      street: user.deliveryAddress.street,
+      buildingNumber: user.deliveryAddress.buildingNumber,
+      apartmentNumber: user.deliveryAddress.apartmentNumber ?? '',
+      postalCode: user.deliveryAddress.postalCode,
+      city: user.deliveryAddress.city,
+    }));
+  }
 }

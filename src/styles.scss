@@ -337,6 +337,30 @@ td {
   font-size: 0.9rem;
 }
 
+/* Order status label: color and text (never color alone) */
+.status {
+  display: inline-block;
+  padding: 0.15rem 0.6rem;
+  border: 1px solid var(--color-accent);
+  border-radius: 999px;
+  background: var(--color-accent-subtle);
+  color: var(--color-accent);
+  font-size: 0.8rem;
+  font-weight: 700;
+  line-height: 1.4;
+
+  &.delivered {
+    border-color: var(--color-success);
+    background: var(--color-success-bg);
+    color: var(--color-success);
+  }
+
+  &.cancelled {
+    border-color: var(--color-danger);
+    background: var(--color-danger-bg);
+    color: var(--color-danger);
+  }
+}
 /* Short animations only, none for people who ask for less motion */
 @media (prefers-reduced-motion: reduce) {
   *,

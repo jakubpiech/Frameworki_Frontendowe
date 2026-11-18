@@ -1,0 +1,81 @@
+/* Distinct "order receipt" card: accent stripe on top, own surface */
+:host {
+  display: block;
+  width: 100%;
+  max-width: 40rem;
+  padding: var(--space-3) var(--space-2);
+  border: 1px solid var(--color-border);
+  border-top: 4px solid var(--color-accent);
+  border-radius: var(--radius-md);
+  background: var(--color-surface);
+  box-shadow: var(--shadow-sm);
+}
+
+/* Back link */
+:host > a {
+  margin-bottom: var(--space-2);
+}
+
+/* Info lines look like a list of rows */
+:host > p {
+  margin: 0;
+  padding: var(--space-1) 0;
+  border-bottom: 1px solid var(--color-border);
+}
+
+/* The table sits between the info rows and the amounts */
+table {
+  margin: var(--space-3) 0 var(--space-2);
+}
+
+th,
+td {
+  padding: var(--space-1);
+}
+
+th:nth-child(2),
+td:nth-child(2),
+th:last-child,
+td:last-child {
+  text-align: right;
+}
+
+/* Amounts: right aligned summary, the last line is the main number */
+:host > table ~ p {
+  max-width: 20rem;
+  margin: 0 0 0 auto;
+  padding: 0.35rem 0;
+  border: 0;
+  color: var(--color-text-muted);
+  text-align: right;
+}
+
+:host > table ~ p:last-of-type {
+  margin-top: var(--space-1);
+  padding-top: var(--space-1);
+  border-top: 2px solid var(--color-accent);
+  color: var(--color-text);
+  font-size: 1.2rem;
+  font-weight: 700;
+}
+
+@media (min-width: 48rem) {
+  :host {
+    padding: var(--space-4);
+  }
+
+  th,
+  td {
+    padding: var(--space-1) var(--space-2);
+  }
+}
+
+/* Desktop: details take 40% of the width, next to the list (see order-list) */
+@media (min-width: 64rem) {
+  :host {
+    flex: 0 0 40%;
+    width: 40%;
+    max-width: none;
+    padding: var(--space-3);
+  }
+}
