@@ -30,4 +30,12 @@ export class OrderDetails {
     }
     return order;
   });
+  changeStatus(orderId: string, value: string) {
+    const status = ORDER_STATUS.find((stat) => stat === value);
+    if (!status) {
+      return undefined;
+    }
+
+    this.#order.updateStatus(orderId, status);
+  }
 }

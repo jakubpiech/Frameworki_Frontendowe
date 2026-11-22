@@ -1,12 +1,12 @@
 import { Component, computed, inject } from '@angular/core';
-import { RouterLink, RouterLinkActive, RouterOutlet } from '@angular/router';
+import { RouterLink, RouterOutlet } from '@angular/router';
 import { AuthService } from '../../services/auth-service';
 import { OrderService } from '../../services/order-service';
-import { ORDER_STATUS_DISPLAY } from '../../Model/order.model';
+import { ORDER_STATUS, ORDER_STATUS_DISPLAY } from '../../Model/order.model';
 import { DecimalPipe } from '@angular/common';
 
 @Component({
-  imports: [RouterOutlet, DecimalPipe, RouterLink, RouterLinkActive],
+  imports: [RouterOutlet, DecimalPipe, RouterLink],
   selector: 'app-order-list',
   styleUrl: './order-list.scss',
   templateUrl: './order-list.html',

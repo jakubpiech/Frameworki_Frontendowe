@@ -9,18 +9,11 @@
   </thead>
   <tbody>
     @for (order of orders(); track order.id) {
-      <tr routerLinkActive="selected" ariaCurrentWhenActive="page">
+      <tr>
         <td>{{ order.restaurantName }}</td>
         <td>{{ order.totalToPay | number: '1.2-2' }}zł</td>
-        <td>
-          <span
-            class="status"
-            [class.delivered]="order.status === 'delivered'"
-            [class.cancelled]="order.status === 'cancelled'"
-            >{{ statusLabels[order.status] }}</span
-          >
-        </td>
-        <td><a class="btn" [routerLink]="['/orders', order.id]">Szczegóły</a></td>
+        <td>{{ statusLabels[order.status] }}</td>
+        <td><a [routerLink]="['/orders', order.id]">Szczegóły</a></td>
       </tr>
     } @empty {
       <tr>

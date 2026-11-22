@@ -9,6 +9,17 @@
       [class.cancelled]="selectedOrder.status === 'cancelled'"
       >{{ statusLabels[selectedOrder.status] }}</span
     >
+    @if (isAdmin()) {
+      <label for="statusSelect">Zmień status:</label>
+      <select #statusSelect id="statusSelect">
+        @for (status of statuses; track status) {
+          <option [value]="status" [selected]="status === selectedOrder.status">
+            {{ statusLabels[status] }}
+          </option>
+        }
+      </select>
+      <button (click)="changeStatus(selectedOrder.id, statusSelect.value)">Zmień</button>
+    }
   </p>
   <p>Klient: {{ selectedOrder?.userName }} {{ selectedOrder?.userSurname }}</p>
   <p>
