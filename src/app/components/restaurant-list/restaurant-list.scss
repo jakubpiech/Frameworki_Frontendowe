@@ -36,8 +36,43 @@ label:first-child {
   margin-top: 0;
 }
 
-button {
+form button {
   margin-top: var(--space-1);
+}
+
+/* @switch states: Loading, Empty, Error */
+.list > p {
+  grid-column: 1 / -1;
+  margin: 0;
+  padding: var(--space-3);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  background: var(--color-surface);
+  color: var(--color-text-muted);
+  font-weight: 600;
+  text-align: center;
+  box-shadow: var(--shadow-sm);
+
+  &:has(+ button) {
+    border-color: var(--color-danger);
+    background: var(--color-danger-bg);
+    color: var(--color-danger);
+  }
+}
+
+.list > button {
+  grid-column: 1 / -1;
+  justify-self: center;
+  min-width: 9rem;
+  border-color: var(--color-accent);
+  background: var(--color-accent);
+  color: var(--color-accent-contrast);
+
+  &:hover:not(:disabled) {
+    border-color: var(--color-accent-hover);
+    background: var(--color-accent-hover);
+    color: var(--color-accent-contrast);
+  }
 }
 
 @media (min-width: 48rem) {
@@ -95,7 +130,7 @@ button {
     margin-top: 0;
   }
 
-  button {
+  form button {
     grid-area: 5 / 1 / 6 / 3;
     justify-self: start;
   }
@@ -141,7 +176,7 @@ button {
     grid-row: 2;
   }
 
-  button {
+  form button {
     grid-area: 2 / 5;
     margin-top: 0;
   }

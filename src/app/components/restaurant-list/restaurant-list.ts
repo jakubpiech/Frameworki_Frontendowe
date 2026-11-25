@@ -10,19 +10,25 @@ import { Cuisine } from '../../Model/restaurant.model';
   templateUrl: './restaurant-list.html',
 })
 export class RestaurantList {
-  private restaurantService = inject(Restaurants);
-
-  nameFilter = signal('');
+  readonly #restaurantService = inject(Restaurants);
+  readonly status = this.#restaurantService.loading;
+  constructor() {
+    this.#restaurantService.load();
+  }
+  retry() {
+    this.#restaurantService.load();
+  }
   cuisineFilter = signal('all');
   statusFilter = signal('all');
   sortFilter = signal('rating');
+  nameFilter = signal('');
 
   displayedRestaurants = computed(() => {
     const name = this.nameFilter();
     const cuisine = this.cuisineFilter();
     const status = this.statusFilter();
     const sort = this.sortFilter();
-    const all = this.restaurantService.restaurants();
+    const all = this.#restaurantService.restaurants();
     const nameToLower = name.toLowerCase();
 
     const result = all.filter((restaurant) => {

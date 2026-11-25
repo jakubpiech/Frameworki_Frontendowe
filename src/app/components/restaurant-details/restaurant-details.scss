@@ -14,16 +14,11 @@ header {
   }
 }
 
-/* Restaurant info: stacked on mobile, image + facts side by side from tablet */
 :host > section {
   display: grid;
   grid-template-columns: minmax(0, 1fr);
   gap: 0.25rem var(--space-4);
   align-items: start;
-}
-
-:host > section > div:not(.menu-header, .product-actions, .image) {
-  grid-column: 1;
 }
 
 .image {
@@ -61,7 +56,6 @@ header {
     }
   }
 
-  /* One menu category */
   > div {
     margin-bottom: var(--space-4);
 
@@ -71,8 +65,6 @@ header {
   }
 }
 
-/* Warning when the cart already has products from another restaurant.
-   The message carries text, the border and background only support it. */
 .menu-section > [role='alert'] {
   display: flex;
   flex-wrap: wrap;
@@ -96,22 +88,21 @@ header {
     flex: 1 1 14rem;
     background: var(--color-surface);
   }
+}
 
-  /* Second button replaces the cart, so it is the main (accent) action */
-  > button:last-of-type {
-    border-color: var(--color-accent);
-    background: var(--color-accent);
+.menu-section > [role='alert'] > button:last-of-type,
+.menu-section .add-to-cart {
+  border-color: var(--color-accent);
+  background: var(--color-accent);
+  color: var(--color-accent-contrast);
+
+  &:hover:not(:disabled) {
+    border-color: var(--color-accent-hover);
+    background: var(--color-accent-hover);
     color: var(--color-accent-contrast);
-
-    &:hover:not(:disabled) {
-      border-color: var(--color-accent-hover);
-      background: var(--color-accent-hover);
-      color: var(--color-accent-contrast);
-    }
   }
 }
 
-/* Product row: text and price on the left, image and action on the right */
 .menu-section > div > section {
   display: grid;
   grid-template-columns: minmax(0, 1fr);
@@ -123,12 +114,12 @@ header {
   background: var(--color-surface);
   box-shadow: var(--shadow-sm);
 
-  h4 {
+  h4,
+  h6 {
     margin: 0;
   }
 
   h6 {
-    margin: 0;
     color: var(--color-text-muted);
     font-size: 0.9rem;
     font-weight: 400;
@@ -144,7 +135,6 @@ header {
 
     p {
       margin: 0;
-      color: var(--color-text);
       font-weight: 700;
     }
 
@@ -156,34 +146,12 @@ header {
     }
   }
 
-  /* Button on top, availability label right under it */
   .product-actions {
     display: flex;
     flex-direction: column;
-    align-items: stretch;
     gap: var(--space-1);
-    margin-top: 0;
   }
 
-  .add-to-cart {
-    border-color: var(--color-accent);
-    background: var(--color-accent);
-    color: var(--color-accent-contrast);
-
-    &:hover:not(:disabled) {
-      border-color: var(--color-accent-hover);
-      background: var(--color-accent-hover);
-      color: var(--color-accent-contrast);
-    }
-
-    &:disabled {
-      border-color: var(--color-border);
-      background: var(--color-surface-muted);
-      color: var(--color-text-muted);
-    }
-  }
-
-  /* Availability: color + text */
   .availability-badge {
     padding: 0.2rem var(--space-1);
     border: 1px solid currentcolor;
@@ -224,7 +192,7 @@ header {
     margin-bottom: 0;
   }
 
-  :host > section > div:not(.menu-header, .product-actions, .image) {
+  :host > section > div:not(.image) {
     grid-column: 2;
   }
 

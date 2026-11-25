@@ -37,8 +37,21 @@
     </form>
   </div>
 
-  @for (restaurant of displayedRestaurants(); track restaurant.id) {
-    <app-restaurant-card [restaurant]="restaurant" />
+  @switch (status()) {
+    @case ('Loading') {
+      <p>Ładowanie restauracji...</p>
+    }
+    @case ('Error') {
+      <p>Unable to load restaurants.</p>
+      <button type="button" (click)="retry()">Retry</button>
+    }
+    @case ('Empty') {
+      <p>Brak dostępnych restauracji.</p>
+    }
+    @case ('Success') {
+      @for (restaurant of displayedRestaurants(); track restaurant.id) {
+        <app-restaurant-card [restaurant]="restaurant" />
+      }
+    }
   }
 </section>
-c

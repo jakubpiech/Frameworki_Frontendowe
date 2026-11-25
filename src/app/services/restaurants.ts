@@ -1,28 +1,34 @@
-import { effect, Service, signal } from '@angular/core';
+import { effect, inject, Service, signal } from '@angular/core';
 import { Restaurant, RestaurantWithoutId } from '../Model/restaurant.model';
-import data from '../../data/restaurants.json';
-function loadRestaurants(): Restaurant[] {
-  const saved = localStorage.getItem('restaurants');
-  if (saved === null) {
-    return data as Restaurant[];
-  }
-  try {
-    const parsed: unknown = JSON.parse(saved);
-    if (Array.isArray(parsed)) {
-      return parsed as Restaurant[];
-    }
-  } catch {
-    // Corrupted data in localStorage, fall back to the JSON file.
-  }
-  return data as Restaurant[];
-}
+import { HttpClient } from '@angular/common/http';
+import { loadStatus } from '../Model/loading.model';
+import { API_URL } from '../api-url';
+
 @Service()
 export class Restaurants {
-  readonly #restaurants = signal<Restaurant[]>(loadRestaurants());
+  readonly #http = inject(HttpClient);
+  readonly #loading = signal<loadStatus>('Loading');
+  readonly #restaurants = signal<Restaurant[]>([]);
+  readonly loading = this.#loading.asReadonly();
   readonly restaurants = this.#restaurants.asReadonly();
-  readonly #persist = effect(() => {
-    localStorage.setItem('restaurants', JSON.stringify(this.#restaurants()));
-  });
+
+  load() {
+    this.#loading.set('Loading');
+
+    this.#http.get<Restaurant[]>(`${API_URL}/restaurants`).subscribe({
+      next: (data) => {
+        if (data.length === 0) {
+          this.#loading.set('Empty');
+          return;
+        }
+        this.#restaurants.set(data);
+        this.#loading.set('Success');
+      },
+      error: () => {
+        this.#loading.set('Error');
+      },
+    });
+  }
   getById(id: number) {
     return this.#restaurants().find((restaurant) => restaurant.id === id);
   }

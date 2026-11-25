@@ -9,9 +9,13 @@ import { RouterLink } from '@angular/router';
   templateUrl: './admin-restaurant-list.html',
 })
 export class AdminRestaurantList {
-  private restaurantService = inject(Restaurants);
-  adminRestaurantList = this.restaurantService.restaurants;
+  readonly #restaurantService = inject(Restaurants);
+
+  constructor() {
+    this.#restaurantService.load();
+  }
+  adminRestaurantList = this.#restaurantService.restaurants;
   onToggleActive(id: number) {
-    this.restaurantService.toggleActive(id);
+    this.#restaurantService.toggleActive(id);
   }
 }
